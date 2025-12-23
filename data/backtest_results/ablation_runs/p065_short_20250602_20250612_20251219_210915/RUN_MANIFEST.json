@@ -1,0 +1,43 @@
+{
+  "run_id": "p065_short_20250602_20250612_20251219_210915",
+  "window": {
+    "start": "2025-06-02",
+    "end": "2025-06-12"
+  },
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "data_source": {
+    "SPY": {
+      "path": "/app/data/historical/1m/SPY.parquet",
+      "size_bytes": 2674673,
+      "sha256": "10a0c998a56bcf245b648ee216344bbc57c9ca2ae86849a30951992152b62605",
+      "coverage": {
+        "first_ts": "2025-06-02T08:00:00+00:00",
+        "last_ts": "2025-11-28T21:59:00+00:00",
+        "total_bars": 105822
+      }
+    },
+    "QQQ": {
+      "path": "/app/data/historical/1m/QQQ.parquet",
+      "size_bytes": 2777149,
+      "sha256": "0a62dcbb5511dcc2802b3da760a8b2754b3e84d982f3469d650da8ab69b00304",
+      "coverage": {
+        "first_ts": "2025-06-02T08:00:00+00:00",
+        "last_ts": "2025-11-28T21:59:00+00:00",
+        "total_bars": 110752
+      }
+    }
+  },
+  "outputs": {
+    "comparison_report": "/app/data/backtest_results/ablation_runs/p065_short_20250602_20250612_20251219_210915/comparison_report.json",
+    "scenarios": {
+      "newsfade": "/app/data/backtest_results/ablation_runs/p065_short_20250602_20250612_20251219_210915/newsfade",
+      "session_open": "/app/data/backtest_results/ablation_runs/p065_short_20250602_20250612_20251219_210915/session_open",
+      "scalp_aplus": "/app/data/backtest_results/ablation_runs/p065_short_20250602_20250612_20251219_210915/scalp_aplus",
+      "day_aplus": "/app/data/backtest_results/ablation_runs/p065_short_20250602_20250612_20251219_210915/day_aplus",
+      "combo": "/app/data/backtest_results/ablation_runs/p065_short_20250602_20250612_20251219_210915/combo"
+    }
+  }
+}
