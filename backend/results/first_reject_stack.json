@@ -1,0 +1,81 @@
+{
+  "diagnosis": "P0 Root Cause - AGGRESSIVE mode ineffective",
+  "reject_points": [
+    {
+      "priority": 1,
+      "where_file": "/app/backend/engines/playbook_loader.py",
+      "where_line": 767,
+      "function": "_evaluate_playbook_conditions",
+      "code_snippet": "if playbook.structure_htf and structure not in playbook.structure_htf and structure != 'unknown'",
+      "reject_reason": "structure_htf_vocabulary_mismatch",
+      "market_state_value": "bullish",
+      "playbook_expected_values": ["uptrend", "downtrend"],
+      "impact": "Blocks 100% of playbooks due to vocabulary inconsistency"
+    },
+    {
+      "priority": 2,
+      "where_file": "/app/backend/engines/playbook_loader.py",
+      "where_line": 796,
+      "function": "_evaluate_playbook_conditions",
+      "code_snippet": "if not matching_patterns:\n    return None, None",
+      "reject_reason": "required_candlestick_patterns_missing",
+      "market_state_value": [],
+      "playbook_expected_values": ["engulfing", "pin_bar", "morning_star", "evening_star"],
+      "impact": "Blocks all playbooks when candlestick engine produces no patterns"
+    },
+    {
+      "priority": 3,
+      "where_file": "/app/backend/engines/playbook_loader.py",
+      "where_line": 783,
+      "function": "_evaluate_playbook_conditions",
+      "code_snippet": "if not ict_patterns:\n    return None, None",
+      "reject_reason": "ict_patterns_empty",
+      "market_state_value": [],
+      "playbook_expected_values": ["at least 1 ICT pattern"],
+      "impact": "Blocks playbooks when no ICT patterns detected (already relaxed in prior work)"
+    }
+  ],
+  "vocabulary_mismatch_analysis": {
+    "source_of_truth": "MASTER_FINAL.txt and playbooks.yml",
+    "market_state_engine_output": {
+      "field": "daily_structure",
+      "values": ["bullish", "bearish", "neutral", "unknown"]
+    },
+    "playbook_definitions_expect": {
+      "field": "structure_htf",
+      "values": ["uptrend", "downtrend", "range", "unknown"]
+    },
+    "root_cause": "MarketStateEngine and Playbooks use different vocabulary for the same concept",
+    "p1_fix_proposal": "Add mapping layer in _evaluate_playbook_conditions:\n  structure_normalized = {'bullish': 'uptrend', 'bearish': 'downtrend'}.get(structure, structure)"
+  },
+  "test_evidence": {
+    "playbook_examples": [
+      {
+        "playbook_name": "NY_Open_Reversal",
+        "required_families": ["engulfing", "pin_bar", "morning_star", "evening_star"],
+        "structure_htf": ["uptrend", "downtrend"],
+        "signals_present": {
+          "ict_patterns": ["equilibrium"],
+          "candle_patterns": [],
+          "market_state_structure": "bullish"
+        },
+        "reject_point": "structure_htf (line 767)"
+      },
+      {
+        "playbook_name": "London_Sweep_NY_Continuation",
+        "required_families": ["marubozu", "three_soldiers", "three_crows", "engulfing"],
+        "structure_htf": ["uptrend", "downtrend"],
+        "signals_present": {
+          "ict_patterns": ["equilibrium"],
+          "candle_patterns": [],
+          "market_state_structure": "bullish"
+        },
+        "reject_point": "structure_htf (line 767)"
+      }
+    ]
+  },
+  "aggressive_comment_location": "line 773-775",
+  "aggressive_comment": "Pour l'instant en backtest AGGRESSIVE, on ne bloque plus sur require_sweep / require_bos",
+  "actual_behavior_before_patch": "Comment only mentions ICT confluences, but structure_htf (767) and candlestick patterns (796) checks are STILL BLOCKING 100% of playbooks",
+  "patch_applied": "Extended AGGRESSIVE relaxation to bypass structure_htf and candlestick_patterns checks when is_backtest_aggressive=True"
+}

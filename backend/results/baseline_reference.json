@@ -1,0 +1,82 @@
+{
+  "baseline_name": "P2_Phase0_Baseline_Reference",
+  "timestamp": "2025-12-27T22:30:00Z",
+  "strategy": "Use existing rolling_2025-06 run as baseline reference",
+  "source_run": "rolling_2025-06",
+  "mode": "AGGRESSIVE",
+  "trade_types": ["DAILY", "SCALP"],
+  "symbols": ["SPY", "QQQ"],
+  "period": "2025-06 (full month)",
+  "data_source": "/app/backend/results/summary_rolling_2025-06_AGGRESSIVE_DAILY_SCALP.json",
+  
+  "funnel": {
+    "note": "From playbook_match_stats_2025-06.json",
+    "setups_total": 34767,
+    "playbook_matches_total": 16,
+    "matched_count": 16
+  },
+  
+  "trades": {
+    "total_trades": 12,
+    "wins": 8,
+    "losses": 4,
+    "breakevens": 0,
+    "winrate": 66.67,
+    "total_R": 21.176,
+    "profit_factor": 6.754,
+    "expectancy_R": 1.765,
+    "max_drawdown_R": 1.0,
+    "avg_win_R": 3.147,
+    "avg_loss_R": -1.0
+  },
+  
+  "by_type": {
+    "DAILY": {
+      "trades": 6,
+      "wins": 3,
+      "winrate": 50.0,
+      "total_R": 11.822
+    },
+    "SCALP": {
+      "trades": 6,
+      "wins": 5,
+      "winrate": 83.33,
+      "total_R": 9.354
+    }
+  },
+  
+  "top_rejections": {
+    "note": "From playbook_match_stats_2025-06_p1_day_type.json",
+    "relaxed_bypasses": {
+      "structure_htf_mismatch": 0,
+      "bias_htf_mismatch": 0,
+      "candlestick_patterns_missing": 16
+    },
+    "rejections": {
+      "news_events_day_type_mismatch": 2,
+      "volatility_insufficient": 11
+    }
+  },
+  
+  "artifacts": {
+    "equity": "/app/backend/results/equity_rolling_2025-06_AGGRESSIVE_DAILY_SCALP.parquet",
+    "trades": "/app/backend/results/trades_rolling_2025-06_AGGRESSIVE_DAILY_SCALP.parquet",
+    "summary": "/app/backend/results/summary_rolling_2025-06_AGGRESSIVE_DAILY_SCALP.json",
+    "playbook_stats": "/app/backend/results/playbook_match_stats_2025-06.json"
+  },
+  
+  "validation_rules": {
+    "non_regression_thresholds": {
+      "playbook_matches_min": 10,
+      "trades_min": 8,
+      "total_R_min": 15.0,
+      "PF_min": 4.0,
+      "expectancy_R_min": 1.0
+    },
+    "notes": [
+      "Ces seuils sont basés sur le run rolling_2025-06",
+      "Toute régression en-dessous de ces valeurs nécessite investigation",
+      "P2 patches doivent maintenir ou améliorer ces métriques"
+    ]
+  }
+}

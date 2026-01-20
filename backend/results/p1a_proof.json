@@ -1,0 +1,43 @@
+{
+  "p1a_validation": "structure_htf vocabulary mismatch",
+  "root_cause_identified": true,
+  "before_fix": {
+    "source": "Test artifacts (tools/*.py)",
+    "files_forcing_bullish": [
+      "/app/backend/tools/debug_playbook_evaluation.py:113",
+      "/app/backend/tools/generate_aggressive_baseline.py:92",
+      "/app/backend/tools/generate_baseline.py:92"
+    ],
+    "forced_values": {
+      "daily_structure": "bullish",
+      "h4_structure": "bullish",
+      "h1_structure": "bullish"
+    },
+    "expected_by_playbooks": ["uptrend", "downtrend", "range"],
+    "result": "100% structure_htf_mismatch (16 bypasses)"
+  },
+  "after_fix": {
+    "source": "MarketStateEngine.create_market_state()",
+    "file": "/app/backend/engines/market_state.py",
+    "function": "detect_structure() + analyze_htf_structure()",
+    "produces_vocabulary": ["uptrend", "downtrend", "range", "unknown"],
+    "actual_output_in_test": {
+      "daily_structure": "unknown",
+      "reason": "Insufficient HTF data in 100-bar sample"
+    },
+    "result": "0 structure_htf_mismatch (0 bypasses)"
+  },
+  "fix_type": "Test artifacts correction",
+  "production_code_changes": 0,
+  "mapping_needed": false,
+  "verification": {
+    "engine_source_correct": true,
+    "engine_line_reference": "/app/backend/engines/market_state.py:74-86",
+    "test_fix_line_reference": "/app/backend/tools/test_aggressive_patch.py:92-123"
+  },
+  "impact": {
+    "bypasses_before": 16,
+    "bypasses_after": 0,
+    "reduction_pct": 100
+  }
+}

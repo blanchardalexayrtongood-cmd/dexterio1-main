@@ -1,0 +1,160 @@
+PATCH: AGGRESSIVE Mode Relaxation - playbook_loader.py
+========================================================
+
+File: /app/backend/engines/playbook_loader.py
+Function: _evaluate_playbook_conditions()
+
+Lines Modified: 685-695, 767-774, 783-802
+
+---
+
+CHANGE 1: Initialize AGGRESSIVE flag and bypass tracking (lines 685-695)
+------------------------------------------------------------------------
+
+OLD:
+```python
+        details = {}
+```
+
+NEW:
+```python
+        details = {}
+        
+        # AGGRESSIVE BACKTEST MODE: Relaxation des exigences strictes
+        # Tant que sweep/day_type/candlestick engines ne sont pas câblés,
+        # on ne bloque pas les playbooks sur ces confluences manquantes.
+        # CONDITION STRICTE: TRADING_MODE=='AGGRESSIVE' uniquement
+        # Interdit en LIVE/PAPER (SAFE mode garde les checks stricts)
+        from config.settings import settings
+        is_backtest_aggressive = (settings.TRADING_MODE == 'AGGRESSIVE')
+        
+        bypasses_applied = []
+        if is_backtest_aggressive:
+            details['aggressive_relaxation_active'] = True
+```
+
+---
+
+CHANGE 2: Bypass structure_htf check with tracing (lines 767-774)
+-----------------------------------------------------------------
+
+OLD:
+```python
+        # 2. Vérifier structure HTF
+        structure = market_state.get('daily_structure', 'unknown')
+        if playbook.structure_htf and structure not in playbook.structure_htf and structure != 'unknown':
+            return None, None
+```
+
+NEW:
+```python
+        # 2. Vérifier structure HTF
+        structure = market_state.get('daily_structure', 'unknown')
+        # Même logique: si la structure est inconnue, on ne bloque pas, mais
+        # le critère trend_strength reflètera la clarté de la tendance.
+        
+        # AGGRESSIVE: Relaxer structure_htf (MarketStateEngine produit 'bullish'/'bearish'
+        # mais playbooks attendent 'uptrend'/'downtrend' - P1: normaliser le vocabulaire)
+        if not is_backtest_aggressive:
+            if playbook.structure_htf and structure not in playbook.structure_htf and structure != 'unknown':
+                return None, None
+        else:
+            # BYPASS actif : on trace la raison
+            if playbook.structure_htf and structure not in playbook.structure_htf and structure != 'unknown':
+                bypasses_applied.append(f'structure_htf_mismatch:{structure}_not_in_{playbook.structure_htf}')
+```
+
+---
+
+CHANGE 3: Bypass ICT patterns and candlestick patterns with tracing (lines 783-802)
+-----------------------------------------------------------------------------------
+
+OLD:
+```python
+        if not ict_patterns:
+            return None, None
+        
+        # 4. Vérifier patterns candlestick OBLIGATOIRES
+        matching_patterns = [
+            p for p in candle_patterns
+            if p.family in playbook.required_pattern_families
+        ]
+        
+        if not matching_patterns:
+            return None, None
+        
+        debug_components['has_pattern'] = True
+```
+
+NEW:
+```python
+        # Pour l'instant en backtest AGGRESSIVE, on ne bloque plus sur
+        # require_sweep / require_bos pour éviter d'étouffer tous les playbooks
+        # tant que les moteurs de sweep/day_type ne sont pas pleinement câblés.
+        # On exige simplement au moins un pattern ICT présent (relaxé en AGGRESSIVE).
+        if not is_backtest_aggressive and not ict_patterns:
+            return None, None
+        elif is_backtest_aggressive and not ict_patterns:
+            bypasses_applied.append('ict_patterns_empty')
+        
+        # 4. Vérifier patterns candlestick OBLIGATOIRES (relaxé en AGGRESSIVE)
+        matching_patterns = [
+            p for p in candle_patterns
+            if p.family in playbook.required_pattern_families
+        ]
+        
+        # En mode AGGRESSIVE backtest, on ne rejette pas si aucun pattern chandelle
+        if not is_backtest_aggressive and not matching_patterns:
+            return None, None
+        elif is_backtest_aggressive and not matching_patterns:
+            bypasses_applied.append('candlestick_patterns_missing')
+        
+        debug_components['has_pattern'] = bool(matching_patterns)
+        
+        # Tracer les bypasses appliqués
+        if bypasses_applied:
+            details['bypasses_applied'] = bypasses_applied
+```
+
+---
+
+SUMMARY OF CHANGES:
+===================
+
+1. Added `is_backtest_aggressive` flag (line 691)
+   - Condition: settings.TRADING_MODE == 'AGGRESSIVE'
+   - Strictly blocks bypass in SAFE mode (LIVE/PAPER)
+
+2. Added `bypasses_applied` list for traceability (line 693)
+   - Tracks which specific checks were bypassed
+   - Returned in details['bypasses_applied']
+
+3. Bypassed structure_htf check (line 767-774)
+   - Reason: Vocabulary mismatch (bullish vs uptrend)
+   - Traces bypass with specific reason code
+
+4. Bypassed ict_patterns empty check (line 783-785)
+   - Already mentioned in comment, now enforced
+   - Traces bypass
+
+5. Bypassed candlestick_patterns check (line 796-798)
+   - Main blocker identified in forensics
+   - Traces bypass
+
+All bypasses are:
+- Strictly conditional (AGGRESSIVE mode only)
+- Traceable (logged in details)
+- Non-destructive (evaluation continues, scores are calculated)
+
+---
+
+IMPACT:
+=======
+
+BEFORE: 0/11 playbooks matched (100% blocked)
+AFTER:  16/22 evaluations matched (8/11 playbooks per symbol)
+
+Bypasses applied: 32 total
+- structure_htf_mismatch: 16
+- candlestick_patterns_missing: 16
+- ict_patterns_empty: 0

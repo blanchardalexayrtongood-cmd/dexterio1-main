@@ -1,0 +1,27 @@
+[2026-01-04 00:43:29] Starting backtest worker...
+[2026-01-04 00:43:29] Config received: {"symbols":["SPY"],"start_date":"2025-08-01","end_date":"2025-08-03","trading_mode":"AGGRESSIVE","trade_types":["DAILY"],"htf_warmup_days":40,"initial_capital":50000.0,"commission_model":"ibkr_fixed","enable_reg_fees":true,"slippage_model":"pct","slippage_cost_pct":0.0005,"spread_model":"fixed_bps","spread_bps":2.0}
+[2026-01-04 00:43:29] Symbols: ['SPY']
+[2026-01-04 00:43:29] Period: 2025-08-01 -> 2025-08-03
+[2026-01-04 00:43:29] Mode: AGGRESSIVE
+[2026-01-04 00:43:29] HTF Warmup: 40 days
+[2026-01-04 00:43:29] Trade Types: ['DAILY']
+[2026-01-04 00:43:29] Config saved to: C:\bots\dexterio1-main\backend\results\jobs\75c93a0a\job_config.json
+[2026-01-04 00:43:29] Data: C:\bots\dexterio1-main\data\historical\1m\SPY.parquet
+[2026-01-04 00:43:29] Running backtest...
+[2026-01-04 00:43:30] ERROR: ValueError: 'datetime' is both an index level and a column label, which is ambiguous.
+[2026-01-04 00:43:30] Traceback (most recent call last):
+  File "C:\bots\dexterio1-main\backend\jobs\backtest_jobs.py", line 327, in run_backtest_worker
+    engine.load_data()  # Load data first to populate debug_counts
+    ^^^^^^^^^^^^^^^^^^
+  File "C:\bots\dexterio1-main\backend\backtest\engine.py", line 297, in load_data
+    df_warmup = df_warmup.sort_values('datetime').reset_index(drop=True)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bots\dexterio1-main\venv\Lib\site-packages\pandas\core\frame.py", line 7211, in sort_values
+    k = self._get_label_or_level_values(by[0], axis=axis)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\bots\dexterio1-main\venv\Lib\site-packages\pandas\core\generic.py", line 1909, in _get_label_or_level_values
+    self._check_label_or_level_ambiguity(key, axis=axis)
+  File "C:\bots\dexterio1-main\venv\Lib\site-packages\pandas\core\generic.py", line 1871, in _check_label_or_level_ambiguity
+    raise ValueError(msg)
+ValueError: 'datetime' is both an index level and a column label, which is ambiguous.
+

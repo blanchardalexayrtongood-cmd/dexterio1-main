@@ -1,0 +1,74 @@
+{
+  "timestamp": "1767384334.278265",
+  "environment": {
+    "os_name": "posix",
+    "platform_system": "Linux",
+    "platform_release": "6.6.105+",
+    "python_version": "3.11.14",
+    "cwd": "/app/backend",
+    "script_location": "/app/backend/tools/debug_paths_windows.py",
+    "env_DEXTERIO_REPO_ROOT": null,
+    "dockerenv_exists": false,
+    "app_dir_exists": true
+  },
+  "paths": {
+    "repo_root": {
+      "path": "/app",
+      "exists": true,
+      "is_dir": true,
+      "is_file": false
+    },
+    "backend_path": {
+      "path": "/app/backend",
+      "exists": true,
+      "is_dir": true,
+      "is_file": false
+    },
+    "data_path": {
+      "path": "/app/data",
+      "exists": true,
+      "is_dir": true,
+      "is_file": false
+    },
+    "historical_1m": {
+      "path": "/app/data/historical/1m",
+      "exists": true,
+      "is_dir": true,
+      "is_file": false
+    },
+    "results_path": {
+      "path": "/app/backend/results",
+      "exists": true,
+      "is_dir": true,
+      "is_file": false
+    }
+  },
+  "file_discovery": {
+    "historical_1m": {
+      "exists": true,
+      "parquet_count": 7,
+      "files": [
+        "QQQ_POLY_6W.parquet",
+        "SPY_POLY_6W.parquet",
+        "SPY_POLY_7D.parquet",
+        "QQQ.parquet",
+        "SPY.parquet",
+        "SPY_POLY_2D.parquet",
+        "SPY_POLY_14D.parquet"
+      ]
+    },
+    "tests_tests": {
+      "exists": true,
+      "path": "/app/backend/tests",
+      "test_count": 8
+    }
+  },
+  "validation": {
+    "repo_root_is_local": false,
+    "repo_root_not_app": false,
+    "backend_dir_exists": true,
+    "data_dir_exists": true,
+    "historical_1m_exists": true,
+    "spy_parquet_exists": true
+  }
+}

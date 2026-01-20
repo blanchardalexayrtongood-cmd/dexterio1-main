@@ -1,0 +1,95 @@
+{
+  "run_id": "job_bfc5faf2",
+  "config": {
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-08",
+    "htf_warmup_days": 40,
+    "trading_mode": "AGGRESSIVE",
+    "trade_types": [
+      "DAILY",
+      "SCALP"
+    ],
+    "symbols": [
+      "SPY"
+    ]
+  },
+  "counts": {
+    "candles_loaded_1m": 5282,
+    "candles_loaded_htf": {
+      "SPY_1d": 27,
+      "SPY_4h": 30,
+      "SPY_1h": 50
+    },
+    "setups_detected_total": 1,
+    "setups_rejected_total": 0,
+    "setups_accepted_total": 0,
+    "setups_rejected_by_mode": 405,
+    "setups_rejected_by_trade_types": 0,
+    "trades_opened_total": 0,
+    "trades_closed_total": 0,
+    "reject_reasons": {},
+    "bars_processed": 5282,
+    "playbooks_registered_count": 11,
+    "playbooks_registered_names": [
+      "NY_Open_Reversal",
+      "London_Sweep_NY_Continuation",
+      "Trend_Continuation_FVG_Retest",
+      "Morning_Trap_Reversal",
+      "Power_Hour_Expansion",
+      "News_Fade",
+      "Liquidity_Sweep_Scalp",
+      "FVG_Fill_Scalp",
+      "BOS_Momentum_Scalp",
+      "Session_Open_Scalp",
+      "Lunch_Range_Scalp"
+    ],
+    "playbooks_evaluated_total": 5282,
+    "playbooks_evaluated_unique": {},
+    "matches_total": 570,
+    "matches_by_playbook": {
+      "Morning_Trap_Reversal": 297,
+      "Liquidity_Sweep_Scalp": 261,
+      "Session_Open_Scalp": 12
+    },
+    "setups_created_total": 405,
+    "setups_created_by_playbook": {
+      "Morning_Trap_Reversal": 214,
+      "Liquidity_Sweep_Scalp": 191
+    },
+    "setups_after_risk_filter_total": 0,
+    "setups_after_risk_filter_by_playbook": {},
+    "trades_open_attempted_total": 0,
+    "trades_open_rejected_by_reason": {},
+    "setups_detected_by_playbook": {
+      "Morning_Trap_Reversal": 214,
+      "Liquidity_Sweep_Scalp": 191
+    },
+    "setups_rejected_by_reason": {
+      "rejected_by_mode": 405
+    },
+    "setups_rejected_by_mode_by_playbook": {},
+    "setups_rejected_by_mode_examples": [],
+    "missing_playbook_name": 0,
+    "risk_mode_used": "AGGRESSIVE",
+    "risk_allowlist_snapshot": {
+      "aggressive": {
+        "len": 8,
+        "first5": [
+          "News_Fade",
+          "Session_Open_Scalp",
+          "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+          "NY_Open_Reversal",
+          "Trend_Continuation_FVG_Retest"
+        ]
+      },
+      "safe": {
+        "len": 1,
+        "first5": [
+          "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+        ]
+      }
+    },
+    "risk_rejects_by_playbook": {},
+    "risk_reject_examples": []
+  }
+}

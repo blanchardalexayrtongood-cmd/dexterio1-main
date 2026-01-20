@@ -1,0 +1,61 @@
+
+================================================================================
+[94mP2-1.C SMOKE SUITE[0m
+================================================================================
+Started: 2025-12-27 22:39:55
+Target: < 15 minutes
+
+================================================================================
+[94mTEST 1: Python Syntax Check[0m
+================================================================================
+
+🔧 Compiling Python files...
+   Command: /root/.venv/bin/python3 -m compileall -q backend
+[91m❌ Compiling Python files failed (exit code 1)[0m
+STDERR: 
+
+================================================================================
+[94mTEST 2: Unit Tests (pytest)[0m
+================================================================================
+
+🔧 Running unit tests...
+   Command: /root/.venv/bin/python3 -m pytest backend/tests -q --tb=short
+[92m✅ Running unit tests passed[0m
+
+================================================================================
+[94mTEST 3: Micro-Backtest 1 Day (2025-06-03)[0m
+================================================================================
+   Bars processed: 836
+   Trades: 1
+   Total R: 4.947
+[92m✅ 1-day backtest completed[0m
+
+================================================================================
+[94mTEST 4: Micro-Backtest 5 Days (2025-06-03 → 2025-06-09)[0m
+================================================================================
+Could not calculate price levels for London_Sweep_NY_Continuation
+   Bars processed: 4148
+   Trades: 3
+   Total R: 6.416
+   Profit Factor: 7.20
+[92m✅ 5-day backtest completed[0m
+
+================================================================================
+[94mTEST 5: Metrics Validation[0m
+================================================================================
+[92m✅ Metrics validation passed[0m
+
+================================================================================
+[94mSMOKE SUITE SUMMARY[0m
+================================================================================
+  ❌ FAIL: syntax_check
+  ✅ PASS: unit_tests
+  ✅ PASS: backtest_1d
+  ✅ PASS: backtest_5d
+  ✅ PASS: metrics
+
+Duration: 63.3s (1.1 minutes)
+Report: /app/backend/results/P2_smoke_suite_report.json
+
+[91m❌ ❌ SOME TESTS FAILED - See details above[0m
+Failed tests: syntax_check

@@ -1,0 +1,67 @@
+{
+  "month": "2025-06",
+  "candlestick_engine_present": true,
+  "candlestick_engine_functional": true,
+  "sample_size_bars": 18,
+  "candlestick_patterns_detected_total": 3,
+  "patterns_by_type": {
+    "shooting_star": 2,
+    "dragonfly_doji": 1
+  },
+  "coverage_rate": 16.7,
+  "coverage_rate_unit": "percent of bars with patterns",
+  "detection_sample": {
+    "timeframe": "5m",
+    "candles": 18,
+    "patterns_detected": 3,
+    "return_type": "PatternDetection",
+    "expected_type": "CandlestickPattern"
+  },
+  "architecture_issue": {
+    "problem": "CandlestickPatternEngine returns PatternDetection but playbook_loader expects CandlestickPattern",
+    "missing_fields": ["family", "direction", "body_size", "confirmation"],
+    "impact": "Engine exists and works but is not wired into BacktestEngine pipeline",
+    "root_cause": "Type mismatch between engine output and expected input"
+  },
+  "required_by_playbook": {
+    "NY_Open_Reversal": ["engulfing", "pin_bar", "morning_star", "evening_star"],
+    "London_Sweep_NY_Continuation": ["marubozu", "three_soldiers", "three_crows", "engulfing"],
+    "Trend_Continuation_FVG_Retest": ["marubozu", "hammer", "shooting_star"],
+    "Power_Hour_Expansion": ["marubozu", "three_soldiers", "engulfing"],
+    "Morning_Trap_Reversal": ["engulfing", "morning_star", "evening_star", "hammer"],
+    "Liquidity_Sweep_Scalp": ["pin_bar", "hammer", "shooting_star", "doji"],
+    "FVG_Fill_Scalp": ["doji", "spinning_top", "pin_bar"],
+    "BOS_Momentum_Scalp": ["marubozu", "three_soldiers", "three_crows"],
+    "News_Fade": ["engulfing", "doji", "pin_bar"],
+    "Session_Open_Scalp": ["marubozu", "hammer", "shooting_star"]
+  },
+  "families_detected": ["shooting_star", "doji"],
+  "families_required": ["engulfing", "pin_bar", "morning_star", "evening_star", "marubozu", "three_soldiers", "three_crows", "hammer", "shooting_star", "doji", "spinning_top"],
+  "families_missing": ["engulfing", "pin_bar", "marubozu", "hammer", "morning_star", "evening_star", "three_soldiers", "three_crows", "spinning_top"],
+  "coverage_pct": 18.2,
+  "wiring_status": "NOT_WIRED",
+  "wiring_locations_to_fix": [
+    "/app/backend/backtest/engine.py: _process_bar_optimized() - call CandlestickPatternEngine",
+    "/app/backend/engines/patterns/candlesticks.py: _create_pattern() - return CandlestickPattern instead of PatternDetection",
+    "/app/backend/engines/setup_engine_v2.py: generate_setups() - accept CandlestickPattern list"
+  ],
+  "p1b_recommendation": {
+    "action": "DEFER to P2",
+    "reason": "LOW coverage (16.7%) = marginal impact. Wiring requires refactoring. P1 priority = day_type (higher ROI).",
+    "scope": "OUT_OF_SCOPE for P1 (P0 = unblock funnel ✅, P1 = day_type)",
+    "future_p2": "Refactor CandlestickPatternEngine to return CandlestickPattern, tune thresholds for 50%+ coverage, then wire"
+  },
+  "impact_if_wired": {
+    "bypass_reduction_realistic": "16 → 14 (12.5% reduction at 10% coverage)",
+    "bypass_reduction_optimistic": "16 → 8 (50% reduction if engine tuned to 50% coverage)",
+    "score_improvement_realistic": "0.145 → 0.19 avg (+0.045 for 10% of setups)",
+    "score_improvement_optimistic": "0.145 → 0.35 avg (+0.205 if 50% coverage)",
+    "grade_improvement": "C → B for setups with patterns"
+  },
+  "bypass_impact": {
+    "current": "16 bypasses for candlestick_patterns_missing",
+    "after_wiring": "14-8 bypasses (depends on coverage %)",
+    "score_improvement": "Scores would increase by +0.1 to +0.3 for matched setups",
+    "grade_improvement": "Grades could go from C to B/A for ~10-50% of setups"
+  }
+}

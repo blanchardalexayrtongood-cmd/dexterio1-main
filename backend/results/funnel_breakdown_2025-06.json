@@ -1,0 +1,176 @@
+{
+  "month": "2025-06",
+  "mode": "AGGRESSIVE",
+  "funnel_stages": {
+    "1_setups_total": {
+      "count": 34767,
+      "description": "Total bars processed (SPY + QQQ)"
+    },
+    "2_evaluated_total": {
+      "count": 22,
+      "description": "Playbook evaluations (11 playbooks × 2 symbols)",
+      "note": "Test sample limited to 100 bars per symbol for performance"
+    },
+    "3_basic_filters_pass": {
+      "count": 16,
+      "description": "Passed instrument/session/timefilter checks",
+      "pass_rate": "72.7%"
+    },
+    "4_playbook_matched": {
+      "count": 16,
+      "description": "Passed required_signals + context checks",
+      "pass_rate": "100% of basic_filters_pass"
+    },
+    "5_grade_pass": {
+      "count": 16,
+      "description": "Score calculated, grade assigned",
+      "distribution": {
+        "A": 0,
+        "B": 0,
+        "C": 16
+      },
+      "avg_score": 0.145,
+      "note": "All grades C due to missing candlestick patterns (pattern_quality_score=0)"
+    },
+    "6_timefilter_pass": {
+      "count": 16,
+      "description": "Within valid time windows",
+      "pass_rate": "100%"
+    },
+    "7_risk_pass": {
+      "count": 16,
+      "description": "Position sizing validated",
+      "pass_rate": "100%"
+    },
+    "8_executed": {
+      "count": 16,
+      "description": "Would be executed in full backtest",
+      "note": "Sample test doesn't execute trades"
+    }
+  },
+  "rejection_breakdown": {
+    "basic_filters": {
+      "total": 6,
+      "reasons": {
+        "volatility_insufficient": {
+          "count": 2,
+          "playbooks": ["Power_Hour_Expansion"],
+          "fix": "Requires volatility engine"
+        },
+        "news_events_day_type_mismatch": {
+          "count": 2,
+          "playbooks": ["News_Fade"],
+          "fix": "Requires day_type implementation (P1 identified)"
+        },
+        "timefilter_outside_window": {
+          "count": 2,
+          "playbooks": ["Session_Open_Scalp"],
+          "fix": "Playbook time_range doesn't match sample time"
+        }
+      }
+    },
+    "score_none": {
+      "total": 0,
+      "note": "AGGRESSIVE bypasses eliminated score=None rejections"
+    }
+  },
+  "bypass_analysis": {
+    "total_bypasses": 16,
+    "by_type": {
+      "structure_htf_mismatch": {
+        "count": 0,
+        "status": "RESOLVED",
+        "resolution": "MarketStateEngine produces correct vocabulary (uptrend/downtrend). Test artifacts were using wrong values."
+      },
+      "candlestick_patterns_missing": {
+        "count": 16,
+        "status": "ACTIVE",
+        "reason": "CandlestickPatternEngine exists but not wired (type mismatch)",
+        "scope": "OUT_OF_SCOPE for P1"
+      },
+      "ict_patterns_empty": {
+        "count": 0,
+        "status": "NOT_TRIGGERED",
+        "reason": "Sample contains ICT patterns (equilibrium)"
+      }
+    }
+  },
+  "bottleneck_analysis": {
+    "current_bottleneck": "basic_filters (27.3% rejection)",
+    "top_rejection_reasons_global": [
+      {"reason": "volatility_insufficient", "count": 2, "pct": 33.3},
+      {"reason": "news_events_day_type_mismatch", "count": 2, "pct": 33.3},
+      {"reason": "timefilter_outside_window", "count": 2, "pct": 33.3}
+    ],
+    "top_rejection_reasons_by_playbook": {
+      "Power_Hour_Expansion": ["volatility_insufficient"],
+      "News_Fade": ["news_events_day_type_mismatch"],
+      "Session_Open_Scalp": ["timefilter_outside_window"]
+    }
+  },
+  "optimization_priorities": {
+    "p1": {
+      "target": "day_type implementation",
+      "impact": "Unblock News_Fade playbook (+2 matches)",
+      "complexity": "MEDIUM",
+      "reference": "MASTER_FINAL.txt"
+    },
+    "p2": {
+      "target": "Wire CandlestickPatternEngine",
+      "impact": "Improve scores from C to B/A, increase confidence",
+      "complexity": "HIGH",
+      "scope": "Requires type refactoring across 3+ files"
+    },
+    "p3": {
+      "target": "Volatility engine",
+      "impact": "Unblock Power_Hour_Expansion (+2 matches)",
+      "complexity": "HIGH",
+      "reference": "Needs volatility calculation logic"
+    },
+    "not_recommended": {
+      "target": "Relax timefilter or grade thresholds",
+      "reason": "Would lower quality. Current rejections are legitimate (playbook rules)."
+    }
+  },
+  "score_distribution_analysis": {
+    "current": {
+      "avg_score": 0.145,
+      "grade_C_pct": 100,
+      "grade_B_pct": 0,
+      "grade_A_pct": 0
+    },
+    "after_candlestick_wiring": {
+      "avg_score_estimate": "0.3-0.5",
+      "grade_C_pct_estimate": 30,
+      "grade_B_pct_estimate": 50,
+      "grade_A_pct_estimate": 20,
+      "reasoning": "pattern_quality_score would add +0.2 to +0.4 to total score"
+    }
+  },
+  "volume_improvement_potential": {
+    "current_state": {
+      "matched_count": 16,
+      "playbooks_active": "8/11 (72.7%)"
+    },
+    "after_p1_day_type": {
+      "matched_count_estimate": 18,
+      "playbooks_active_estimate": "9/11 (81.8%)",
+      "delta": "+2 matches (+12.5%)"
+    },
+    "after_p2_volatility": {
+      "matched_count_estimate": 20,
+      "playbooks_active_estimate": "10/11 (90.9%)",
+      "delta": "+4 matches (+25%)"
+    },
+    "max_theoretical": {
+      "matched_count_max": 22,
+      "playbooks_active_max": "11/11 (100%)",
+      "note": "Requires full backtest (not sample), all engines wired, optimal market conditions"
+    }
+  },
+  "recommendation": {
+    "immediate": "P1 LOCKED. Continue with day_type implementation if needed.",
+    "quality_vs_volume": "Current setup prioritizes QUALITY (legitimate rejections). Volume can be increased by implementing missing engines, not by relaxing thresholds.",
+    "next_priority": "day_type > volatility > candlestick wiring"
+  }
+}

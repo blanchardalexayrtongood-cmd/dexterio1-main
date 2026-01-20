@@ -1,0 +1,57 @@
+{
+  "config": {
+    "start_date": "2025-08-01",
+    "end_date": "2025-08-01",
+    "htf_warmup_days": 40,
+    "warmup_start_date": "2025-06-22"
+  },
+  "checkpoints": {
+    "1_after_load_data": {
+      "htf_warmup_data_exists": true,
+      "htf_warmup_data_keys": [
+        "SPY"
+      ],
+      "htf_warmup_rows": {
+        "SPY": 22939
+      },
+      "combined_data_rows": 882
+    },
+    "2_before_run": {
+      "aggregator_exists": true,
+      "candles_1d_count": 0,
+      "candles_4h_count": 0
+    },
+    "3_after_run": {
+      "candles_1d_count": 28,
+      "candles_4h_count": 30
+    },
+    "4_market_state": {
+      "total_records": 270,
+      "day_type_distribution": {
+        "range": 270
+      },
+      "daily_structure_distribution": {
+        "range": 270
+      },
+      "day_type_unknown_pct": 0.0,
+      "daily_structure_unknown_pct": 0.0
+    },
+    "5_prefeed_gate": {
+      "hasattr_htf_warmup_data": true,
+      "htf_warmup_data_is_none": false,
+      "id_htf_warmup_data": 277612738063232,
+      "type_htf_warmup_data": "<class 'dict'>",
+      "len_htf_warmup_data": 1,
+      "bool_htf_warmup_data": true,
+      "keys_htf_warmup_data": [
+        "SPY"
+      ],
+      "combined_data_is_none": false,
+      "config_start_date": "2025-08-01",
+      "config_end_date": "2025-08-01",
+      "config_htf_warmup_days": 40,
+      "SPY_type": "<class 'pandas.core.frame.DataFrame'>",
+      "SPY_len": 22939
+    }
+  }
+}
