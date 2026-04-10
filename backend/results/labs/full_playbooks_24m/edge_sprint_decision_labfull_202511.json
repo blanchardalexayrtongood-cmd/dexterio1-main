@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-04-10T12:00:00Z",
+  "lab_run_id": "labfull_202511",
+  "verdict_global": "NO_SECOND_EDGE",
+  "summary_fr": "Sur nov 2025 SPY+QQQ, après patch sprint (gates candidats LSS/NF), le lab reste 100 % NY_Open_Reversal (167 trades). Aucun trade Liquidity_Sweep_Scalp ni News_Fade. La comparaison avant/après est nulle sur les agrégats car le patch ne cible pas NY et les candidats ne passent toujours pas le funnel.",
+  "references": {
+    "comparison": "backend/results/labs/full_playbooks_24m/edge_candidate_comparison_labfull_202511.json",
+    "candidates_spec": "backend/results/labs/full_playbooks_24m/edge_sprint_candidates_labfull_202511.json",
+    "candidates_alt_id": "backend/results/labs/full_playbooks_24m/edge_sprint_candidates_edge_sprint_20260409.json",
+    "framework": "backend/docs/COMMON_EDGE_FRAMEWORK.md"
+  },
+  "decisions_by_candidate": [
+    {
+      "playbook": "Liquidity_Sweep_Scalp",
+      "verdict": "REFINE_OR_KILL",
+      "confidence": "high",
+      "rationale_fr": "Zéro exécution sur run court et sur lab 1 mois ; aucune preuve d'edge. Les rejets dominants restent no_liquidity_event, regime_chop et no_playbook_match — le sprint n'a pas ouvert de volume tradable sans assouplir hors périmètre.",
+      "next_actions_suggested": [
+        "Si poursuite : instrumenter matches LSS vs raison de rejet après match (hors scope patch minimal actuel).",
+        "Sinon : retirer des candidats sprint ou laisser en quarantaine jusqu'à nouvelle preuve sur autre fenêtre."
+      ]
+    },
+    {
+      "playbook": "News_Fade",
+      "verdict": "KILL_OR_QUARANTINE",
+      "confidence": "high",
+      "rationale_fr": "Même constat : 0 trade ; risque de faux edge déjà noté 'high' dans la fiche candidat. Pas de signal pour réactiver hors NY.",
+      "next_actions_suggested": [
+        "Ne pas élargir allowlist ; garder gates sweep/structure/RR stricts si re-test ultérieur sur calendrier news explicite."
+      ]
+    }
+  ],
+  "ny_open_reversal": {
+    "verdict": "UNCHANGED",
+    "note_fr": "Conformément au périmètre sprint, la logique métier NY n'a pas été modifiée ; les métriques lab NY restent les seules contributrices."
+  }
+}

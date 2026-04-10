@@ -1,0 +1,503 @@
+{
+  "run_id": "ref_validation_20260409",
+  "config": {
+    "start_date": "2025-08-04",
+    "end_date": "2025-08-08",
+    "htf_warmup_days": 40,
+    "trading_mode": "AGGRESSIVE",
+    "trade_types": [
+      "DAILY",
+      "SCALP"
+    ],
+    "symbols": [
+      "SPY"
+    ]
+  },
+  "counts": {
+    "candles_loaded_1m": 1955,
+    "candles_loaded_htf": {
+      "SPY_1d": 26,
+      "SPY_4h": 30,
+      "SPY_1h": 50
+    },
+    "setups_detected_total": 0,
+    "setups_rejected_total": 0,
+    "setups_accepted_total": 0,
+    "setups_rejected_by_mode": 567,
+    "setups_rejected_by_trade_types": 0,
+    "trades_opened_total": 10,
+    "trades_closed_total": 10,
+    "reject_reasons": {},
+    "bars_processed": 1955,
+    "playbooks_registered_count": 27,
+    "playbooks_registered_names": [
+      "NY_Open_Reversal",
+      "London_Sweep_NY_Continuation",
+      "Trend_Continuation_FVG_Retest",
+      "Morning_Trap_Reversal",
+      "Power_Hour_Expansion",
+      "News_Fade",
+      "Liquidity_Sweep_Scalp",
+      "FVG_Fill_Scalp",
+      "BOS_Momentum_Scalp",
+      "Session_Open_Scalp",
+      "Lunch_Range_Scalp",
+      "Opening_Range_Breakout_NY",
+      "VWAP_Reclaim_Trend_Day",
+      "NY_Lunch_Breakout_Reprice",
+      "London_Reversal_Into_NY",
+      "PM_Trend_Continuation_2PM",
+      "Micro_Pullback_Scalp_M1",
+      "IFVG_Flip_Scalp",
+      "SMT_Divergence_Scalp",
+      "News_Reclaim_Scalp",
+      "Close_Reversion_Scalp",
+      "Opening_Drive_Continuation_SAFE",
+      "VWAP_Failure_Reversal_SAFE",
+      "Midday_Compression_Break_SAFE",
+      "PowerHour_Pullback_SAFE",
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+    ],
+    "playbooks_evaluated_total": 1955,
+    "playbooks_evaluated_unique": {},
+    "matches_total": 2624,
+    "matches_by_playbook": {
+      "Session_Open_Scalp": 67,
+      "NY_Lunch_Breakout_Reprice": 242,
+      "Midday_Compression_Break_SAFE": 242,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 276,
+      "Morning_Trap_Reversal": 236,
+      "Liquidity_Sweep_Scalp": 214,
+      "London_Reversal_Into_NY": 223,
+      "IFVG_Flip_Scalp": 214,
+      "SMT_Divergence_Scalp": 222,
+      "Close_Reversion_Scalp": 223,
+      "VWAP_Failure_Reversal_SAFE": 223,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 242
+    },
+    "setups_created_total": 687,
+    "setups_created_by_playbook": {
+      "Morning_Trap_Reversal": 163,
+      "Liquidity_Sweep_Scalp": 150,
+      "Session_Open_Scalp": 10,
+      "NY_Lunch_Breakout_Reprice": 40,
+      "London_Reversal_Into_NY": 40,
+      "IFVG_Flip_Scalp": 40,
+      "SMT_Divergence_Scalp": 40,
+      "Close_Reversion_Scalp": 40,
+      "VWAP_Failure_Reversal_SAFE": 40,
+      "Midday_Compression_Break_SAFE": 40,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 42,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 42
+    },
+    "setups_after_risk_filter_total": 10,
+    "setups_after_risk_filter_by_playbook": {
+      "Session_Open_Scalp": 10
+    },
+    "trades_open_attempted_total": 10,
+    "trades_open_rejected_by_reason": {},
+    "setups_detected_by_playbook": {
+      "Morning_Trap_Reversal": 163,
+      "Liquidity_Sweep_Scalp": 150,
+      "Session_Open_Scalp": 10,
+      "NY_Lunch_Breakout_Reprice": 40,
+      "London_Reversal_Into_NY": 40,
+      "IFVG_Flip_Scalp": 40,
+      "SMT_Divergence_Scalp": 40,
+      "Close_Reversion_Scalp": 40,
+      "VWAP_Failure_Reversal_SAFE": 40,
+      "Midday_Compression_Break_SAFE": 40,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 42,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 42
+    },
+    "setups_rejected_by_reason": {
+      "rejected_by_mode": 567
+    },
+    "setups_rejected_by_mode_by_playbook": {
+      "Morning_Trap_Reversal": 163,
+      "Liquidity_Sweep_Scalp": 150,
+      "NY_Lunch_Breakout_Reprice": 40,
+      "London_Reversal_Into_NY": 40,
+      "IFVG_Flip_Scalp": 40,
+      "SMT_Divergence_Scalp": 40,
+      "Close_Reversion_Scalp": 40,
+      "VWAP_Failure_Reversal_SAFE": 40,
+      "Midday_Compression_Break_SAFE": 40,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 42,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 42
+    },
+    "setups_rejected_by_mode_examples": [
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "Liquidity_Sweep_Scalp",
+        "raw_playbook_name": "Liquidity_Sweep_Scalp",
+        "reason": "Playbook 'Liquidity_Sweep_Scalp' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "NY_Lunch_Breakout_Reprice",
+        "raw_playbook_name": "NY_Lunch_Breakout_Reprice",
+        "reason": "Playbook 'NY_Lunch_Breakout_Reprice' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "London_Reversal_Into_NY",
+        "raw_playbook_name": "London_Reversal_Into_NY",
+        "reason": "Playbook 'London_Reversal_Into_NY' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      },
+      {
+        "playbook_name": "IFVG_Flip_Scalp",
+        "raw_playbook_name": "IFVG_Flip_Scalp",
+        "reason": "Playbook 'IFVG_Flip_Scalp' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      }
+    ],
+    "missing_playbook_name": 0,
+    "risk_mode_used": "AGGRESSIVE",
+    "risk_allowlist_snapshot": {
+      "aggressive": {
+        "len": 6,
+        "first5": [
+          "News_Fade",
+          "Session_Open_Scalp",
+          "NY_Open_Reversal",
+          "Morning_Trap_Reversal",
+          "Liquidity_Sweep_Scalp"
+        ]
+      },
+      "safe": {
+        "len": 0,
+        "first5": []
+      }
+    },
+    "risk_rejects_by_playbook": {
+      "Morning_Trap_Reversal": 1,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 1,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 1
+    },
+    "risk_reject_examples": [
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "raw_playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "reason": "Playbook 'DAY_Aplus_1_Liquidity_Sweep_OB_Retest' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "raw_playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "reason": "Playbook 'SCALP_Aplus_1_Mini_FVG_Retest_NY_Open' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      }
+    ],
+    "risk_input_setups_len": 3,
+    "risk_output_setups_len": 0,
+    "risk_first3_input_playbooks": [
+      "Morning_Trap_Reversal",
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+    ],
+    "risk_first3_output_playbooks": [],
+    "caps_snapshot": {
+      "aggressive": {
+        "daily_cap": 80,
+        "per_playbook_session_cap": 10,
+        "hard_daily_cap": 80,
+        "n_active_playbooks": 27
+      },
+      "safe": {
+        "daily_cap": 20,
+        "per_playbook_session_cap": 3
+      }
+    },
+    "trades_opened_by_playbook": {
+      "Session_Open_Scalp": 10
+    },
+    "trades_attempted_by_playbook": {
+      "Session_Open_Scalp": 10
+    },
+    "session_limit_reached_by_playbook": {},
+    "session_key_used": "2025-08-04|ny|0800-1200NY",
+    "grade_counts_by_playbook": {
+      "Session_Open_Scalp": {
+        "A+": 0,
+        "A": 0,
+        "B": 0,
+        "C": 10,
+        "UNKNOWN": 0
+      }
+    },
+    "trade_context_snapshots": [
+      {
+        "timestamp": "2025-08-04T14:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.23,
+            "low": 626.18,
+            "close": 628.495,
+            "range": 3.050000000000068
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T14:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.23,
+            "low": 626.18,
+            "close": 629.06,
+            "range": 3.050000000000068
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T14:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.29,
+            "low": 626.18,
+            "close": 629.055,
+            "range": 3.1100000000000136
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T14:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.29,
+            "low": 626.18,
+            "close": 629.115,
+            "range": 3.1100000000000136
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T14:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.4989,
+            "low": 626.18,
+            "close": 629.4,
+            "range": 3.3189000000000988
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T14:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.4989,
+            "low": 626.18,
+            "close": 629.12,
+            "range": 3.3189000000000988
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T14:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 629.4989,
+            "low": 626.18,
+            "close": 629.26,
+            "range": 3.3189000000000988
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T16:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 630.0206,
+            "low": 626.18,
+            "close": 629.75,
+            "range": 3.840599999999995
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T17:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 630.42,
+            "low": 626.18,
+            "close": 630.235,
+            "range": 4.240000000000009
+          }
+        }
+      },
+      {
+        "timestamp": "2025-08-04T17:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-08-04|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "unknown",
+        "session_states": {
+          "ny": {
+            "open": 626.18,
+            "high": 630.51,
+            "low": 626.18,
+            "close": 630.51,
+            "range": 4.330000000000041
+          }
+        }
+      }
+    ],
+    "symbols_processed": [
+      "SPY"
+    ],
+    "metrics_by_symbol": {
+      "SPY": {
+        "trades": 10,
+        "wins": 3,
+        "winrate": 30.0,
+        "avg_r": -0.020708944999999708,
+        "total_r": -0.20708944999999707
+      }
+    },
+    "trades_opened_by_minute": {
+      "2025-08-04T14:09:00+00:00": 1,
+      "2025-08-04T14:14:00+00:00": 1,
+      "2025-08-04T14:19:00+00:00": 1,
+      "2025-08-04T14:24:00+00:00": 1,
+      "2025-08-04T14:29:00+00:00": 1,
+      "2025-08-04T14:34:00+00:00": 1,
+      "2025-08-04T14:39:00+00:00": 1,
+      "2025-08-04T16:14:00+00:00": 1,
+      "2025-08-04T17:04:00+00:00": 1,
+      "2025-08-04T17:14:00+00:00": 1
+    },
+    "trades_opened_by_minute_by_symbol": {
+      "2025-08-04T14:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T14:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T14:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T14:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T14:29:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T14:34:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T14:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T16:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T17:04:00+00:00": {
+        "SPY": 1
+      },
+      "2025-08-04T17:14:00+00:00": {
+        "SPY": 1
+      }
+    },
+    "blocked_by_per_minute_cap": 0,
+    "setup_engine_reject_reasons": {
+      "no_playbook_match": 1679,
+      "high_indecision_continuation": 999,
+      "direction_ambiguous": 1937,
+      "setup_creation_failed": 1937,
+      "low_conviction_reversal": 137
+    }
+  }
+}

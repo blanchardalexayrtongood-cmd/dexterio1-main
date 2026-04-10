@@ -1,0 +1,214 @@
+{
+  "run_id": "edge_filter_validation_20260409",
+  "config": {
+    "start_date": "2025-08-04",
+    "end_date": "2025-08-08",
+    "htf_warmup_days": 40,
+    "trading_mode": "AGGRESSIVE",
+    "trade_types": [
+      "DAILY",
+      "SCALP"
+    ],
+    "symbols": [
+      "SPY"
+    ]
+  },
+  "counts": {
+    "candles_loaded_1m": 1955,
+    "candles_loaded_htf": {
+      "SPY_1d": 26,
+      "SPY_4h": 30,
+      "SPY_1h": 50
+    },
+    "setups_detected_total": 0,
+    "setups_rejected_total": 0,
+    "setups_accepted_total": 0,
+    "setups_rejected_by_mode": 74,
+    "setups_rejected_by_trade_types": 0,
+    "trades_opened_total": 0,
+    "trades_closed_total": 0,
+    "reject_reasons": {},
+    "bars_processed": 1955,
+    "playbooks_registered_count": 27,
+    "playbooks_registered_names": [
+      "NY_Open_Reversal",
+      "London_Sweep_NY_Continuation",
+      "Trend_Continuation_FVG_Retest",
+      "Morning_Trap_Reversal",
+      "Power_Hour_Expansion",
+      "News_Fade",
+      "Liquidity_Sweep_Scalp",
+      "FVG_Fill_Scalp",
+      "BOS_Momentum_Scalp",
+      "Session_Open_Scalp",
+      "Lunch_Range_Scalp",
+      "Opening_Range_Breakout_NY",
+      "VWAP_Reclaim_Trend_Day",
+      "NY_Lunch_Breakout_Reprice",
+      "London_Reversal_Into_NY",
+      "PM_Trend_Continuation_2PM",
+      "Micro_Pullback_Scalp_M1",
+      "IFVG_Flip_Scalp",
+      "SMT_Divergence_Scalp",
+      "News_Reclaim_Scalp",
+      "Close_Reversion_Scalp",
+      "Opening_Drive_Continuation_SAFE",
+      "VWAP_Failure_Reversal_SAFE",
+      "Midday_Compression_Break_SAFE",
+      "PowerHour_Pullback_SAFE",
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+    ],
+    "playbooks_evaluated_total": 1955,
+    "playbooks_evaluated_unique": {},
+    "matches_total": 2624,
+    "matches_by_playbook": {
+      "Session_Open_Scalp": 67,
+      "NY_Lunch_Breakout_Reprice": 242,
+      "Midday_Compression_Break_SAFE": 242,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 276,
+      "Morning_Trap_Reversal": 236,
+      "Liquidity_Sweep_Scalp": 214,
+      "London_Reversal_Into_NY": 223,
+      "IFVG_Flip_Scalp": 214,
+      "SMT_Divergence_Scalp": 222,
+      "Close_Reversion_Scalp": 223,
+      "VWAP_Failure_Reversal_SAFE": 223,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 242
+    },
+    "setups_created_total": 74,
+    "setups_created_by_playbook": {
+      "Morning_Trap_Reversal": 74
+    },
+    "setups_after_risk_filter_total": 0,
+    "setups_after_risk_filter_by_playbook": {},
+    "trades_open_attempted_total": 0,
+    "trades_open_rejected_by_reason": {},
+    "setups_detected_by_playbook": {
+      "Morning_Trap_Reversal": 74
+    },
+    "setups_rejected_by_reason": {
+      "rejected_by_mode": 74
+    },
+    "setups_rejected_by_mode_by_playbook": {
+      "Morning_Trap_Reversal": 74
+    },
+    "setups_rejected_by_mode_examples": [
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      }
+    ],
+    "missing_playbook_name": 0,
+    "risk_mode_used": "AGGRESSIVE",
+    "risk_allowlist_snapshot": {
+      "aggressive": {
+        "len": 6,
+        "first5": [
+          "News_Fade",
+          "Session_Open_Scalp",
+          "NY_Open_Reversal",
+          "Morning_Trap_Reversal",
+          "Liquidity_Sweep_Scalp"
+        ]
+      },
+      "safe": {
+        "len": 0,
+        "first5": []
+      }
+    },
+    "risk_rejects_by_playbook": {
+      "Morning_Trap_Reversal": 1
+    },
+    "risk_reject_examples": [
+      {
+        "playbook_name": "Morning_Trap_Reversal",
+        "raw_playbook_name": "Morning_Trap_Reversal",
+        "reason": "Playbook 'Morning_Trap_Reversal' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": true,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      }
+    ],
+    "risk_input_setups_len": 1,
+    "risk_output_setups_len": 0,
+    "risk_first3_input_playbooks": [
+      "Morning_Trap_Reversal"
+    ],
+    "risk_first3_output_playbooks": [],
+    "caps_snapshot": {
+      "aggressive": {
+        "daily_cap": 80,
+        "per_playbook_session_cap": 10,
+        "hard_daily_cap": 80,
+        "n_active_playbooks": 27
+      },
+      "safe": {
+        "daily_cap": 20,
+        "per_playbook_session_cap": 3
+      }
+    },
+    "trades_opened_by_playbook": {},
+    "trades_attempted_by_playbook": {},
+    "session_limit_reached_by_playbook": {},
+    "session_key_used": "",
+    "grade_counts_by_playbook": {},
+    "trade_context_snapshots": [],
+    "symbols_processed": [],
+    "metrics_by_symbol": {},
+    "trades_opened_by_minute": {},
+    "trades_opened_by_minute_by_symbol": {},
+    "blocked_by_per_minute_cap": 0,
+    "setup_engine_reject_reasons": {
+      "no_playbook_match": 1679,
+      "high_indecision_continuation": 872,
+      "direction_ambiguous": 901,
+      "setup_creation_failed": 2550,
+      "regime_chop": 1581,
+      "no_liquidity_event": 68,
+      "low_conviction_reversal": 29
+    }
+  }
+}

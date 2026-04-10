@@ -1,0 +1,91 @@
+{
+  "schema_version": "1.0",
+  "generated_at_utc": "2026-04-10T12:00:00Z",
+  "lab_run_id": "labfull_202511",
+  "sprint_patch_ref": "EDGE_SPRINT_CANDIDATE_RULES (Liquidity_Sweep_Scalp, News_Fade) dans backend/engines/setup_engine_v2.py",
+  "lab_command_after": "python backend/scripts/run_full_playbooks_lab.py --months 1 --anchor-end 2025-11-28 --symbols SPY,QQQ --respect-allowlists",
+  "lab_env": {
+    "RISK_EVAL_ALLOW_ALL_PLAYBOOKS": "false",
+    "RISK_EVAL_RELAX_CAPS": "true",
+    "RISK_EVAL_DISABLE_KILL_SWITCH": "true"
+  },
+  "window": {
+    "start_date": "2025-11-03T14:30:00+00:00",
+    "end_date": "2025-11-28T21:00:00+00:00",
+    "symbols": ["SPY", "QQQ"]
+  },
+  "before": {
+    "description": "Métriques lab nov 2025 avant re-run de cette session (fichiers lus avant écrasement ; identiques au run post-patch sur les agrégats).",
+    "artifacts": [
+      "backend/results/labs/full_playbooks_24m/summary_labfull_202511_AGGRESSIVE_DAILY_SCALP.json",
+      "backend/results/labs/full_playbooks_24m/debug_counts_labfull_202511.json",
+      "backend/results/labs/full_playbooks_24m/playbook_stats_labfull_202511.json"
+    ],
+    "total_trades": 167,
+    "stats_by_playbook": {
+      "NY_Open_Reversal": 167,
+      "Liquidity_Sweep_Scalp": 0,
+      "News_Fade": 0
+    },
+    "expectancy_r": 0.08648925933083454,
+    "profit_factor": 1.6253618369256801,
+    "winrate": 0.49700598802395206,
+    "setup_engine_reject_reasons": {
+      "regime_chop": 6783,
+      "no_liquidity_event": 11418,
+      "rr_too_low": 0,
+      "no_playbook_match": 12211,
+      "high_indecision_continuation": 2240,
+      "direction_ambiguous": 2438,
+      "low_conviction_reversal": 198
+    }
+  },
+  "after": {
+    "description": "Re-run immédiat après sprint (même fenêtre, même commande lab).",
+    "artifacts": [
+      "backend/results/labs/full_playbooks_24m/summary_labfull_202511_AGGRESSIVE_DAILY_SCALP.json",
+      "backend/results/labs/full_playbooks_24m/debug_counts_labfull_202511.json",
+      "backend/results/labs/full_playbooks_24m/playbook_stats_labfull_202511.json"
+    ],
+    "total_trades": 167,
+    "stats_by_playbook": {
+      "NY_Open_Reversal": 167,
+      "Liquidity_Sweep_Scalp": 0,
+      "News_Fade": 0
+    },
+    "expectancy_r": 0.08648925933083454,
+    "profit_factor": 1.6253618369256801,
+    "winrate": 0.49700598802395206,
+    "setup_engine_reject_reasons": {
+      "regime_chop": 6783,
+      "no_liquidity_event": 11418,
+      "rr_too_low": 0,
+      "no_playbook_match": 12211,
+      "high_indecision_continuation": 2240,
+      "direction_ambiguous": 2438,
+      "low_conviction_reversal": 198
+    }
+  },
+  "delta": {
+    "total_trades": 0,
+    "expectancy_r": 0.0,
+    "profit_factor": 0.0,
+    "candidate_structure_too_low_observed": false,
+    "interpretation": "Aucun changement sur les totaux : NY_Open_Reversal inchangé par design ; Liquidity_Sweep_Scalp et News_Fade n'ont toujours aucun trade. La clé candidate_structure_too_low n'apparaît pas dans debug_counts (compteur nul sur toute la fenêtre)."
+  },
+  "short_run_reference": {
+    "run_id": "edge_sprint_short_20260409",
+    "artifacts": [
+      "backend/results/ref_runs/summary_edge_sprint_short_20260409_AGGRESSIVE_DAILY_SCALP.json",
+      "backend/results/ref_runs/playbook_stats_edge_sprint_short_20260409.json",
+      "backend/results/ref_runs/debug_counts_edge_sprint_short_20260409.json"
+    ],
+    "total_trades": 44,
+    "stats_by_playbook": {
+      "NY_Open_Reversal": 44,
+      "Liquidity_Sweep_Scalp": 0,
+      "News_Fade": 0
+    },
+    "note": "Run court SPY seul ; NY désactivé en fin de fenêtre côté stats playbook (PF kill-switch simulé après 30 trades) — sans impact sur le lab 1 mois (kill switch lab désactivé)."
+  }
+}

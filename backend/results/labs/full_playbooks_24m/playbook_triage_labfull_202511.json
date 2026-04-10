@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-04-09T17:49:08.322007+00:00",
+  "run_id": "labfull_202511",
+  "policy_guardrails": {
+    "ny_open_reversal_unchanged": true,
+    "session_open_scalp_lab_only": true,
+    "trend_continuation_quarantined": true
+  },
+  "playbooks": [
+    {
+      "playbook": "NY_Open_Reversal",
+      "decision": "KEEP",
+      "metrics": {
+        "trades": 167,
+        "total_r": 14.443706,
+        "avg_r": 0.086489,
+        "winrate_pct": 49.7006,
+        "max_drawdown_r": 6.318895
+      },
+      "regime_sensitivity_note": "edge stable",
+      "reasons": [
+        "positive_edge_with_volume"
+      ]
+    }
+  ]
+}

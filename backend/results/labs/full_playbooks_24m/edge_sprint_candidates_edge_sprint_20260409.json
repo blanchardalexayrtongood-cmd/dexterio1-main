@@ -1,0 +1,84 @@
+{
+  "schema_version": "1.0",
+  "run_id": "edge_sprint_20260409",
+  "baseline_run_id": "labfull_202511",
+  "candidates": [
+    {
+      "priority_rank": 1,
+      "playbook": "Liquidity_Sweep_Scalp",
+      "why_selected": "Allowlist AGGRESSIVE actif, dépendance sweep native, compatible framework commun liquidité/structure/régime/RR.",
+      "strengths": [
+        "liquidity_event centric",
+        "compatible session NY",
+        "testable avec gates strictes"
+      ],
+      "weaknesses": [
+        "historique sans exécution récente",
+        "sensible au chop"
+      ],
+      "evidence_from_artifacts": [
+        "next_edge_candidates_labfull_202511: REFINE prioritaire",
+        "playbook_capability_audit_labfull_202511: partially_grounded avec sweep/structure",
+        "edge_learning_matrix_labfull_202511: aucun 2e edge actif hors NY"
+      ],
+      "first_hypothesis": "Viable uniquement si sweep réel + structure >= 0.50 + RR >= 1.5, avec tolérance chop strictement conditionnelle.",
+      "risk_of_false_edge": "medium",
+      "hypothesis": "Le playbook peut émerger hors NY si le signal de liquidité est réel et la structure non dégradée.",
+      "reject_conditions": [
+        "no_liquidity_event",
+        "candidate_structure_too_low",
+        "rr_too_low",
+        "regime_chop"
+      ],
+      "success_conditions": [
+        "trades > 0 sans explosion volume",
+        "expectancy >= 0",
+        "post_run_verification pass"
+      ],
+      "minimal_changes_allowed": [
+        "candidate-only sweep gating",
+        "candidate-only structure min",
+        "candidate-only RR min",
+        "candidate-only chop tolerance with strict conditions"
+      ]
+    },
+    {
+      "priority_rank": 2,
+      "playbook": "News_Fade",
+      "why_selected": "Allowlist AGGRESSIVE actif, logique contrarian testable, potentiel événementiel si sweep confirmé.",
+      "strengths": [
+        "événementiel",
+        "risque borné par RR et structure",
+        "compatible framework commun"
+      ],
+      "weaknesses": [
+        "risque de faux edge en chop",
+        "fréquence potentiellement faible"
+      ],
+      "evidence_from_artifacts": [
+        "next_edge_candidates_labfull_202511: REFINE",
+        "playbook_capability_audit_labfull_202511: partially_grounded",
+        "market_data_audit_labfull_202511: données temps/prix fiables -> test interprétable"
+      ],
+      "first_hypothesis": "Viable uniquement sur confluence sweep + structure >= 0.52 + RR >= 1.8, sans desserrer protections globales.",
+      "risk_of_false_edge": "high",
+      "hypothesis": "Le playbook ne doit passer que sur évènement de liquidité net et contexte structurel propre.",
+      "reject_conditions": [
+        "no_liquidity_event",
+        "candidate_structure_too_low",
+        "rr_too_low",
+        "regime_chop"
+      ],
+      "success_conditions": [
+        "quelques trades max",
+        "qualité >= baseline sans dégrader expectancy globale"
+      ],
+      "minimal_changes_allowed": [
+        "candidate-only sweep gating",
+        "candidate-only structure min",
+        "candidate-only RR min",
+        "candidate-only chop tolerance with strict conditions"
+      ]
+    }
+  ]
+}

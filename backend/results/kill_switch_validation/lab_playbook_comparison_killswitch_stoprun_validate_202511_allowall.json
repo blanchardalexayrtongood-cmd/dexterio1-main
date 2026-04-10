@@ -1,0 +1,335 @@
+{
+  "run_id": "killswitch_stoprun_validate_202511_allowall",
+  "trading_mode": "AGGRESSIVE",
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "start_date": "2025-11-01",
+  "end_date": "2025-11-30",
+  "playbooks": [
+    {
+      "playbook": "BOS_Momentum_Scalp",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Entr\u00e9e AGGRESSIVE_DENYLIST \u2014 voir backend/engines/risk_engine.py"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Entr\u00e9e AGGRESSIVE_DENYLIST \u2014 voir backend/engines/risk_engine.py"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "FVG_Fill_Scalp",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": true,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": false,
+      "policy_notes": [],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "IFVG_Flip_Scalp",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": false,
+      "policy_notes": [],
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": -0.86639,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {
+        "ny": 2
+      }
+    },
+    {
+      "playbook": "Liquidity_Sweep_Scalp",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": true,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Quarantaine YAML: high_loss_r"
+      ],
+      "trades": 17,
+      "wins": 1,
+      "losses": 16,
+      "breakevens": 0,
+      "winrate_pct": 5.8824,
+      "total_R": -2.403062,
+      "profit_factor": 0.041321,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {
+        "ny": 17
+      }
+    },
+    {
+      "playbook": "London_Sweep_NY_Continuation",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Entr\u00e9e AGGRESSIVE_DENYLIST \u2014 voir backend/engines/risk_engine.py"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "Lunch_Range_Scalp",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Entr\u00e9e AGGRESSIVE_DENYLIST \u2014 voir backend/engines/risk_engine.py"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "Midday_Compression_Break_SAFE",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": false,
+      "policy_notes": [],
+      "trades": 18,
+      "wins": 4,
+      "losses": 14,
+      "breakevens": 0,
+      "winrate_pct": 22.2222,
+      "total_R": -1.354031,
+      "profit_factor": 0.28886,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {
+        "ny": 18
+      }
+    },
+    {
+      "playbook": "Morning_Trap_Reversal",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": true,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Quarantaine YAML: high_loss_r"
+      ],
+      "trades": 10,
+      "wins": 4,
+      "losses": 6,
+      "breakevens": 0,
+      "winrate_pct": 40.0,
+      "total_R": 0.801554,
+      "profit_factor": 1.458321,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {
+        "ny": 10
+      }
+    },
+    {
+      "playbook": "NY_Lunch_Breakout_Reprice",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Quarantaine YAML: high_loss_r"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "NY_Open_Reversal",
+      "lab_reference_baseline": true,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": true,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": false,
+      "policy_notes": [],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "News_Fade",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": true,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": false,
+      "policy_notes": [],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "Power_Hour_Expansion",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Entr\u00e9e AGGRESSIVE_DENYLIST \u2014 voir backend/engines/risk_engine.py"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+      "lab_reference_baseline": false,
+      "lab_only_policy": false,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": true,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "Entr\u00e9e AGGRESSIVE_DENYLIST \u2014 voir backend/engines/risk_engine.py",
+        "Quarantaine YAML: high_loss_r"
+      ],
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": -0.06603,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {
+        "ny": 1
+      }
+    },
+    {
+      "playbook": "Session_Open_Scalp",
+      "lab_reference_baseline": false,
+      "lab_only_policy": true,
+      "on_aggressive_allowlist": true,
+      "on_safe_policy_allowlist": false,
+      "blocked_by_deny_or_quarantine": false,
+      "policy_notes": [
+        "SAFE policy: LAB_ONLY/QUARANTINED (non autoris\u00e9 en SAFE)"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    },
+    {
+      "playbook": "Trend_Continuation_FVG_Retest",
+      "lab_reference_baseline": false,
+      "lab_only_policy": true,
+      "on_aggressive_allowlist": false,
+      "on_safe_policy_allowlist": false,
+      "blocked_by_deny_or_quarantine": true,
+      "policy_notes": [
+        "AGGRESSIVE_DENYLIST \u2014 lab Nov 2025 SPY+QQQ (1 mois): -22.32R, PF 0.0, 98 trades (MarketState.current_session corrig\u00e9)",
+        "Quarantaine YAML: lab_nov_2025_spy_qqq_1m: -22.32R net, PF 0.0, 98 trades (MarketState.current_session corrig\u00e9) \u2014 playbook retir\u00e9 de AGGRESSIVE_ALLOWLIST et ajout\u00e9 \u00e0 AGGRESSIVE_DENYLIST",
+        "SAFE policy: LAB_ONLY/QUARANTINED (non autoris\u00e9 en SAFE)"
+      ],
+      "trades": 0,
+      "wins": 0,
+      "losses": 0,
+      "breakevens": 0,
+      "winrate_pct": 0.0,
+      "total_R": 0,
+      "profit_factor": 0.0,
+      "profit_factor_is_infinite": false,
+      "session_distribution": {}
+    }
+  ]
+}

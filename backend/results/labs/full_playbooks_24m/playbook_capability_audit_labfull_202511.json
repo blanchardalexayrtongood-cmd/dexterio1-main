@@ -1,0 +1,681 @@
+{
+  "schema_version": "1.0",
+  "run_id": "labfull_202511",
+  "playbooks": [
+    {
+      "playbook": "BOS_Momentum_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.5,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Close_Reversion_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "FVG_Fill_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.5,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "IFVG_Flip_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Liquidity_Sweep_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.55,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "London_Reversal_Into_NY",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "London_Sweep_NY_Continuation",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Lunch_Range_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.55,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Micro_Pullback_Scalp_M1",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Midday_Compression_Break_SAFE",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Morning_Trap_Reversal",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.5,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "NY_Lunch_Breakout_Reprice",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "NY_Open_Reversal",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "News_Fade",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "News_Reclaim_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Opening_Drive_Continuation_SAFE",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.7,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "structurally_grounded"
+    },
+    {
+      "playbook": "Opening_Range_Breakout_NY",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.5,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "PM_Trend_Continuation_2PM",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.7,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "structurally_grounded"
+    },
+    {
+      "playbook": "PowerHour_Pullback_SAFE",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.7,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "structurally_grounded"
+    },
+    {
+      "playbook": "Power_Hour_Expansion",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.5,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "SMT_Divergence_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Session_Open_Scalp",
+      "category": "SCALP",
+      "market_inputs_used": [
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.38,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "Trend_Continuation_FVG_Retest",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.7,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "structurally_grounded"
+    },
+    {
+      "playbook": "VWAP_Failure_Reversal_SAFE",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "liquidity_sweep_score",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure",
+        "sweep"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure",
+        "sweep"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness",
+        "sweep"
+      ],
+      "structure_reliance_score": 0.4,
+      "pattern_reliance_score": 0.4,
+      "regime_reliance_score": 0.6,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "partially_grounded"
+    },
+    {
+      "playbook": "VWAP_Reclaim_Trend_Day",
+      "category": "DAYTRADE",
+      "market_inputs_used": [
+        "fvg",
+        "pattern_quality",
+        "regime",
+        "rr",
+        "session",
+        "structure"
+      ],
+      "market_inputs_required": [
+        "regime",
+        "rr",
+        "structure"
+      ],
+      "weak_dependencies": [],
+      "strong_dependencies": [
+        "market_structure_awareness"
+      ],
+      "structure_reliance_score": 0.7,
+      "pattern_reliance_score": 0.45,
+      "regime_reliance_score": 0.8,
+      "notes": "derived from playbooks.yml context_requirements/ict_confluences/scoring.weights",
+      "verdict": "structurally_grounded"
+    }
+  ]
+}
