@@ -1,0 +1,35 @@
+{
+  "schema_version": "CampaignGateVerdictV0",
+  "verdict": "BACKTEST_READY_BUT_NOT_PAPER_READY",
+  "reasons": [],
+  "paper_blockers": [
+    "playbooks_yaml non null : campagne YAML dérivée — hors noyau canon pour paper limité standard"
+  ],
+  "checks": [
+    {
+      "id": "summary.data_coverage_ok",
+      "ok": true
+    },
+    {
+      "id": "manifest.data_coverage.coverage_ok",
+      "ok": true
+    },
+    {
+      "id": "manifest.run_id_matches_summary",
+      "ok": true
+    },
+    {
+      "id": "summary.trade_metrics_parquet",
+      "ok": true
+    }
+  ],
+  "reference_playbook_set": [
+    "News_Fade",
+    "Session_Open_Scalp",
+    "NY_Open_Reversal",
+    "Morning_Trap_Reversal",
+    "Liquidity_Sweep_Scalp",
+    "FVG_Fill_Scalp"
+  ],
+  "note": "Verdict documentaire — décision produit finale reste humaine (NF gate, Wave2, etc.)."
+}

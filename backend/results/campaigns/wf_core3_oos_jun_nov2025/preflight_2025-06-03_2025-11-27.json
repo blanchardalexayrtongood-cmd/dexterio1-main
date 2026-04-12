@@ -1,0 +1,30 @@
+{
+  "ok": true,
+  "warmup_start_utc": "2025-05-04T00:00:00+00:00",
+  "start_utc": "2025-06-03T00:00:00+00:00",
+  "end_exclusive_utc": "2025-11-28T00:00:00+00:00",
+  "htf_warmup_days": 30,
+  "by_path": [
+    {
+      "path": "/home/dexter/dexterio1-main/data/historical/1m/SPY.parquet",
+      "exists": true,
+      "min_utc": "2025-06-02T08:00:00+00:00",
+      "max_utc": "2025-11-28T21:59:00+00:00",
+      "rows": 105822,
+      "symbol": "SPY"
+    },
+    {
+      "path": "/home/dexter/dexterio1-main/data/historical/1m/QQQ.parquet",
+      "exists": true,
+      "min_utc": "2025-06-02T08:00:00+00:00",
+      "max_utc": "2025-11-28T21:59:00+00:00",
+      "rows": 110752,
+      "symbol": "QQQ"
+    }
+  ],
+  "warnings": [
+    "SPY: warmup HTF potentiellement incomplet (min 2025-06-02 08:00:00+00:00 > warmup_start 2025-05-04 00:00:00+00:00)",
+    "QQQ: warmup HTF potentiellement incomplet (min 2025-06-02 08:00:00+00:00 > warmup_start 2025-05-04 00:00:00+00:00)"
+  ],
+  "errors": []
+}
