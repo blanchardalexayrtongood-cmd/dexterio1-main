@@ -1,0 +1,43 @@
+{
+  "schema_version": "CampaignManifestV0",
+  "contract_version": "RunSummaryV0",
+  "run_id": "miniweek_nf_tp1_arb_1p50_oct2025_202510_w04",
+  "runner": "run_mini_lab_week.py",
+  "argv": [
+    "/home/dexter/dexterio1-main/backend/scripts/run_mini_lab_week.py",
+    "--start",
+    "2025-10-27",
+    "--end",
+    "2025-11-02",
+    "--label",
+    "202510_w04",
+    "--symbols",
+    "SPY,QQQ",
+    "--output-parent",
+    "nf_tp1_arb_1p50_oct2025",
+    "--playbooks-yaml",
+    "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+    "--nf-tp1-rr",
+    "1.5"
+  ],
+  "cwd": "/home/dexter/dexterio1-main/backend",
+  "git_sha": "eb6b245686452536fc9452d362a5d1712703e48f",
+  "run_started_at_utc": "2026-04-12T05:59:09.607914+00:00",
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "start_date": "2025-10-27",
+  "end_date": "2025-11-02",
+  "label": "202510_w04",
+  "output_parent": "nf_tp1_arb_1p50_oct2025",
+  "respect_allowlists": true,
+  "bypass_lss_quarantine": true,
+  "run_clock_mode": "BACKTEST",
+  "lab_environment": {
+    "RISK_EVAL_ALLOW_ALL_PLAYBOOKS": "false",
+    "RISK_EVAL_RELAX_CAPS": "true",
+    "RISK_EVAL_DISABLE_KILL_SWITCH": "true",
+    "RISK_BYPASS_DYNAMIC_QUARANTINE_LSS_ONLY": "true"
+  }
+}

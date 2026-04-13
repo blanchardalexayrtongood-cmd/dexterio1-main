@@ -1,0 +1,6590 @@
+{
+  "run_id": "miniweek_nf_tp1_arb_1p00_oct2025_202510_w01",
+  "config": {
+    "start_date": "2025-10-06",
+    "end_date": "2025-10-12",
+    "htf_warmup_days": 30,
+    "trading_mode": "AGGRESSIVE",
+    "trade_types": [
+      "DAILY",
+      "SCALP"
+    ],
+    "symbols": [
+      "SPY",
+      "QQQ"
+    ]
+  },
+  "counts": {
+    "candles_loaded_1m": 8598,
+    "candles_loaded_htf": {
+      "SPY_1d": 20,
+      "SPY_4h": 30,
+      "SPY_1h": 50,
+      "QQQ_1d": 20,
+      "QQQ_4h": 30,
+      "QQQ_1h": 50
+    },
+    "setups_detected_total": 0,
+    "setups_rejected_total": 0,
+    "setups_accepted_total": 0,
+    "setups_rejected_by_mode": 126,
+    "setups_rejected_by_trade_types": 0,
+    "trades_opened_total": 500,
+    "trades_closed_total": 500,
+    "reject_reasons": {},
+    "bars_processed": 8598,
+    "playbooks_registered_count": 13,
+    "playbooks_registered_names": [
+      "NY_Open_Reversal",
+      "London_Sweep_NY_Continuation",
+      "Trend_Continuation_FVG_Retest",
+      "Morning_Trap_Reversal",
+      "Power_Hour_Expansion",
+      "News_Fade",
+      "Liquidity_Sweep_Scalp",
+      "FVG_Fill_Scalp",
+      "BOS_Momentum_Scalp",
+      "Session_Open_Scalp",
+      "Lunch_Range_Scalp",
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+    ],
+    "playbooks_evaluated_total": 9316,
+    "playbooks_evaluated_unique": {},
+    "matches_total": 2527,
+    "matches_by_playbook": {
+      "Session_Open_Scalp": 23,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 585,
+      "Morning_Trap_Reversal": 513,
+      "News_Fade": 216,
+      "Liquidity_Sweep_Scalp": 381,
+      "FVG_Fill_Scalp": 279,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 530
+    },
+    "setups_created_total": 1809,
+    "setups_created_by_playbook": {
+      "Morning_Trap_Reversal": 379,
+      "News_Fade": 159,
+      "Liquidity_Sweep_Scalp": 277,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 359,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 403,
+      "Session_Open_Scalp": 13,
+      "FVG_Fill_Scalp": 219
+    },
+    "setups_after_risk_filter_total": 1047,
+    "setups_after_risk_filter_by_playbook": {
+      "Morning_Trap_Reversal": 379,
+      "News_Fade": 159,
+      "Liquidity_Sweep_Scalp": 277,
+      "Session_Open_Scalp": 13,
+      "FVG_Fill_Scalp": 219
+    },
+    "trades_open_attempted_total": 500,
+    "trades_open_rejected_by_reason": {},
+    "setups_detected_by_playbook": {
+      "Morning_Trap_Reversal": 379,
+      "News_Fade": 159,
+      "Liquidity_Sweep_Scalp": 277,
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 359,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 403,
+      "Session_Open_Scalp": 13,
+      "FVG_Fill_Scalp": 219
+    },
+    "setups_rejected_by_reason": {
+      "rejected_by_mode": 126
+    },
+    "setups_rejected_by_mode_by_playbook": {
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 359,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 403
+    },
+    "setups_rejected_by_mode_examples": [
+      {
+        "playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "raw_playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "reason": "Playbook 'DAY_Aplus_1_Liquidity_Sweep_OB_Retest' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "raw_playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "reason": "Playbook 'SCALP_Aplus_1_Mini_FVG_Retest_NY_Open' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "raw_playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "reason": "Playbook 'DAY_Aplus_1_Liquidity_Sweep_OB_Retest' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "raw_playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "reason": "Playbook 'SCALP_Aplus_1_Mini_FVG_Retest_NY_Open' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "raw_playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "reason": "Playbook 'DAY_Aplus_1_Liquidity_Sweep_OB_Retest' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      }
+    ],
+    "missing_playbook_name": 0,
+    "risk_mode_used": "AGGRESSIVE",
+    "risk_allowlist_snapshot": {
+      "aggressive": {
+        "len": 7,
+        "first5": [
+          "News_Fade",
+          "Session_Open_Scalp",
+          "NY_Open_Reversal",
+          "Trend_Continuation_FVG_Retest",
+          "Morning_Trap_Reversal"
+        ]
+      },
+      "safe": {
+        "len": 0,
+        "first5": []
+      }
+    },
+    "risk_rejects_by_playbook": {
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": 1,
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": 1
+    },
+    "risk_reject_examples": [
+      {
+        "playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "raw_playbook_name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "reason": "Playbook 'DAY_Aplus_1_Liquidity_Sweep_OB_Retest' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      },
+      {
+        "playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "raw_playbook_name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+        "reason": "Playbook 'SCALP_Aplus_1_Mini_FVG_Retest_NY_Open' is in DENYLIST (destructeur)",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": true
+      }
+    ],
+    "risk_input_setups_len": 3,
+    "risk_output_setups_len": 1,
+    "risk_first3_input_playbooks": [
+      "Morning_Trap_Reversal",
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+    ],
+    "risk_first3_output_playbooks": [
+      "Morning_Trap_Reversal"
+    ],
+    "caps_snapshot": {
+      "aggressive": {
+        "daily_cap": 39,
+        "per_playbook_session_cap": 10,
+        "hard_daily_cap": 80,
+        "n_active_playbooks": 13
+      },
+      "safe": {
+        "daily_cap": 20,
+        "per_playbook_session_cap": 3
+      }
+    },
+    "trades_opened_by_playbook": {
+      "Liquidity_Sweep_Scalp": 265,
+      "Morning_Trap_Reversal": 106,
+      "Session_Open_Scalp": 13,
+      "FVG_Fill_Scalp": 114,
+      "News_Fade": 2
+    },
+    "trades_attempted_by_playbook": {
+      "Liquidity_Sweep_Scalp": 265,
+      "Morning_Trap_Reversal": 106,
+      "Session_Open_Scalp": 13,
+      "FVG_Fill_Scalp": 114,
+      "News_Fade": 2
+    },
+    "session_limit_reached_by_playbook": {},
+    "session_key_used": "2025-10-06|ny|0800-1200NY",
+    "grade_counts_by_playbook": {
+      "Liquidity_Sweep_Scalp": {
+        "A+": 0,
+        "A": 0,
+        "B": 0,
+        "C": 265,
+        "UNKNOWN": 0
+      },
+      "Morning_Trap_Reversal": {
+        "A+": 0,
+        "A": 0,
+        "B": 0,
+        "C": 106,
+        "UNKNOWN": 0
+      },
+      "Session_Open_Scalp": {
+        "A+": 0,
+        "A": 8,
+        "B": 5,
+        "C": 0,
+        "UNKNOWN": 0
+      },
+      "FVG_Fill_Scalp": {
+        "A+": 0,
+        "A": 0,
+        "B": 0,
+        "C": 114,
+        "UNKNOWN": 0
+      },
+      "News_Fade": {
+        "A+": 0,
+        "A": 2,
+        "B": 0,
+        "C": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "trade_context_snapshots": [
+      {
+        "timestamp": "2025-10-06T13:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.3099,
+            "close": 606.66,
+            "range": 1.7601000000000795
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T13:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.3099,
+            "close": 607.24,
+            "range": 1.7601000000000795
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T13:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 670.19,
+            "close": 670.26,
+            "range": 1.1099999999999
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T13:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.3099,
+            "close": 606.88,
+            "range": 1.7601000000000795
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T13:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.9688,
+            "close": 670.015,
+            "range": 1.331199999999967
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 670.04,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 669.59,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 670.3,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 670.28,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.3099,
+            "close": 607.08,
+            "range": 1.7601000000000795
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 670.395,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.3099,
+            "close": 606.745,
+            "range": 1.7601000000000795
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 670.515,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.3099,
+            "close": 606.75,
+            "range": 1.7601000000000795
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.305,
+            "close": 606.45,
+            "range": 1.7650000000001
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.305,
+            "close": 607.04,
+            "range": 1.7650000000001
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.305,
+            "close": 606.61,
+            "range": 1.7650000000001
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T14:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.305,
+            "close": 606.9793,
+            "range": 1.7650000000001
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.305,
+            "close": 607.21,
+            "range": 1.7650000000001
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 670.875,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 671.09,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.3,
+            "low": 669.57,
+            "close": 671.105,
+            "range": 1.7299999999999045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.33,
+            "low": 669.57,
+            "close": 671.15,
+            "range": 1.759999999999991
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.345,
+            "low": 669.57,
+            "close": 671.345,
+            "range": 1.7749999999999773
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T15:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.07,
+            "low": 606.305,
+            "close": 607.45,
+            "range": 1.7650000000001
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.895,
+            "low": 669.57,
+            "close": 671.64,
+            "range": 2.324999999999932
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.895,
+            "low": 669.57,
+            "close": 671.59,
+            "range": 2.324999999999932
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.895,
+            "low": 669.57,
+            "close": 671.3999,
+            "range": 2.324999999999932
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.015,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.035,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.036,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 607.9297,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.155,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.18,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T16:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.895,
+            "low": 669.57,
+            "close": 671.72,
+            "range": 2.324999999999932
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.065,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 671.895,
+            "low": 669.57,
+            "close": 671.645,
+            "range": 2.324999999999932
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:09:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 607.918,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:14:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 607.945,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.41,
+            "low": 606.305,
+            "close": 608.11,
+            "range": 2.105000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.71,
+            "low": 606.305,
+            "close": 608.71,
+            "range": 2.4050000000000864
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.76,
+            "low": 606.305,
+            "close": 608.63,
+            "range": 2.455000000000041
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.76,
+            "low": 606.305,
+            "close": 608.57,
+            "range": 2.455000000000041
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.76,
+            "low": 606.305,
+            "close": 608.67,
+            "range": 2.455000000000041
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.2904,
+            "low": 669.57,
+            "close": 672.09,
+            "range": 2.720399999999927
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.76,
+            "low": 606.305,
+            "close": 608.36,
+            "range": 2.455000000000041
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.76,
+            "low": 606.305,
+            "close": 608.62,
+            "range": 2.455000000000041
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.2904,
+            "low": 669.57,
+            "close": 672.12,
+            "range": 2.720399999999927
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.3001,
+            "low": 669.57,
+            "close": 672.23,
+            "range": 2.730099999999993
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T17:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.31,
+            "low": 669.57,
+            "close": 672.27,
+            "range": 2.7399999999998954
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.91,
+            "low": 606.305,
+            "close": 608.87,
+            "range": 2.605000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:09:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.91,
+            "low": 606.305,
+            "close": 608.665,
+            "range": 2.605000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.41,
+            "low": 669.57,
+            "close": 672.18,
+            "range": 2.839999999999918
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.91,
+            "low": 606.305,
+            "close": 608.85,
+            "range": 2.605000000000018
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.41,
+            "low": 669.57,
+            "close": 672.15,
+            "range": 2.839999999999918
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 608.96,
+            "low": 606.305,
+            "close": 608.95,
+            "range": 2.6550000000000864
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.41,
+            "low": 669.57,
+            "close": 672.24,
+            "range": 2.839999999999918
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.075,
+            "low": 606.305,
+            "close": 608.95,
+            "range": 2.7700000000000955
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.41,
+            "low": 669.57,
+            "close": 672.24,
+            "range": 2.839999999999918
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.3044,
+            "low": 606.305,
+            "close": 609.21,
+            "range": 2.999400000000037
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.455,
+            "low": 669.57,
+            "close": 672.39,
+            "range": 2.884999999999991
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 672.25,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 672.155,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 672.205,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T18:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 609.02,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:14:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 608.955,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 608.8049,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 608.66,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 608.664,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 671.8,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 608.65,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 608.75,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 671.9,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 671.86,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 671.86,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.8,
+            "high": 672.1,
+            "low": 670.8,
+            "close": 671.28,
+            "range": 1.3000000000000682
+          },
+          "ny": {
+            "open": 671.28,
+            "high": 672.465,
+            "low": 669.57,
+            "close": 671.59,
+            "range": 2.894999999999982
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-06T19:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-06|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.46,
+            "high": 609.0304,
+            "low": 605.45,
+            "close": 608.07,
+            "range": 3.5803999999999405
+          },
+          "ny": {
+            "open": 608.07,
+            "high": 609.33,
+            "low": 606.305,
+            "close": 607.71,
+            "range": 3.025000000000091
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 672.4,
+            "close": 672.94,
+            "range": 0.5400000000000773
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 672.4,
+            "close": 672.72,
+            "range": 0.5400000000000773
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 672.4,
+            "close": 672.61,
+            "range": 0.5400000000000773
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 672.33,
+            "close": 672.33,
+            "range": 0.6100000000000136
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.5,
+            "low": 608.79,
+            "close": 609.3199,
+            "range": 0.7100000000000364
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 672.125,
+            "close": 672.475,
+            "range": 0.8150000000000546
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.5,
+            "low": 608.79,
+            "close": 609.315,
+            "range": 0.7100000000000364
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.79,
+            "close": 609.16,
+            "range": 0.8400000000000318
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T13:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 672.125,
+            "close": 672.23,
+            "range": 0.8150000000000546
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.63,
+            "close": 608.63,
+            "range": 1.0
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 671.82,
+            "close": 671.82,
+            "range": 1.1200000000000045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:09:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.63,
+            "close": 609.2509,
+            "range": 1.0
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 671.82,
+            "close": 671.955,
+            "range": 1.1200000000000045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:14:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.63,
+            "close": 609.09,
+            "range": 1.0
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 671.82,
+            "close": 672.015,
+            "range": 1.1200000000000045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.63,
+            "close": 609.1251,
+            "range": 1.0
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 671.74,
+            "close": 671.74,
+            "range": 1.2000000000000455
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.63,
+            "close": 608.9468,
+            "range": 1.0
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 671.27,
+            "close": 671.27,
+            "range": 1.6700000000000728
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.41,
+            "close": 608.475,
+            "range": 1.2200000000000273
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.41,
+            "close": 608.71,
+            "range": 1.2200000000000273
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 608.07,
+            "close": 608.1101,
+            "range": 1.5599999999999454
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 670.975,
+            "close": 671.04,
+            "range": 1.9650000000000318
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 607.98,
+            "close": 608.13,
+            "range": 1.6499999999999773
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 607.97,
+            "close": 607.99,
+            "range": 1.6599999999999682
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 607.87,
+            "close": 607.9699,
+            "range": 1.759999999999991
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 670.91,
+            "close": 671.0,
+            "range": 2.0300000000000864
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T14:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 670.76,
+            "close": 670.9,
+            "range": 2.1800000000000637
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 670.37,
+            "close": 670.37,
+            "range": 2.57000000000005
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:09:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 604.83,
+            "close": 604.83,
+            "range": 4.7999999999999545
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.91,
+            "close": 668.91,
+            "range": 4.030000000000086
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.91,
+            "close": 669.545,
+            "range": 4.030000000000086
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 604.83,
+            "close": 605.77,
+            "range": 4.7999999999999545
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.91,
+            "close": 669.5381,
+            "range": 4.030000000000086
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.91,
+            "close": 669.75,
+            "range": 4.030000000000086
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 604.83,
+            "close": 605.934,
+            "range": 4.7999999999999545
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.91,
+            "close": 669.29,
+            "range": 4.030000000000086
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 604.83,
+            "close": 605.21,
+            "range": 4.7999999999999545
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.88,
+            "close": 669.01,
+            "range": 4.060000000000059
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 604.5319,
+            "close": 604.73,
+            "range": 5.098100000000045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.875,
+            "close": 604.05,
+            "range": 5.7549999999999955
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 668.27,
+            "close": 668.52,
+            "range": 4.670000000000073
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.35,
+            "close": 603.38,
+            "range": 6.279999999999973
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.85,
+            "close": 668.01,
+            "range": 5.090000000000032
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 603.31,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.77,
+            "close": 667.77,
+            "range": 5.170000000000073
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T15:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.14,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.7045,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:09:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.07,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.7599,
+            "close": 668.13,
+            "range": 5.180100000000039
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:14:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 603.76,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 603.42,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.12,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.4,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 605.35,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.328,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 605.18,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.135,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.22,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.42,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.18,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.36,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.01,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T16:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.3692,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.9999,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.505,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.08,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:09:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.57,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.11,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:14:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.575,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.03,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.475,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.805,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.18,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.99,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.625,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.26,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.5406,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.39,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.68,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T17:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.92,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:19:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.19,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.51,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:24:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.455,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.78,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.21,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.625,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.29,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.84,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.52,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.95,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:44:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.33,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.805,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.4044,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.815,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.615,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.975,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.69,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T18:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.05,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.835,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:09:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.81,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:14:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.71,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:19:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.65,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:24:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.74,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:29:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.22,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:29:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.57,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.775,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 668.83,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.3,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 603.1799,
+            "close": 604.8145,
+            "range": 6.45010000000002
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-07T19:59:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|1200-1600NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.91,
+            "high": 673.04,
+            "low": 670.37,
+            "close": 672.4,
+            "range": 2.669999999999959
+          },
+          "ny": {
+            "open": 672.4,
+            "high": 672.94,
+            "low": 667.72,
+            "close": 669.13,
+            "range": 5.220000000000027
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:34:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 670.34,
+            "low": 669.98,
+            "close": 669.98,
+            "range": 0.36000000000001364
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:34:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.42,
+            "high": 606.1,
+            "low": 604.54,
+            "close": 605.67,
+            "range": 1.5600000000000591
+          },
+          "ny": {
+            "open": 605.67,
+            "high": 606.5888,
+            "low": 605.67,
+            "close": 606.41,
+            "range": 0.9188000000000329
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:39:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 670.34,
+            "low": 669.61,
+            "close": 670.01,
+            "range": 0.7300000000000182
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:39:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "low",
+        "session_states": {
+          "london": {
+            "open": 605.42,
+            "high": 606.1,
+            "low": 604.54,
+            "close": 605.67,
+            "range": 1.5600000000000591
+          },
+          "ny": {
+            "open": 605.67,
+            "high": 606.99,
+            "low": 605.67,
+            "close": 606.99,
+            "range": 1.32000000000005
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:44:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 670.34,
+            "low": 669.58,
+            "close": 669.73,
+            "range": 0.7599999999999909
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:49:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.42,
+            "high": 606.1,
+            "low": 604.54,
+            "close": 605.67,
+            "range": 1.5600000000000591
+          },
+          "ny": {
+            "open": 605.67,
+            "high": 607.29,
+            "low": 605.67,
+            "close": 607.29,
+            "range": 1.6200000000000045
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:49:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 670.43,
+            "low": 669.58,
+            "close": 670.4,
+            "range": 0.849999999999909
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:54:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.42,
+            "high": 606.1,
+            "low": 604.54,
+            "close": 605.67,
+            "range": 1.5600000000000591
+          },
+          "ny": {
+            "open": 605.67,
+            "high": 607.345,
+            "low": 605.67,
+            "close": 607.345,
+            "range": 1.6750000000000682
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:54:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 670.43,
+            "low": 669.58,
+            "close": 670.21,
+            "range": 0.849999999999909
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T13:59:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.42,
+            "high": 606.1,
+            "low": 604.54,
+            "close": 605.67,
+            "range": 1.5600000000000591
+          },
+          "ny": {
+            "open": 605.67,
+            "high": 607.7344,
+            "low": 605.67,
+            "close": 607.58,
+            "range": 2.0644000000000915
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T14:04:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 671.2899,
+            "low": 669.58,
+            "close": 671.2899,
+            "range": 1.7098999999999478
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T14:04:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 605.42,
+            "high": 606.1,
+            "low": 604.54,
+            "close": 605.67,
+            "range": 1.5600000000000591
+          },
+          "ny": {
+            "open": 605.67,
+            "high": 608.42,
+            "low": 605.67,
+            "close": 608.28,
+            "range": 2.75
+          }
+        }
+      }
+    ],
+    "symbols_processed": [
+      "SPY",
+      "QQQ"
+    ],
+    "metrics_by_symbol": {
+      "SPY": {
+        "trades": 251,
+        "wins": 35,
+        "winrate": 13.94422310756972,
+        "avg_r": -0.05031717235756994,
+        "total_r": -12.629610261750054
+      },
+      "QQQ": {
+        "trades": 249,
+        "wins": 40,
+        "winrate": 16.06425702811245,
+        "avg_r": -0.05876639159236992,
+        "total_r": -14.632831506500109
+      }
+    },
+    "trades_opened_by_minute": {
+      "2025-10-06T13:44:00+00:00": 1,
+      "2025-10-06T13:49:00+00:00": 1,
+      "2025-10-06T13:54:00+00:00": 2,
+      "2025-10-06T13:59:00+00:00": 1,
+      "2025-10-06T14:04:00+00:00": 1,
+      "2025-10-06T14:09:00+00:00": 1,
+      "2025-10-06T14:14:00+00:00": 1,
+      "2025-10-06T14:19:00+00:00": 1,
+      "2025-10-06T14:24:00+00:00": 2,
+      "2025-10-06T14:29:00+00:00": 2,
+      "2025-10-06T14:39:00+00:00": 1,
+      "2025-10-06T14:44:00+00:00": 1,
+      "2025-10-06T14:49:00+00:00": 1,
+      "2025-10-06T14:54:00+00:00": 1,
+      "2025-10-06T14:59:00+00:00": 1,
+      "2025-10-06T15:04:00+00:00": 1,
+      "2025-10-06T15:14:00+00:00": 1,
+      "2025-10-06T15:19:00+00:00": 1,
+      "2025-10-06T15:24:00+00:00": 1,
+      "2025-10-06T15:29:00+00:00": 1,
+      "2025-10-06T15:34:00+00:00": 1,
+      "2025-10-06T15:39:00+00:00": 1,
+      "2025-10-06T16:04:00+00:00": 1,
+      "2025-10-06T16:09:00+00:00": 1,
+      "2025-10-06T16:14:00+00:00": 1,
+      "2025-10-06T16:34:00+00:00": 1,
+      "2025-10-06T16:39:00+00:00": 1,
+      "2025-10-06T16:44:00+00:00": 1,
+      "2025-10-06T16:49:00+00:00": 1,
+      "2025-10-06T16:54:00+00:00": 1,
+      "2025-10-06T16:59:00+00:00": 2,
+      "2025-10-06T17:04:00+00:00": 2,
+      "2025-10-06T17:09:00+00:00": 1,
+      "2025-10-06T17:14:00+00:00": 1,
+      "2025-10-06T17:19:00+00:00": 1,
+      "2025-10-06T17:24:00+00:00": 1,
+      "2025-10-06T17:29:00+00:00": 1,
+      "2025-10-06T17:34:00+00:00": 1,
+      "2025-10-06T17:39:00+00:00": 2,
+      "2025-10-06T17:44:00+00:00": 1,
+      "2025-10-06T17:49:00+00:00": 2,
+      "2025-10-06T17:54:00+00:00": 1,
+      "2025-10-06T17:59:00+00:00": 1,
+      "2025-10-06T18:04:00+00:00": 1,
+      "2025-10-06T18:09:00+00:00": 1,
+      "2025-10-06T18:14:00+00:00": 1,
+      "2025-10-06T18:19:00+00:00": 2,
+      "2025-10-06T18:24:00+00:00": 2,
+      "2025-10-06T18:29:00+00:00": 2,
+      "2025-10-06T18:34:00+00:00": 2,
+      "2025-10-06T18:39:00+00:00": 1,
+      "2025-10-06T18:44:00+00:00": 1,
+      "2025-10-06T18:49:00+00:00": 1,
+      "2025-10-06T18:59:00+00:00": 1,
+      "2025-10-06T19:14:00+00:00": 1,
+      "2025-10-06T19:19:00+00:00": 1,
+      "2025-10-06T19:24:00+00:00": 1,
+      "2025-10-06T19:29:00+00:00": 1,
+      "2025-10-06T19:34:00+00:00": 2,
+      "2025-10-06T19:39:00+00:00": 2,
+      "2025-10-06T19:44:00+00:00": 1,
+      "2025-10-06T19:49:00+00:00": 1,
+      "2025-10-06T19:59:00+00:00": 2,
+      "2025-10-07T13:34:00+00:00": 1,
+      "2025-10-07T13:39:00+00:00": 1,
+      "2025-10-07T13:44:00+00:00": 1,
+      "2025-10-07T13:49:00+00:00": 2,
+      "2025-10-07T13:54:00+00:00": 2,
+      "2025-10-07T13:59:00+00:00": 2,
+      "2025-10-07T14:04:00+00:00": 2,
+      "2025-10-07T14:09:00+00:00": 1,
+      "2025-10-07T14:14:00+00:00": 2,
+      "2025-10-07T14:19:00+00:00": 2,
+      "2025-10-07T14:24:00+00:00": 2,
+      "2025-10-07T14:29:00+00:00": 2,
+      "2025-10-07T14:34:00+00:00": 1,
+      "2025-10-07T14:39:00+00:00": 1,
+      "2025-10-07T14:44:00+00:00": 2,
+      "2025-10-07T14:49:00+00:00": 1,
+      "2025-10-07T14:54:00+00:00": 2,
+      "2025-10-07T14:59:00+00:00": 1,
+      "2025-10-07T15:04:00+00:00": 1,
+      "2025-10-07T15:09:00+00:00": 2,
+      "2025-10-07T15:14:00+00:00": 1,
+      "2025-10-07T15:19:00+00:00": 2,
+      "2025-10-07T15:24:00+00:00": 2,
+      "2025-10-07T15:29:00+00:00": 2,
+      "2025-10-07T15:34:00+00:00": 2,
+      "2025-10-07T15:39:00+00:00": 2,
+      "2025-10-07T15:49:00+00:00": 2,
+      "2025-10-07T15:54:00+00:00": 2,
+      "2025-10-07T15:59:00+00:00": 1,
+      "2025-10-07T16:04:00+00:00": 1,
+      "2025-10-07T16:09:00+00:00": 2,
+      "2025-10-07T16:14:00+00:00": 1,
+      "2025-10-07T16:19:00+00:00": 1,
+      "2025-10-07T16:24:00+00:00": 1,
+      "2025-10-07T16:29:00+00:00": 1,
+      "2025-10-07T16:39:00+00:00": 2,
+      "2025-10-07T16:44:00+00:00": 2,
+      "2025-10-07T16:49:00+00:00": 2,
+      "2025-10-07T16:54:00+00:00": 2,
+      "2025-10-07T16:59:00+00:00": 2,
+      "2025-10-07T17:04:00+00:00": 2,
+      "2025-10-07T17:09:00+00:00": 2,
+      "2025-10-07T17:14:00+00:00": 2,
+      "2025-10-07T17:19:00+00:00": 2,
+      "2025-10-07T17:24:00+00:00": 2,
+      "2025-10-07T17:29:00+00:00": 2,
+      "2025-10-07T17:34:00+00:00": 2,
+      "2025-10-07T17:39:00+00:00": 2,
+      "2025-10-07T17:44:00+00:00": 1,
+      "2025-10-07T18:19:00+00:00": 2,
+      "2025-10-07T18:24:00+00:00": 2,
+      "2025-10-07T18:29:00+00:00": 2,
+      "2025-10-07T18:34:00+00:00": 2,
+      "2025-10-07T18:39:00+00:00": 2,
+      "2025-10-07T18:44:00+00:00": 2,
+      "2025-10-07T18:49:00+00:00": 2,
+      "2025-10-07T18:54:00+00:00": 2,
+      "2025-10-07T18:59:00+00:00": 2,
+      "2025-10-07T19:04:00+00:00": 1,
+      "2025-10-07T19:09:00+00:00": 1,
+      "2025-10-07T19:14:00+00:00": 1,
+      "2025-10-07T19:19:00+00:00": 1,
+      "2025-10-07T19:24:00+00:00": 1,
+      "2025-10-07T19:29:00+00:00": 2,
+      "2025-10-07T19:34:00+00:00": 1,
+      "2025-10-07T19:39:00+00:00": 1,
+      "2025-10-07T19:44:00+00:00": 1,
+      "2025-10-07T19:54:00+00:00": 1,
+      "2025-10-07T19:59:00+00:00": 1,
+      "2025-10-08T13:34:00+00:00": 2,
+      "2025-10-08T13:39:00+00:00": 2,
+      "2025-10-08T13:44:00+00:00": 1,
+      "2025-10-08T13:49:00+00:00": 2,
+      "2025-10-08T13:54:00+00:00": 2,
+      "2025-10-08T13:59:00+00:00": 1,
+      "2025-10-08T14:04:00+00:00": 2,
+      "2025-10-08T14:09:00+00:00": 2,
+      "2025-10-08T14:14:00+00:00": 1,
+      "2025-10-08T14:19:00+00:00": 1,
+      "2025-10-08T14:24:00+00:00": 2,
+      "2025-10-08T14:29:00+00:00": 2,
+      "2025-10-08T14:34:00+00:00": 2,
+      "2025-10-08T14:39:00+00:00": 2,
+      "2025-10-08T14:44:00+00:00": 1,
+      "2025-10-08T14:49:00+00:00": 2,
+      "2025-10-08T14:54:00+00:00": 2,
+      "2025-10-08T14:59:00+00:00": 2,
+      "2025-10-08T15:04:00+00:00": 2,
+      "2025-10-08T15:09:00+00:00": 2,
+      "2025-10-08T15:19:00+00:00": 1,
+      "2025-10-08T15:24:00+00:00": 1,
+      "2025-10-08T15:29:00+00:00": 1,
+      "2025-10-08T15:34:00+00:00": 1,
+      "2025-10-08T15:39:00+00:00": 1,
+      "2025-10-08T15:44:00+00:00": 2,
+      "2025-10-08T15:49:00+00:00": 2,
+      "2025-10-08T15:54:00+00:00": 2,
+      "2025-10-08T15:59:00+00:00": 1,
+      "2025-10-08T16:04:00+00:00": 2,
+      "2025-10-08T16:19:00+00:00": 1,
+      "2025-10-08T16:24:00+00:00": 2,
+      "2025-10-08T16:29:00+00:00": 1,
+      "2025-10-08T16:34:00+00:00": 2,
+      "2025-10-08T16:39:00+00:00": 2,
+      "2025-10-08T16:44:00+00:00": 2,
+      "2025-10-08T16:49:00+00:00": 2,
+      "2025-10-08T16:54:00+00:00": 2,
+      "2025-10-08T17:04:00+00:00": 2,
+      "2025-10-08T17:09:00+00:00": 2,
+      "2025-10-08T17:14:00+00:00": 2,
+      "2025-10-08T17:19:00+00:00": 2,
+      "2025-10-08T17:24:00+00:00": 2,
+      "2025-10-08T17:29:00+00:00": 1,
+      "2025-10-08T17:34:00+00:00": 2,
+      "2025-10-08T17:39:00+00:00": 2,
+      "2025-10-08T17:44:00+00:00": 2,
+      "2025-10-08T17:49:00+00:00": 2,
+      "2025-10-08T17:54:00+00:00": 2,
+      "2025-10-08T17:59:00+00:00": 2,
+      "2025-10-08T18:04:00+00:00": 1,
+      "2025-10-08T18:09:00+00:00": 1,
+      "2025-10-08T18:14:00+00:00": 1,
+      "2025-10-08T18:19:00+00:00": 1,
+      "2025-10-08T18:24:00+00:00": 1,
+      "2025-10-08T18:39:00+00:00": 1,
+      "2025-10-08T18:44:00+00:00": 1,
+      "2025-10-08T18:49:00+00:00": 1,
+      "2025-10-08T18:54:00+00:00": 2,
+      "2025-10-08T18:59:00+00:00": 2,
+      "2025-10-08T19:04:00+00:00": 2,
+      "2025-10-08T19:09:00+00:00": 2,
+      "2025-10-08T19:14:00+00:00": 2,
+      "2025-10-08T19:19:00+00:00": 2,
+      "2025-10-08T19:24:00+00:00": 1,
+      "2025-10-08T19:29:00+00:00": 2,
+      "2025-10-08T19:34:00+00:00": 1,
+      "2025-10-08T19:49:00+00:00": 2,
+      "2025-10-08T19:54:00+00:00": 1,
+      "2025-10-09T13:34:00+00:00": 2,
+      "2025-10-09T13:39:00+00:00": 1,
+      "2025-10-09T13:44:00+00:00": 2,
+      "2025-10-09T13:49:00+00:00": 1,
+      "2025-10-09T13:54:00+00:00": 1,
+      "2025-10-09T13:59:00+00:00": 2,
+      "2025-10-09T14:04:00+00:00": 2,
+      "2025-10-09T14:09:00+00:00": 2,
+      "2025-10-09T14:14:00+00:00": 2,
+      "2025-10-09T14:19:00+00:00": 2,
+      "2025-10-09T14:24:00+00:00": 2,
+      "2025-10-09T14:29:00+00:00": 2,
+      "2025-10-09T14:34:00+00:00": 2,
+      "2025-10-09T14:39:00+00:00": 1,
+      "2025-10-09T14:49:00+00:00": 2,
+      "2025-10-09T14:54:00+00:00": 2,
+      "2025-10-09T14:59:00+00:00": 2,
+      "2025-10-09T15:04:00+00:00": 2,
+      "2025-10-09T15:09:00+00:00": 2,
+      "2025-10-09T15:14:00+00:00": 1,
+      "2025-10-09T15:19:00+00:00": 1,
+      "2025-10-09T15:24:00+00:00": 2,
+      "2025-10-09T15:29:00+00:00": 2,
+      "2025-10-09T15:34:00+00:00": 2,
+      "2025-10-09T15:39:00+00:00": 1,
+      "2025-10-09T15:44:00+00:00": 1,
+      "2025-10-09T15:49:00+00:00": 1,
+      "2025-10-09T15:54:00+00:00": 1,
+      "2025-10-09T15:59:00+00:00": 1,
+      "2025-10-09T16:14:00+00:00": 1,
+      "2025-10-09T16:19:00+00:00": 1,
+      "2025-10-09T16:24:00+00:00": 1,
+      "2025-10-09T16:29:00+00:00": 1,
+      "2025-10-09T16:34:00+00:00": 2,
+      "2025-10-09T16:39:00+00:00": 2,
+      "2025-10-09T16:44:00+00:00": 2,
+      "2025-10-09T16:49:00+00:00": 2,
+      "2025-10-09T16:54:00+00:00": 1,
+      "2025-10-09T16:59:00+00:00": 1,
+      "2025-10-09T17:04:00+00:00": 2,
+      "2025-10-09T17:09:00+00:00": 1,
+      "2025-10-09T17:14:00+00:00": 1,
+      "2025-10-09T17:19:00+00:00": 2,
+      "2025-10-09T17:24:00+00:00": 2,
+      "2025-10-09T17:29:00+00:00": 1,
+      "2025-10-09T17:34:00+00:00": 2,
+      "2025-10-09T17:39:00+00:00": 2,
+      "2025-10-09T17:44:00+00:00": 2,
+      "2025-10-09T17:49:00+00:00": 2,
+      "2025-10-09T17:54:00+00:00": 2,
+      "2025-10-09T17:59:00+00:00": 2,
+      "2025-10-09T18:04:00+00:00": 2,
+      "2025-10-09T18:09:00+00:00": 2,
+      "2025-10-09T18:14:00+00:00": 2,
+      "2025-10-09T18:19:00+00:00": 2,
+      "2025-10-09T18:24:00+00:00": 2,
+      "2025-10-09T18:29:00+00:00": 1,
+      "2025-10-09T18:34:00+00:00": 1,
+      "2025-10-09T18:39:00+00:00": 2,
+      "2025-10-09T18:44:00+00:00": 2,
+      "2025-10-09T18:49:00+00:00": 2,
+      "2025-10-09T18:54:00+00:00": 2,
+      "2025-10-09T18:59:00+00:00": 2,
+      "2025-10-09T19:04:00+00:00": 2,
+      "2025-10-09T19:09:00+00:00": 2,
+      "2025-10-09T19:14:00+00:00": 2,
+      "2025-10-09T19:19:00+00:00": 2,
+      "2025-10-09T19:29:00+00:00": 1,
+      "2025-10-09T19:34:00+00:00": 1,
+      "2025-10-09T19:39:00+00:00": 1,
+      "2025-10-09T19:44:00+00:00": 1,
+      "2025-10-09T19:49:00+00:00": 1,
+      "2025-10-09T19:54:00+00:00": 1,
+      "2025-10-10T13:34:00+00:00": 2,
+      "2025-10-10T13:39:00+00:00": 2,
+      "2025-10-10T13:44:00+00:00": 2,
+      "2025-10-10T13:49:00+00:00": 1,
+      "2025-10-10T13:54:00+00:00": 2,
+      "2025-10-10T13:59:00+00:00": 2,
+      "2025-10-10T14:04:00+00:00": 2,
+      "2025-10-10T14:09:00+00:00": 2,
+      "2025-10-10T14:14:00+00:00": 2,
+      "2025-10-10T14:19:00+00:00": 2,
+      "2025-10-10T14:24:00+00:00": 2,
+      "2025-10-10T14:29:00+00:00": 2,
+      "2025-10-10T14:34:00+00:00": 1,
+      "2025-10-10T14:39:00+00:00": 1,
+      "2025-10-10T14:44:00+00:00": 2,
+      "2025-10-10T14:49:00+00:00": 1,
+      "2025-10-10T14:54:00+00:00": 1,
+      "2025-10-10T15:09:00+00:00": 1,
+      "2025-10-10T15:14:00+00:00": 2,
+      "2025-10-10T15:19:00+00:00": 2,
+      "2025-10-10T15:24:00+00:00": 1,
+      "2025-10-10T15:29:00+00:00": 1,
+      "2025-10-10T15:34:00+00:00": 1,
+      "2025-10-10T15:39:00+00:00": 1,
+      "2025-10-10T15:44:00+00:00": 2,
+      "2025-10-10T15:49:00+00:00": 1,
+      "2025-10-10T15:54:00+00:00": 2,
+      "2025-10-10T15:59:00+00:00": 2,
+      "2025-10-10T16:04:00+00:00": 2,
+      "2025-10-10T16:09:00+00:00": 2,
+      "2025-10-10T16:14:00+00:00": 2,
+      "2025-10-10T16:19:00+00:00": 1,
+      "2025-10-10T16:24:00+00:00": 1,
+      "2025-10-10T16:29:00+00:00": 1,
+      "2025-10-10T16:34:00+00:00": 1,
+      "2025-10-10T16:39:00+00:00": 2,
+      "2025-10-10T16:44:00+00:00": 2,
+      "2025-10-10T16:49:00+00:00": 1,
+      "2025-10-10T16:54:00+00:00": 1,
+      "2025-10-10T16:59:00+00:00": 1,
+      "2025-10-10T17:44:00+00:00": 1,
+      "2025-10-10T17:49:00+00:00": 1,
+      "2025-10-10T17:54:00+00:00": 1,
+      "2025-10-10T17:59:00+00:00": 1,
+      "2025-10-10T18:14:00+00:00": 2,
+      "2025-10-10T18:19:00+00:00": 2,
+      "2025-10-10T18:24:00+00:00": 1,
+      "2025-10-10T19:09:00+00:00": 1,
+      "2025-10-10T19:14:00+00:00": 1,
+      "2025-10-10T19:19:00+00:00": 1,
+      "2025-10-10T19:24:00+00:00": 1,
+      "2025-10-10T19:29:00+00:00": 1,
+      "2025-10-10T19:44:00+00:00": 2,
+      "2025-10-10T19:49:00+00:00": 1,
+      "2025-10-10T19:54:00+00:00": 1,
+      "2025-10-10T19:59:00+00:00": 1
+    },
+    "trades_opened_by_minute_by_symbol": {
+      "2025-10-06T13:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T13:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T13:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-06T13:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T14:04:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T14:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T14:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T14:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T14:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T14:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T14:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T14:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T14:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T14:54:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T14:59:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T15:04:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T15:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T15:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T15:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T15:29:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T15:34:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T15:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T16:04:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T16:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T16:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T16:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T16:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T16:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T16:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T16:54:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T16:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T17:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T17:09:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:14:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:19:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:24:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T17:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T17:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T17:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T17:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T18:04:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T18:09:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T18:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T18:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T18:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T18:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T18:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T18:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T18:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T18:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T18:59:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T19:14:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T19:19:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T19:24:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T19:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-06T19:34:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-06T19:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-06T19:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T19:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-06T19:59:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T13:34:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T13:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T13:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T13:49:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T13:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T13:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T14:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T14:09:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T14:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T14:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T14:24:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T14:29:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T14:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T14:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T14:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T14:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T14:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T14:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T15:04:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T15:09:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T15:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T15:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T15:24:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T15:29:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T15:34:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T15:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T15:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T15:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T15:59:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T16:04:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T16:09:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T16:14:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T16:19:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T16:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T16:29:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T16:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T16:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T16:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T16:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T16:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T17:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T17:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T17:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T17:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T17:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T17:29:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-07T17:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T17:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T17:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T18:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T18:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T19:04:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-07T19:34:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-07T19:54:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-07T19:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T13:34:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T13:39:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T13:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T13:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T13:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T13:59:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T14:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T14:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T14:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T14:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T14:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T14:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T14:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T14:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T14:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T14:49:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T14:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T14:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T15:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T15:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T15:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T15:24:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T15:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T15:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T15:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T15:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T15:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T15:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T15:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T16:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T16:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T16:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T16:29:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T16:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T16:39:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T16:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T16:49:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T16:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T17:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T17:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T17:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T17:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T17:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T17:29:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T17:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T17:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T17:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T17:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T17:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T17:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T18:04:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T18:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T18:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T18:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T18:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T18:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T18:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T18:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T18:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T18:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T19:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T19:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T19:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T19:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T19:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-08T19:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-08T19:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T19:49:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-08T19:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T13:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T13:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T13:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T13:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T13:54:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T13:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T14:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T14:09:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T14:14:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T14:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T14:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T14:29:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T14:34:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T14:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T14:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T14:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T14:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T15:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T15:09:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T15:14:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T15:19:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T15:24:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T15:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T15:34:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T15:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T15:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T15:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T15:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T15:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T16:14:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T16:19:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T16:24:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T16:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T16:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T16:39:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T16:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T16:49:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T16:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T16:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-09T17:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T17:09:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T17:14:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T17:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T17:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T17:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T17:34:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T17:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T17:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T17:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T17:54:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T17:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T18:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T18:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T18:14:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T18:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T18:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T18:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T18:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T18:39:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T18:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T18:49:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T18:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T18:59:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T19:04:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T19:09:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-09T19:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T19:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-09T19:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T19:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T19:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T19:44:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T19:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-09T19:54:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T13:34:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T13:39:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T13:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T13:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T13:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T13:59:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:09:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:14:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:24:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:29:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:34:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T14:39:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T14:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T14:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T14:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T15:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T15:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T15:19:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T15:24:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T15:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T15:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T15:39:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T15:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T15:49:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T15:54:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T15:59:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T16:04:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T16:09:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T16:14:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T16:19:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T16:24:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T16:29:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T16:34:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T16:39:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T16:44:00+00:00": {
+        "SPY": 1,
+        "QQQ": 1
+      },
+      "2025-10-10T16:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T16:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T16:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T17:44:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T17:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T17:54:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T17:59:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T18:14:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T18:19:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T18:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:09:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:14:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:19:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:24:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:29:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:44:00+00:00": {
+        "QQQ": 1,
+        "SPY": 1
+      },
+      "2025-10-10T19:49:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T19:54:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-10T19:59:00+00:00": {
+        "QQQ": 1
+      }
+    },
+    "blocked_by_per_minute_cap": 0,
+    "news_fade_post_risk_final_pool_count": 159,
+    "news_fade_post_risk_final_pool_multi_setup_count": 159,
+    "news_fade_post_risk_won_final_selection_count": 2,
+    "news_fade_post_risk_lost_final_selection_count": 157,
+    "news_fade_post_risk_lost_final_selection_by_winner": {
+      "Liquidity_Sweep_Scalp": 151,
+      "Session_Open_Scalp": 6
+    }
+  }
+}

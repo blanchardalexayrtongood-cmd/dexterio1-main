@@ -1,25 +1,25 @@
 {
   "run_id": "labfull_202511",
   "status": "OK",
-  "timestamp": "2026-04-10T07:15:58.825411",
+  "timestamp": "2026-04-10T10:03:31.305069",
   "entry_price_validation": {
-    "entry_price_mean": 664.6081623529412,
-    "entry_price_median": 672.3375000000001,
-    "entry_price_std": 22.548017707224037,
+    "entry_price_mean": 645.1122955936354,
+    "entry_price_median": 661.24495,
+    "entry_price_std": 32.80522791145102,
     "entry_price_vs_market": {
       "SPY": {
-        "entry_price_mean": 674.3783274647888,
-        "market_close_mean": 672.5547714324138,
-        "market_close_std": 8.246179738227196,
-        "entry_vs_market_diff": 1.823556032374995,
-        "entry_vs_market_diff_pct": 0.2711386655530177
+        "entry_price_mean": 673.7930744107745,
+        "market_close_mean": 672.5411515678015,
+        "market_close_std": 8.42689238866685,
+        "entry_vs_market_diff": 1.251922842972931,
+        "entry_vs_market_diff_pct": 0.18614813979107414
       },
       "QQQ": {
-        "entry_price_mean": 615.0594678571427,
-        "market_close_mean": 610.9177771147586,
-        "market_close_std": 11.247564448753488,
-        "entry_vs_market_diff": 4.141690742384185,
-        "entry_vs_market_diff_pct": 0.6779456904895704
+        "entry_price_mean": 610.7185218034994,
+        "market_close_mean": 611.2139250953948,
+        "market_close_std": 11.564857017666498,
+        "entry_vs_market_diff": -0.4954032918953999,
+        "entry_vs_market_diff_pct": -0.08105235688438875
       }
     },
     "placeholder_detected": false
@@ -27,109 +27,108 @@
   "duration_validation": {
     "zero_duration_count": 0,
     "zero_duration_pct": 0.0,
-    "duration_mean_minutes": 1121.4823529411765,
-    "duration_median_minutes": 288.5,
-    "total_trades_with_duration": 170,
+    "duration_mean_minutes": 411.02019583843327,
+    "duration_median_minutes": 30.0,
+    "total_trades_with_duration": 1634,
     "scalp": {
-      "duration_mean_minutes": 30.0,
+      "duration_mean_minutes": 36.73175745118191,
       "duration_median_minutes": 30.0,
-      "duration_max_minutes": 30.0,
+      "duration_max_minutes": 120.0,
       "max_allowed_minutes": 120.0,
       "time_stop_broken": false,
       "violations": [],
-      "total_scalp_trades": 8,
-      "time_stop_proof": {
-        "criterion": "every SCALP trade has duration_minutes <= max_allowed_minutes",
-        "pass": true,
-        "exit_reason_counts": {
-          "time_stop": 8
-        },
-        "violation_count": 0
-      }
+      "total_scalp_trades": 973
     },
     "daily": {
-      "duration_mean_minutes": 1175.3827160493827,
-      "duration_median_minutes": 1063.5,
-      "total_daily_trades": 162
+      "duration_mean_minutes": 961.9773071104387,
+      "duration_median_minutes": 490.0,
+      "total_daily_trades": 661
     }
   },
   "session_validation": {
     "unknown_session_count": 0,
     "unknown_session_pct": 0.0,
     "session_distribution": {
-      "ny": 170
+      "ny": 1634
     },
-    "total_trades_with_session": 170
+    "total_trades_with_session": 1634
   },
   "costs_breakdown": {
-    "total_slippage": 8899.499999999998,
-    "total_spread": 1779.8599999999992,
-    "total_commission": 340.0,
-    "total_reg_fees": 47.43000000000011,
-    "total_costs": 11066.790000000003,
-    "costs_per_trade_avg": 65.09876470588237,
+    "total_slippage": 40810.360000000226,
+    "total_spread": 8162.430000000031,
+    "total_commission": 3268.0,
+    "total_reg_fees": 216.6599999999997,
+    "total_costs": 52457.45000000008,
+    "costs_per_trade_avg": 32.10370257037948,
     "slippage_double_counting_detected": false
   },
   "stability_metrics": {
-    "total_trades": 170,
-    "winrate_pct": 38.23529411764706,
-    "expectancy_net_R": 0.033553567408821136,
-    "total_r_net": 5.704106459499596,
-    "avg_win_r": 0.40270170999999183,
-    "avg_loss_r": -0.19496671133809404
-  },
-  "stop_run_validation": {
-    "stop_run_triggered": false,
-    "stop_run_time": null,
-    "stop_run_reason": "",
-    "risk_engine_run_stopped": false
+    "total_trades": 1634,
+    "winrate_pct": 20.501835985312116,
+    "expectancy_net_R": -0.02679538068329277,
+    "total_r_net": -43.78365203650031,
+    "avg_win_r": 0.14585454653581903,
+    "avg_loss_r": -0.07132018870361798
   },
   "grading_validation": {
     "grading_produced": true,
     "quality_distribution": {
-      "A+": 8,
-      "C": 162
+      "C": 1546,
+      "A": 29,
+      "B": 59
     },
     "all_c_detected": false,
-    "total_trades": 170,
+    "total_trades": 1634,
     "count_missing_grade": 0,
     "pct_missing_grade": 0.0,
     "grading_pipeline_propagation_ok": true
   },
   "grading_debug": {
-    "total_trades": 170,
-    "score_count": 170,
+    "total_trades": 1634,
+    "score_count": 1634,
     "pct_missing_score": 0.0,
-    "score_min": 0.34,
-    "score_max": 1.0,
-    "score_mean": 0.4655441176470589,
+    "score_min": 0.15,
+    "score_max": 0.715,
+    "score_mean": 0.5072299848331652,
     "grade_counts": {
-      "A+": 8,
-      "A": 0,
-      "B": 0,
-      "C": 162,
+      "A+": 0,
+      "A": 29,
+      "B": 59,
+      "C": 1546,
       "UNKNOWN": 0
     },
-    "unique_playbooks": 2,
+    "unique_playbooks": 6,
     "playbook_counts": {
-      "NY_Open_Reversal": 162,
-      "Liquidity_Sweep_Scalp": 8
+      "Liquidity_Sweep_Scalp": 863,
+      "Morning_Trap_Reversal": 369,
+      "Trend_Continuation_FVG_Retest": 249,
+      "FVG_Fill_Scalp": 71,
+      "NY_Open_Reversal": 43,
+      "Session_Open_Scalp": 39
     },
     "thresholds_snapshot": {
-      "NY_Open_Reversal": {
-        "count": 162,
+      "Liquidity_Sweep_Scalp": {
+        "count": 863,
+        "thresholds": {
+          "A_plus": 0.8,
+          "A": 0.7,
+          "B": 0.6
+        }
+      },
+      "Morning_Trap_Reversal": {
+        "count": 369,
         "thresholds": {
           "A_plus": 0.85,
           "A": 0.75,
           "B": 0.65
         }
       },
-      "Liquidity_Sweep_Scalp": {
-        "count": 8,
+      "Trend_Continuation_FVG_Retest": {
+        "count": 249,
         "thresholds": {
-          "A_plus": 0.8,
-          "A": 0.7,
-          "B": 0.6
+          "A_plus": 0.85,
+          "A": 0.75,
+          "B": 0.65
         }
       }
     },
@@ -142,7 +141,6 @@
     "costs_valid": true,
     "stability_valid": true,
     "scalp_time_stop_valid": true,
-    "grading_valid": true,
-    "pipeline_ok": true
+    "grading_valid": true
   }
 }

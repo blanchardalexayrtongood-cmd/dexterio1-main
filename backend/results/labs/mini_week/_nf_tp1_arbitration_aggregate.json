@@ -1,0 +1,844 @@
+{
+  "reference_phase_b_nov2025": {
+    "tp1_1p00": {
+      "trades": 27,
+      "winrate_pct": 59.25925925925925,
+      "sum_r": 1.4801414242499547,
+      "expectancy_r": 0.05482005274999832,
+      "exit_reason_counts": {
+        "session_end": 17,
+        "TP1": 9,
+        "SL": 1
+      },
+      "pct_session_end": 62.96296296296296,
+      "pct_tp": 33.33333333333333,
+      "pct_sl": 3.7037037037037033,
+      "median_duration_min": 36.0,
+      "median_r_tp1_exits": 0.23258109999998916,
+      "median_r_tp1_over_tp1_rr": 0.23258109999998916,
+      "tp1_rr": 1.0,
+      "variant_dir": "phase_b_nf_tp1rr_1p00"
+    },
+    "tp1_1p50": {
+      "trades": 27,
+      "winrate_pct": 59.25925925925925,
+      "sum_r": 1.4914370744999668,
+      "expectancy_r": 0.05523841016666543,
+      "exit_reason_counts": {
+        "session_end": 23,
+        "TP1": 3,
+        "SL": 1
+      },
+      "pct_session_end": 85.18518518518519,
+      "pct_tp": 11.11111111111111,
+      "pct_sl": 3.7037037037037033,
+      "median_duration_min": 38.0,
+      "median_r_tp1_exits": 0.3831956499999799,
+      "median_r_tp1_over_tp1_rr": 0.25546376666665327,
+      "tp1_rr": 1.5,
+      "variant_dir": "phase_b_nf_tp1rr_1p50"
+    }
+  },
+  "methodology_note": "Comparaison sur YAML d\u00e9riv\u00e9s playbooks_nf_tp1_1p00 / 1p50 (seul News_Fade change). Les dossiers nf1r_confirm_* (playbooks_yaml null) ne prouvent pas tp1=1.0 au moteur.",
+  "campaign_manifest_path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_nf_tp1_arbitration_campaign_manifest.json",
+  "campaign_manifest": {
+    "schema_version": "NfTp1ArbitrationCampaignManifestV0",
+    "expected_pair_count": 12,
+    "complete_pair_count": 12,
+    "missing_pair_count": 0,
+    "global_status": "COMPLETE_OK",
+    "expected_pairs": [
+      {
+        "preset": "aug2025",
+        "label": "202508_w01",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025"
+      },
+      {
+        "preset": "aug2025",
+        "label": "202508_w02",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025"
+      },
+      {
+        "preset": "aug2025",
+        "label": "202508_w03",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025"
+      },
+      {
+        "preset": "aug2025",
+        "label": "202508_w04",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025"
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w01",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025"
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w02",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025"
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w03",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025"
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w04",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025"
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w01",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025"
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w02",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025"
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w03",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025"
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w04",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025"
+      }
+    ],
+    "pairs_detail": [
+      {
+        "preset": "aug2025",
+        "label": "202508_w01",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w01/mini_lab_summary_202508_w01.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w01/mini_lab_summary_202508_w01.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w01/trades_miniweek_nf_tp1_arb_1p00_aug2025_202508_w01_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w01/trades_miniweek_nf_tp1_arb_1p50_aug2025_202508_w01_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "aug2025",
+        "label": "202508_w02",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w02/mini_lab_summary_202508_w02.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w02/mini_lab_summary_202508_w02.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w02/trades_miniweek_nf_tp1_arb_1p00_aug2025_202508_w02_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w02/trades_miniweek_nf_tp1_arb_1p50_aug2025_202508_w02_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "aug2025",
+        "label": "202508_w03",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w03/mini_lab_summary_202508_w03.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w03/mini_lab_summary_202508_w03.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w03/trades_miniweek_nf_tp1_arb_1p00_aug2025_202508_w03_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w03/trades_miniweek_nf_tp1_arb_1p50_aug2025_202508_w03_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "aug2025",
+        "label": "202508_w04",
+        "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w04/mini_lab_summary_202508_w04.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w04/mini_lab_summary_202508_w04.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_aug2025/202508_w04/trades_miniweek_nf_tp1_arb_1p00_aug2025_202508_w04_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_aug2025/202508_w04/trades_miniweek_nf_tp1_arb_1p50_aug2025_202508_w04_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w01",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w01/mini_lab_summary_202509_w01.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w01/mini_lab_summary_202509_w01.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w01/trades_miniweek_nf_tp1_arb_1p00_sep2025_202509_w01_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w01/trades_miniweek_nf_tp1_arb_1p50_sep2025_202509_w01_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w02",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w02/mini_lab_summary_202509_w02.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w02/mini_lab_summary_202509_w02.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w02/trades_miniweek_nf_tp1_arb_1p00_sep2025_202509_w02_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w02/trades_miniweek_nf_tp1_arb_1p50_sep2025_202509_w02_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w03",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w03/mini_lab_summary_202509_w03.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w03/mini_lab_summary_202509_w03.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w03/trades_miniweek_nf_tp1_arb_1p00_sep2025_202509_w03_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w03/trades_miniweek_nf_tp1_arb_1p50_sep2025_202509_w03_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "sep2025",
+        "label": "202509_w04",
+        "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w04/mini_lab_summary_202509_w04.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w04/mini_lab_summary_202509_w04.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_sep2025/202509_w04/trades_miniweek_nf_tp1_arb_1p00_sep2025_202509_w04_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_sep2025/202509_w04/trades_miniweek_nf_tp1_arb_1p50_sep2025_202509_w04_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w01",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w01/mini_lab_summary_202510_w01.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w01/mini_lab_summary_202510_w01.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w01/trades_miniweek_nf_tp1_arb_1p00_oct2025_202510_w01_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w01/trades_miniweek_nf_tp1_arb_1p50_oct2025_202510_w01_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w02",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w02/mini_lab_summary_202510_w02.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w02/mini_lab_summary_202510_w02.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w02/trades_miniweek_nf_tp1_arb_1p00_oct2025_202510_w02_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w02/trades_miniweek_nf_tp1_arb_1p50_oct2025_202510_w02_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w03",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w03/mini_lab_summary_202510_w03.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w03/mini_lab_summary_202510_w03.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w03/trades_miniweek_nf_tp1_arb_1p00_oct2025_202510_w03_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w03/trades_miniweek_nf_tp1_arb_1p50_oct2025_202510_w03_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      },
+      {
+        "preset": "oct2025",
+        "label": "202510_w04",
+        "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+        "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+        "status": "complete",
+        "paths": {
+          "summary_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w04/mini_lab_summary_202510_w04.json",
+          "summary_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w04/mini_lab_summary_202510_w04.json",
+          "parquet_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p00_oct2025/202510_w04/trades_miniweek_nf_tp1_arb_1p00_oct2025_202510_w04_AGGRESSIVE_DAILY_SCALP.parquet",
+          "parquet_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/nf_tp1_arb_1p50_oct2025/202510_w04/trades_miniweek_nf_tp1_arb_1p50_oct2025_202510_w04_AGGRESSIVE_DAILY_SCALP.parquet"
+        },
+        "flags": {
+          "has_summary_1p00": true,
+          "has_summary_1p50": true,
+          "has_parquet_1p00": true,
+          "has_parquet_1p50": true
+        }
+      }
+    ],
+    "pairs_complete": [
+      "aug2025/202508_w01",
+      "aug2025/202508_w02",
+      "aug2025/202508_w03",
+      "aug2025/202508_w04",
+      "sep2025/202509_w01",
+      "sep2025/202509_w02",
+      "sep2025/202509_w03",
+      "sep2025/202509_w04",
+      "oct2025/202510_w01",
+      "oct2025/202510_w02",
+      "oct2025/202510_w03",
+      "oct2025/202510_w04"
+    ],
+    "pairs_missing": []
+  },
+  "rollup_paired_windows": {
+    "windows_paired": 12,
+    "nf_trades_total_1p00": 85,
+    "nf_trades_total_1p50": 85,
+    "sum_r_total_1p00": -4.127958,
+    "sum_r_total_1p50": -3.43926,
+    "expectancy_r_1p00": -0.04856421352941129,
+    "expectancy_r_1p50": -0.04046188764705809,
+    "weeks_expectancy_better_1p50": 1,
+    "weeks_expectancy_better_1p00": 0,
+    "weeks_expectancy_tie": 11,
+    "trade_count_alignment": {
+      "nf_trades_1p00": 85,
+      "nf_trades_1p50": 85,
+      "delta_abs": 0,
+      "delta_pct_of_max": 0.0,
+      "alignment_level": "aligned",
+      "notes": []
+    }
+  },
+  "decision": {
+    "decision": "KEEP_BOTH_UNRESOLVED_PENDING_MORE_DATA",
+    "reason": "|\u0394E[R]|=0.0081R < seuil 0.015R (zone \u00e9quivalence)",
+    "epsilon_er": 0.015,
+    "epsilon_er_rationale": "Seuil op\u00e9rationnel heuristique (pas intervalle de confiance ni test d'hypoth\u00e8se formel sur E[R]). Objectif : exiger une s\u00e9paration nette entre 1.0R et 1.5R apr\u00e8s agr\u00e9gation sur 12 semaines, plut\u00f4t que trancher sur des diff\u00e9rences du m\u00eame ordre que le bruit de petits sous-\u00e9chantillons. Ancrage qualitatif : sur PHASE B nov (~27 trades NF), l'\u00e9cart d'expectancy entre tp1=1.0 et 1.5 est tr\u00e8s \u00e9troit (~4\u00b710\u207b\u2074R), largement sous 0.015R ; le seuil vise donc un \u00e9cart \u00ab structurel \u00bb sur la campagne multi-semaines, pas le micro-raffinement d'un seul mois. Esprit align\u00e9 sur les gates NF existantes (marges fixes vs ref, sans z-score). \u00c0 r\u00e9viser si le volume agr\u00e9g\u00e9 augmente fortement ou si la politique produit impose une autre sensibilit\u00e9.",
+    "eligibility_errors": [],
+    "warnings": [],
+    "trade_count_alignment": {
+      "nf_trades_1p00": 85,
+      "nf_trades_1p50": 85,
+      "delta_abs": 0,
+      "delta_pct_of_max": 0.0,
+      "alignment_level": "aligned",
+      "notes": []
+    }
+  },
+  "paired_window_rows": [
+    {
+      "preset_month": "aug2025",
+      "label": "202508_w01",
+      "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+      "git_sha_1p00": "00bbd8937c27faec7cea21543b24375d56917f34",
+      "git_sha_1p50": "0266fc57fac8c48769f8fd0b2950cf6cac08fca2",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 0,
+      "trades_1p50": 0,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": 0.0,
+      "sum_r_1p50": 0.0,
+      "expectancy_1p00": 0.0,
+      "expectancy_1p50": 0.0,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 0.0,
+      "pct_session_end_1p50": 0.0,
+      "median_dur_1p00": null,
+      "median_dur_1p50": null,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {},
+      "exit_counts_1p50": {}
+    },
+    {
+      "preset_month": "aug2025",
+      "label": "202508_w02",
+      "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+      "git_sha_1p00": "00bbd8937c27faec7cea21543b24375d56917f34",
+      "git_sha_1p50": "0266fc57fac8c48769f8fd0b2950cf6cac08fca2",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 11,
+      "trades_1p50": 11,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 9.090909090909092,
+      "winrate_1p50": 9.090909090909092,
+      "sum_r_1p00": -0.6885465000000238,
+      "sum_r_1p50": -0.6885465000000238,
+      "expectancy_1p00": -0.06259513636363853,
+      "expectancy_1p50": -0.06259513636363853,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 46.0,
+      "median_dur_1p50": 46.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 11
+      },
+      "exit_counts_1p50": {
+        "session_end": 11
+      }
+    },
+    {
+      "preset_month": "aug2025",
+      "label": "202508_w03",
+      "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+      "git_sha_1p00": "0266fc57fac8c48769f8fd0b2950cf6cac08fca2",
+      "git_sha_1p50": "0266fc57fac8c48769f8fd0b2950cf6cac08fca2",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 7,
+      "trades_1p50": 7,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 85.71428571428571,
+      "winrate_1p50": 85.71428571428571,
+      "sum_r_1p00": 1.3967109999999614,
+      "sum_r_1p50": 2.085408699999983,
+      "expectancy_1p00": 0.19953014285713735,
+      "expectancy_1p50": 0.29791552857142617,
+      "pct_tp_1p00": 85.71428571428571,
+      "pct_tp_1p50": 42.857142857142854,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 14.285714285714285,
+      "pct_session_end_1p50": 57.14285714285714,
+      "median_dur_1p00": 54.0,
+      "median_dur_1p50": 66.0,
+      "delta_expectancy_1p50_minus_1p00": 0.09838538571428881,
+      "delta_sum_r_1p50_minus_1p00": 0.6886977000000216,
+      "exit_counts_1p00": {
+        "TP1": 6,
+        "session_end": 1
+      },
+      "exit_counts_1p50": {
+        "session_end": 4,
+        "TP1": 3
+      }
+    },
+    {
+      "preset_month": "aug2025",
+      "label": "202508_w04",
+      "campaign_1p00": "nf_tp1_arb_1p00_aug2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_aug2025",
+      "git_sha_1p00": "0266fc57fac8c48769f8fd0b2950cf6cac08fca2",
+      "git_sha_1p50": "0266fc57fac8c48769f8fd0b2950cf6cac08fca2",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 7,
+      "trades_1p50": 7,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": -0.8534969999999648,
+      "sum_r_1p50": -0.8534969999999648,
+      "expectancy_1p00": -0.12192814285713782,
+      "expectancy_1p50": -0.12192814285713782,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 11.0,
+      "median_dur_1p50": 11.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 7
+      },
+      "exit_counts_1p50": {
+        "session_end": 7
+      }
+    },
+    {
+      "preset_month": "sep2025",
+      "label": "202509_w01",
+      "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+      "git_sha_1p00": "0ae3e0cfb78b149517342ffa3337c6c7ecf434ab",
+      "git_sha_1p50": "0ae3e0cfb78b149517342ffa3337c6c7ecf434ab",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 7,
+      "trades_1p50": 7,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": -0.6559799999999846,
+      "sum_r_1p50": -0.6559799999999846,
+      "expectancy_1p00": -0.09371142857142636,
+      "expectancy_1p50": -0.09371142857142636,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 6.0,
+      "median_dur_1p50": 6.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 7
+      },
+      "exit_counts_1p50": {
+        "session_end": 7
+      }
+    },
+    {
+      "preset_month": "sep2025",
+      "label": "202509_w02",
+      "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+      "git_sha_1p00": "0ae3e0cfb78b149517342ffa3337c6c7ecf434ab",
+      "git_sha_1p50": "0ae3e0cfb78b149517342ffa3337c6c7ecf434ab",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 0,
+      "trades_1p50": 0,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": 0.0,
+      "sum_r_1p50": 0.0,
+      "expectancy_1p00": 0.0,
+      "expectancy_1p50": 0.0,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 0.0,
+      "pct_session_end_1p50": 0.0,
+      "median_dur_1p00": null,
+      "median_dur_1p50": null,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {},
+      "exit_counts_1p50": {}
+    },
+    {
+      "preset_month": "sep2025",
+      "label": "202509_w03",
+      "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+      "git_sha_1p00": "0ae3e0cfb78b149517342ffa3337c6c7ecf434ab",
+      "git_sha_1p50": "92d0ed5d42c3d172834243338f2e87dce81d5670",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 18,
+      "trades_1p50": 18,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 27.77777777777778,
+      "winrate_1p50": 27.77777777777778,
+      "sum_r_1p00": -0.8325371499999531,
+      "sum_r_1p50": -0.8325371499999531,
+      "expectancy_1p00": -0.04625206388888628,
+      "expectancy_1p50": -0.04625206388888628,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 5.555555555555555,
+      "pct_sl_1p50": 5.555555555555555,
+      "pct_session_end_1p00": 94.44444444444444,
+      "pct_session_end_1p50": 94.44444444444444,
+      "median_dur_1p00": 63.5,
+      "median_dur_1p50": 63.5,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 17,
+        "SL": 1
+      },
+      "exit_counts_1p50": {
+        "session_end": 17,
+        "SL": 1
+      }
+    },
+    {
+      "preset_month": "sep2025",
+      "label": "202509_w04",
+      "campaign_1p00": "nf_tp1_arb_1p00_sep2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_sep2025",
+      "git_sha_1p00": "0ae3e0cfb78b149517342ffa3337c6c7ecf434ab",
+      "git_sha_1p50": "92d0ed5d42c3d172834243338f2e87dce81d5670",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 9,
+      "trades_1p50": 9,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": -0.6358467999999993,
+      "sum_r_1p50": -0.6358467999999993,
+      "expectancy_1p00": -0.07064964444444437,
+      "expectancy_1p50": -0.07064964444444437,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 16.0,
+      "median_dur_1p50": 16.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 9
+      },
+      "exit_counts_1p50": {
+        "session_end": 9
+      }
+    },
+    {
+      "preset_month": "oct2025",
+      "label": "202510_w01",
+      "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+      "git_sha_1p00": "92d0ed5d42c3d172834243338f2e87dce81d5670",
+      "git_sha_1p50": "eb6b245686452536fc9452d362a5d1712703e48f",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 2,
+      "trades_1p50": 2,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": -0.05572160000000438,
+      "sum_r_1p50": -0.05572160000000438,
+      "expectancy_1p00": -0.02786080000000219,
+      "expectancy_1p50": -0.02786080000000219,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 26.0,
+      "median_dur_1p50": 26.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 2
+      },
+      "exit_counts_1p50": {
+        "session_end": 2
+      }
+    },
+    {
+      "preset_month": "oct2025",
+      "label": "202510_w02",
+      "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+      "git_sha_1p00": "92d0ed5d42c3d172834243338f2e87dce81d5670",
+      "git_sha_1p50": "eb6b245686452536fc9452d362a5d1712703e48f",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 16,
+      "trades_1p50": 16,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 18.75,
+      "winrate_1p50": 18.75,
+      "sum_r_1p00": -0.8431150999999968,
+      "sum_r_1p50": -0.8431150999999968,
+      "expectancy_1p00": -0.0526946937499998,
+      "expectancy_1p50": -0.0526946937499998,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 56.0,
+      "median_dur_1p50": 56.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 16
+      },
+      "exit_counts_1p50": {
+        "session_end": 16
+      }
+    },
+    {
+      "preset_month": "oct2025",
+      "label": "202510_w03",
+      "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+      "git_sha_1p00": "92d0ed5d42c3d172834243338f2e87dce81d5670",
+      "git_sha_1p50": "eb6b245686452536fc9452d362a5d1712703e48f",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 8,
+      "trades_1p50": 8,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": -0.9594249999999939,
+      "sum_r_1p50": -0.9594249999999939,
+      "expectancy_1p00": -0.11992812499999923,
+      "expectancy_1p50": -0.11992812499999923,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 100.0,
+      "pct_session_end_1p50": 100.0,
+      "median_dur_1p00": 76.0,
+      "median_dur_1p50": 76.0,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {
+        "session_end": 8
+      },
+      "exit_counts_1p50": {
+        "session_end": 8
+      }
+    },
+    {
+      "preset_month": "oct2025",
+      "label": "202510_w04",
+      "campaign_1p00": "nf_tp1_arb_1p00_oct2025",
+      "campaign_1p50": "nf_tp1_arb_1p50_oct2025",
+      "git_sha_1p00": "92d0ed5d42c3d172834243338f2e87dce81d5670",
+      "git_sha_1p50": "eb6b245686452536fc9452d362a5d1712703e48f",
+      "playbooks_yaml_1p00": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p00.yml",
+      "playbooks_yaml_1p50": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/_phase_b_yamls/playbooks_nf_tp1_1p50.yml",
+      "nf_tp1_rr_meta_1p00": 1.0,
+      "nf_tp1_rr_meta_1p50": 1.5,
+      "trades_1p00": 0,
+      "trades_1p50": 0,
+      "trade_count_delta_abs": 0,
+      "winrate_1p00": 0.0,
+      "winrate_1p50": 0.0,
+      "sum_r_1p00": 0.0,
+      "sum_r_1p50": 0.0,
+      "expectancy_1p00": 0.0,
+      "expectancy_1p50": 0.0,
+      "pct_tp_1p00": 0.0,
+      "pct_tp_1p50": 0.0,
+      "pct_sl_1p00": 0.0,
+      "pct_sl_1p50": 0.0,
+      "pct_session_end_1p00": 0.0,
+      "pct_session_end_1p50": 0.0,
+      "median_dur_1p00": null,
+      "median_dur_1p50": null,
+      "delta_expectancy_1p50_minus_1p00": -0.0,
+      "delta_sum_r_1p50_minus_1p00": 0.0,
+      "exit_counts_1p00": {},
+      "exit_counts_1p50": {}
+    }
+  ]
+}
