@@ -1,0 +1,111 @@
+{
+  "schema_version": "WalkForwardMiniLabCampaignV0",
+  "created_at_utc": "2026-04-13T01:06:56.229487+00:00",
+  "output_parent": "wf_core3_tune_stricter_grades",
+  "label_prefix": "wf",
+  "include_train": false,
+  "dry_run": false,
+  "fail_fast": true,
+  "fail_fast_stopped": null,
+  "max_returncode": 0,
+  "forwarded_argv": [
+    "--symbols",
+    "SPY,QQQ",
+    "--playbooks-yaml",
+    "knowledge/campaigns/campaign_wf_core3_tune_stricter_grades.yml",
+    "--no-bypass-lss-quarantine",
+    "--strict-manifest-coverage"
+  ],
+  "plan": {
+    "schema_version": "WalkForwardLightV0",
+    "start_date": "2025-06-03",
+    "end_date": "2025-11-27",
+    "calendar_days": 178,
+    "q_calendar_blocks": 44,
+    "splits": [
+      {
+        "id": 0,
+        "train": {
+          "start_date": "2025-06-03",
+          "end_date": "2025-08-29"
+        },
+        "test": {
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12"
+        },
+        "train_days": 88,
+        "test_days": 44
+      },
+      {
+        "id": 1,
+        "train": {
+          "start_date": "2025-06-03",
+          "end_date": "2025-10-12"
+        },
+        "test": {
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27"
+        },
+        "train_days": 132,
+        "test_days": 46
+      }
+    ],
+    "note": "Train/test en jours calendaires (minuit UTC) \u2014 dates inclusives pour encha\u00eener run_mini_lab_week / backtest."
+  },
+  "runs": [
+    {
+      "phase": "test",
+      "split_id": 0,
+      "window": {
+        "start_date": "2025-08-30",
+        "end_date": "2025-10-12"
+      },
+      "cmd": [
+        "/home/dexter/dexterio1-main/backend/.venv/bin/python",
+        "/home/dexter/dexterio1-main/backend/scripts/run_mini_lab_week.py",
+        "--start",
+        "2025-08-30",
+        "--end",
+        "2025-10-12",
+        "--label",
+        "wf_s0_test",
+        "--output-parent",
+        "wf_core3_tune_stricter_grades",
+        "--symbols",
+        "SPY,QQQ",
+        "--playbooks-yaml",
+        "knowledge/campaigns/campaign_wf_core3_tune_stricter_grades.yml",
+        "--no-bypass-lss-quarantine",
+        "--strict-manifest-coverage"
+      ],
+      "returncode": 0
+    },
+    {
+      "phase": "test",
+      "split_id": 1,
+      "window": {
+        "start_date": "2025-10-13",
+        "end_date": "2025-11-27"
+      },
+      "cmd": [
+        "/home/dexter/dexterio1-main/backend/.venv/bin/python",
+        "/home/dexter/dexterio1-main/backend/scripts/run_mini_lab_week.py",
+        "--start",
+        "2025-10-13",
+        "--end",
+        "2025-11-27",
+        "--label",
+        "wf_s1_test",
+        "--output-parent",
+        "wf_core3_tune_stricter_grades",
+        "--symbols",
+        "SPY,QQQ",
+        "--playbooks-yaml",
+        "knowledge/campaigns/campaign_wf_core3_tune_stricter_grades.yml",
+        "--no-bypass-lss-quarantine",
+        "--strict-manifest-coverage"
+      ],
+      "returncode": 0
+    }
+  ]
+}
