@@ -1,0 +1,1190 @@
+{
+  "schema_version": "FullPortfolioMapV0",
+  "generated_at_utc": "2026-04-15T01:22:51+00:00",
+  "git_sha": "59030d59aeee357116d853b1770a99f2a4754967",
+  "sources": {
+    "knowledge_playbooks_yml": "knowledge/playbooks.yml",
+    "knowledge_aplus_setups_yml": "knowledge/aplus_setups.yml",
+    "knowledge_transcripts_yml": "knowledge/playbooks_Aplus_from_transcripts.yaml",
+    "knowledge_campaigns_dir": "knowledge/campaigns/",
+    "risk_engine_py": "engines/risk_engine.py",
+    "knowledge_quarantine_yml": "knowledge/playbook_quarantine.yaml",
+    "results_dir": "results/"
+  },
+  "policy_runtime": {
+    "aggressive_allowlist": [
+      "News_Fade",
+      "Session_Open_Scalp",
+      "NY_Open_Reversal",
+      "Morning_Trap_Reversal",
+      "Liquidity_Sweep_Scalp",
+      "FVG_Fill_Scalp",
+      "IFVG_Flip_5m_Bull",
+      "IFVG_Flip_5m_Bear"
+    ],
+    "aggressive_denylist": [
+      "London_Sweep_NY_Continuation",
+      "BOS_Momentum_Scalp",
+      "Power_Hour_Expansion",
+      "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "Lunch_Range_Scalp",
+      "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+      "Trend_Continuation_FVG_Retest"
+    ]
+  },
+  "families": {
+    "A+ branch\u00e9s": {
+      "family": "A+ branch\u00e9s",
+      "counts": {
+        "total": 2
+      },
+      "by_status": {
+        "blocked by deny": 2
+      },
+      "playbooks": [
+        "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+        "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open"
+      ]
+    },
+    "A+ transcripts research-only": {
+      "family": "A+ transcripts research-only",
+      "counts": {
+        "total": 4
+      },
+      "by_status": {
+        "research-only": 4
+      },
+      "playbooks": [
+        "Aplus_01_MarketOpen_Sweep_IFVG_Breaker",
+        "Aplus_02_PremarketSweep_5mConfirm_5mContinuation_EntryConfluence",
+        "Aplus_03_IFVG_Flip_from_FVG_Invalidation",
+        "Aplus_04_HTF_Bias_15m_Sweep_BOS_EntryConfluence"
+      ]
+    },
+    "FVG / IFVG": {
+      "family": "FVG / IFVG",
+      "counts": {
+        "total": 4
+      },
+      "by_status": {
+        "FULL runnable": 1,
+        "blocked by deny": 1,
+        "FULL runnable via --playbooks-yaml": 2
+      },
+      "playbooks": [
+        "FVG_Fill_Scalp",
+        "IFVG_Flip_5m_Bear",
+        "IFVG_Flip_5m_Bull",
+        "Trend_Continuation_FVG_Retest"
+      ]
+    },
+    "NY / reversals": {
+      "family": "NY / reversals",
+      "counts": {
+        "total": 2
+      },
+      "by_status": {
+        "blocked by deny": 1,
+        "FULL runnable": 1
+      },
+      "playbooks": [
+        "London_Sweep_NY_Continuation",
+        "NY_Open_Reversal"
+      ]
+    },
+    "News Fade": {
+      "family": "News Fade",
+      "counts": {
+        "total": 1
+      },
+      "by_status": {
+        "FULL runnable": 1
+      },
+      "playbooks": [
+        "News_Fade"
+      ]
+    },
+    "Other / uncategorized": {
+      "family": "Other / uncategorized",
+      "counts": {
+        "total": 4
+      },
+      "by_status": {
+        "blocked by deny": 3,
+        "FULL runnable (quarantined / needs revalidation)": 1
+      },
+      "playbooks": [
+        "BOS_Momentum_Scalp",
+        "Lunch_Range_Scalp",
+        "Morning_Trap_Reversal",
+        "Power_Hour_Expansion"
+      ]
+    },
+    "Session / opening range": {
+      "family": "Session / opening range",
+      "counts": {
+        "total": 1
+      },
+      "by_status": {
+        "FULL runnable": 1
+      },
+      "playbooks": [
+        "Session_Open_Scalp"
+      ]
+    },
+    "sweeps / liquidity": {
+      "family": "sweeps / liquidity",
+      "counts": {
+        "total": 1
+      },
+      "by_status": {
+        "FULL runnable (quarantined / needs revalidation)": 1
+      },
+      "playbooks": [
+        "Liquidity_Sweep_Scalp"
+      ]
+    }
+  },
+  "playbooks": [
+    {
+      "name": "BOS_Momentum_Scalp",
+      "family": "Other / uncategorized",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "requires BOS (structure mapping risk); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "FVG_Fill_Scalp",
+      "family": "FVG / IFVG",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "FULL runnable",
+      "campaign_yamls": [
+        "knowledge/campaigns/campaign_wf_core3_fvg_only.yml",
+        "knowledge/campaigns/campaign_wf_core3_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_wf_core3_tune_stricter_grades.yml"
+      ],
+      "evidence_runs": [
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades/wf_s0_test",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "2ea7add2eefea8a9adc9e33fc74337d73b1856d0",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades/wf_s1_test",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "2ea7add2eefea8a9adc9e33fc74337d73b1856d0",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025/wf_s0_test",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "b8e7bcf9035914668eff7ff78329eb7343c07820",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025/wf_s1_test",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "b8e7bcf9035914668eff7ff78329eb7343c07820",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_fvg_only/wf_s0_test",
+          "output_parent": "wf_core3_fvg_only",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "b8ac81f4d03a438f9f00f58cc462b9f9176ac394",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_fvg_only/wf_s1_test",
+          "output_parent": "wf_core3_fvg_only",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "b8ac81f4d03a438f9f00f58cc462b9f9176ac394",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_fvg_only",
+          "output_parent": "wf_core3_fvg_only",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        }
+      ],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "uses HTF bias gates"
+      }
+    },
+    {
+      "name": "Liquidity_Sweep_Scalp",
+      "family": "sweeps / liquidity",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": true,
+      "quarantine_reason": "high_loss_r",
+      "product_status": "FULL runnable (quarantined / needs revalidation)",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "requires sweep (often 5m/15m structure); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "London_Sweep_NY_Continuation",
+      "family": "NY / reversals",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "requires London sweep (often HTF/session-structure driven); requires BOS (structure mapping risk); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "Lunch_Range_Scalp",
+      "family": "Other / uncategorized",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "uses HTF bias gates"
+      }
+    },
+    {
+      "name": "Morning_Trap_Reversal",
+      "family": "Other / uncategorized",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": true,
+      "quarantine_reason": "high_loss_r",
+      "product_status": "FULL runnable (quarantined / needs revalidation)",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "requires sweep (often 5m/15m structure); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "NY_Open_Reversal",
+      "family": "NY / reversals",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "FULL runnable",
+      "campaign_yamls": [
+        "knowledge/campaigns/campaign_wf_core3_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_wf_core3_no_fvg.yml",
+        "knowledge/campaigns/campaign_wf_core3_ny_only.yml",
+        "knowledge/campaigns/campaign_wf_core3_tune_stricter_grades.yml"
+      ],
+      "evidence_runs": [
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades/wf_s0_test",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "2ea7add2eefea8a9adc9e33fc74337d73b1856d0",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades/wf_s1_test",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "2ea7add2eefea8a9adc9e33fc74337d73b1856d0",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025/wf_s0_test",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "b8e7bcf9035914668eff7ff78329eb7343c07820",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025/wf_s1_test",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "b8e7bcf9035914668eff7ff78329eb7343c07820",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_no_fvg/wf_s0_test",
+          "output_parent": "wf_core3_no_fvg",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "99a5780a2b7745cabfd8b21f358b9b3a56bb56ba",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_no_fvg/wf_s1_test",
+          "output_parent": "wf_core3_no_fvg",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "99a5780a2b7745cabfd8b21f358b9b3a56bb56ba",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_ny_only/wf_s0_test",
+          "output_parent": "wf_core3_ny_only",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "9716e2df48162cb3c624a4ba5a91857e001802d4",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_ny_only/wf_s1_test",
+          "output_parent": "wf_core3_ny_only",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "9716e2df48162cb3c624a4ba5a91857e001802d4",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_no_fvg",
+          "output_parent": "wf_core3_no_fvg",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_ny_only",
+          "output_parent": "wf_core3_ny_only",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        }
+      ],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "requires London sweep (often HTF/session-structure driven); requires sweep (often 5m/15m structure); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "News_Fade",
+      "family": "News Fade",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "FULL runnable",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "requires sweep (often 5m/15m structure); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "Power_Hour_Expansion",
+      "family": "Other / uncategorized",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "requires BOS (structure mapping risk); uses HTF bias gates"
+      }
+    },
+    {
+      "name": "Session_Open_Scalp",
+      "family": "Session / opening range",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "FULL runnable",
+      "campaign_yamls": [
+        "knowledge/campaigns/campaign_wf_core3_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_wf_core3_no_fvg.yml",
+        "knowledge/campaigns/campaign_wf_core3_tune_stricter_grades.yml"
+      ],
+      "evidence_runs": [
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades/wf_s0_test",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "2ea7add2eefea8a9adc9e33fc74337d73b1856d0",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades/wf_s1_test",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "2ea7add2eefea8a9adc9e33fc74337d73b1856d0",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025/wf_s0_test",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "b8e7bcf9035914668eff7ff78329eb7343c07820",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025/wf_s1_test",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "b8e7bcf9035914668eff7ff78329eb7343c07820",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_no_fvg/wf_s0_test",
+          "output_parent": "wf_core3_no_fvg",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-12",
+          "git_sha": "99a5780a2b7745cabfd8b21f358b9b3a56bb56ba",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_no_fvg/wf_s1_test",
+          "output_parent": "wf_core3_no_fvg",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-13",
+          "end_date": "2025-11-27",
+          "git_sha": "99a5780a2b7745cabfd8b21f358b9b3a56bb56ba",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_tune_stricter_grades",
+          "output_parent": "wf_core3_tune_stricter_grades",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_oos_jun_nov2025",
+          "output_parent": "wf_core3_oos_jun_nov2025",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/wf_core3_no_fvg",
+          "output_parent": "wf_core3_no_fvg",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        }
+      ],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "uses HTF bias gates"
+      }
+    },
+    {
+      "name": "Trend_Continuation_FVG_Retest",
+      "family": "FVG / IFVG",
+      "source": "CORE",
+      "source_files": [
+        "knowledge/playbooks.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": true,
+      "quarantine_reason": "lab_nov_2025_spy_qqq_1m: -22.32R net, PF 0.0, 98 trades (MarketState.current_session corrig\u00e9) \u2014 playbook retir\u00e9 de AGGRESSIVE_ALLOWLIST et ajout\u00e9 \u00e0 AGGRESSIVE_DENYLIST",
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "medium",
+        "reason": "entry confirmation_tf=5m; uses HTF bias gates"
+      }
+    },
+    {
+      "name": "DAY_Aplus_1_Liquidity_Sweep_OB_Retest",
+      "family": "A+ branch\u00e9s",
+      "source": "APLUS_BRANCHED",
+      "source_files": [
+        "knowledge/aplus_setups.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "A+ setup schema includes HTF/setup timeframes (see aplus_setups.yml); execution likely 1m"
+      }
+    },
+    {
+      "name": "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open",
+      "family": "A+ branch\u00e9s",
+      "source": "APLUS_BRANCHED",
+      "source_files": [
+        "knowledge/aplus_setups.yml"
+      ],
+      "loader_loaded": true,
+      "policy_runtime": "denylist",
+      "in_quarantine_yaml": true,
+      "quarantine_reason": "high_loss_r",
+      "product_status": "blocked by deny",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "A+ setup schema includes HTF/setup timeframes (see aplus_setups.yml); execution likely 1m"
+      }
+    },
+    {
+      "name": "IFVG_Flip_5m_Bear",
+      "family": "FVG / IFVG",
+      "source": "CAMPAIGN_ONLY",
+      "source_files": [
+        "knowledge/campaigns/campaign_ifvg_5m_oos_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_smoke_ifvg_5m.yml"
+      ],
+      "loader_loaded": false,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "FULL runnable via --playbooks-yaml",
+      "campaign_yamls": [
+        "knowledge/campaigns/campaign_ifvg_5m_oos_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_smoke_ifvg_5m.yml"
+      ],
+      "evidence_runs": [
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/debug_sep30_tight",
+          "output_parent": "debug_sep30_tight",
+          "label": "debug_sep30_tight",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-09-29",
+          "end_date": "2025-10-02",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/data_coverage_contract_probe/coverage_enddate_probe",
+          "output_parent": "data_coverage_contract_probe",
+          "label": "coverage_enddate_probe",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-11-26",
+          "end_date": "2025-11-28",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_probe_sep29_oct02_postfix/ifvg_sep29_oct02_postfix",
+          "output_parent": "ifvg_probe_sep29_oct02_postfix",
+          "label": "ifvg_sep29_oct02_postfix",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-09-29",
+          "end_date": "2025-10-02",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix_covfix/wf_s0_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix_covfix",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-13",
+          "git_sha": "ad8ba70c8ebcf3b0f67286c1407594e8d457fbfc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix_covfix/wf_s1_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix_covfix",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-14",
+          "end_date": "2025-11-28",
+          "git_sha": "ad8ba70c8ebcf3b0f67286c1407594e8d457fbfc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/smoke_ifvg_5m/smoke_ifvg_5m_day1_v3",
+          "output_parent": "smoke_ifvg_5m",
+          "label": "smoke_ifvg_5m_day1_v3",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-04",
+          "end_date": "2025-08-04",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/smoke_ifvg_5m/smoke_ifvg_5m_day1",
+          "output_parent": "smoke_ifvg_5m",
+          "label": "smoke_ifvg_5m_day1",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-04",
+          "end_date": "2025-08-04",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/smoke_ifvg_5m/smoke_ifvg_5m_day1_v2",
+          "output_parent": "smoke_ifvg_5m",
+          "label": "smoke_ifvg_5m_day1_v2",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-04",
+          "end_date": "2025-08-04",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_probe_sep29_oct02/ifvg_sep29_oct02",
+          "output_parent": "ifvg_probe_sep29_oct02",
+          "label": "ifvg_sep29_oct02",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-09-29",
+          "end_date": "2025-10-02",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025/wf_s0_test",
+          "output_parent": "ifvg_oos_jun_nov2025",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-13",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025/wf_s1_test",
+          "output_parent": "ifvg_oos_jun_nov2025",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-14",
+          "end_date": "2025-11-28",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix/wf_s0_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-13",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix/wf_s1_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-14",
+          "end_date": "2025-11-28",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025",
+          "output_parent": "ifvg_oos_jun_nov2025",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        }
+      ],
+      "timeframe_compression_suspicion": {
+        "level": "low",
+        "reason": "required_signals=IFVG_BEAR@5m (setup explicitly on 5m)"
+      }
+    },
+    {
+      "name": "IFVG_Flip_5m_Bull",
+      "family": "FVG / IFVG",
+      "source": "CAMPAIGN_ONLY",
+      "source_files": [
+        "knowledge/campaigns/campaign_ifvg_5m_oos_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_smoke_ifvg_5m.yml"
+      ],
+      "loader_loaded": false,
+      "policy_runtime": "allowlist",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "FULL runnable via --playbooks-yaml",
+      "campaign_yamls": [
+        "knowledge/campaigns/campaign_ifvg_5m_oos_jun_nov2025.yml",
+        "knowledge/campaigns/campaign_smoke_ifvg_5m.yml"
+      ],
+      "evidence_runs": [
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/debug_sep30_tight",
+          "output_parent": "debug_sep30_tight",
+          "label": "debug_sep30_tight",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-09-29",
+          "end_date": "2025-10-02",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/data_coverage_contract_probe/coverage_enddate_probe",
+          "output_parent": "data_coverage_contract_probe",
+          "label": "coverage_enddate_probe",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-11-26",
+          "end_date": "2025-11-28",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_probe_sep29_oct02_postfix/ifvg_sep29_oct02_postfix",
+          "output_parent": "ifvg_probe_sep29_oct02_postfix",
+          "label": "ifvg_sep29_oct02_postfix",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-09-29",
+          "end_date": "2025-10-02",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix_covfix/wf_s0_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix_covfix",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-13",
+          "git_sha": "ad8ba70c8ebcf3b0f67286c1407594e8d457fbfc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix_covfix/wf_s1_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix_covfix",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-14",
+          "end_date": "2025-11-28",
+          "git_sha": "ad8ba70c8ebcf3b0f67286c1407594e8d457fbfc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/smoke_ifvg_5m/smoke_ifvg_5m_day1_v3",
+          "output_parent": "smoke_ifvg_5m",
+          "label": "smoke_ifvg_5m_day1_v3",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-04",
+          "end_date": "2025-08-04",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/smoke_ifvg_5m/smoke_ifvg_5m_day1",
+          "output_parent": "smoke_ifvg_5m",
+          "label": "smoke_ifvg_5m_day1",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-04",
+          "end_date": "2025-08-04",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/smoke_ifvg_5m/smoke_ifvg_5m_day1_v2",
+          "output_parent": "smoke_ifvg_5m",
+          "label": "smoke_ifvg_5m_day1_v2",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-04",
+          "end_date": "2025-08-04",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_probe_sep29_oct02/ifvg_sep29_oct02",
+          "output_parent": "ifvg_probe_sep29_oct02",
+          "label": "ifvg_sep29_oct02",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-09-29",
+          "end_date": "2025-10-02",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025/wf_s0_test",
+          "output_parent": "ifvg_oos_jun_nov2025",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-13",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025/wf_s1_test",
+          "output_parent": "ifvg_oos_jun_nov2025",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-14",
+          "end_date": "2025-11-28",
+          "git_sha": "c3eb1d6cf949427d347ea11afc2a3a31ebee7122",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix/wf_s0_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix",
+          "label": "wf_s0_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-08-30",
+          "end_date": "2025-10-13",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025_postfix/wf_s1_test",
+          "output_parent": "ifvg_oos_jun_nov2025_postfix",
+          "label": "wf_s1_test",
+          "runner": "run_mini_lab_week.py",
+          "start_date": "2025-10-14",
+          "end_date": "2025-11-28",
+          "git_sha": "4e7246a3fe5b9dd31e20cc527f57e00e36cf6edc",
+          "kind": "mini_lab_run"
+        },
+        {
+          "path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/ifvg_oos_jun_nov2025",
+          "output_parent": "ifvg_oos_jun_nov2025",
+          "label": "(parent)",
+          "runner": "walk_forward_campaign.json",
+          "start_date": "",
+          "end_date": "",
+          "git_sha": "",
+          "kind": "walk_forward_parent"
+        }
+      ],
+      "timeframe_compression_suspicion": {
+        "level": "low",
+        "reason": "required_signals=IFVG_BULL@5m (setup explicitly on 5m)"
+      }
+    },
+    {
+      "name": "Aplus_01_MarketOpen_Sweep_IFVG_Breaker",
+      "display_name": "Market Open Sweep \u2192 IFVG \u2192 Breaker/OB/FVG (entr\u00e9e 1m)",
+      "family": "A+ transcripts research-only",
+      "source": "APLUS_TRANSCRIPTS",
+      "source_files": [
+        "knowledge/playbooks_Aplus_from_transcripts.yaml"
+      ],
+      "loader_loaded": false,
+      "policy_runtime": "n/a",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "research-only",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "transcript setup timeframes=['5m'], entry=['1m']"
+      },
+      "transcript_timeframes": {
+        "context": [
+          "1H",
+          "4H"
+        ],
+        "setup": [
+          "5m"
+        ],
+        "entry": [
+          "1m"
+        ]
+      },
+      "transcript_universe": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "name": "Aplus_02_PremarketSweep_5mConfirm_5mContinuation_EntryConfluence",
+      "display_name": "Pre-market Liquidity Sweep \u2192 5m Confirm \u2192 5m Continuation \u2192 Entr\u00e9e confluence",
+      "family": "A+ transcripts research-only",
+      "source": "APLUS_TRANSCRIPTS",
+      "source_files": [
+        "knowledge/playbooks_Aplus_from_transcripts.yaml"
+      ],
+      "loader_loaded": false,
+      "policy_runtime": "n/a",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "research-only",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "transcript setup timeframes=['5m'], entry=['5m', '1m']"
+      },
+      "transcript_timeframes": {
+        "context": [
+          "D",
+          "4H"
+        ],
+        "setup": [
+          "5m"
+        ],
+        "entry": [
+          "5m",
+          "1m"
+        ]
+      },
+      "transcript_universe": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "name": "Aplus_03_IFVG_Flip_from_FVG_Invalidation",
+      "display_name": "IFVG Flip (invalidation d\u2019un FVG \u2192 trade dans le sens du flip)",
+      "family": "A+ transcripts research-only",
+      "source": "APLUS_TRANSCRIPTS",
+      "source_files": [
+        "knowledge/playbooks_Aplus_from_transcripts.yaml"
+      ],
+      "loader_loaded": false,
+      "policy_runtime": "n/a",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "research-only",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "transcript setup timeframes=['5m', '15m'], entry=['1m', '5m']"
+      },
+      "transcript_timeframes": {
+        "setup": [
+          "5m",
+          "15m"
+        ],
+        "entry": [
+          "1m",
+          "5m"
+        ]
+      },
+      "transcript_universe": [
+        "SPY",
+        "QQQ"
+      ]
+    },
+    {
+      "name": "Aplus_04_HTF_Bias_15m_Sweep_BOS_EntryConfluence",
+      "display_name": "HTF Bias (D/4H) \u2192 15m Sweep \u2192 15m BOS \u2192 Entr\u00e9e confluence (OB/FVG/EQ/Breaker)",
+      "family": "A+ transcripts research-only",
+      "source": "APLUS_TRANSCRIPTS",
+      "source_files": [
+        "knowledge/playbooks_Aplus_from_transcripts.yaml"
+      ],
+      "loader_loaded": false,
+      "policy_runtime": "n/a",
+      "in_quarantine_yaml": false,
+      "quarantine_reason": null,
+      "product_status": "research-only",
+      "campaign_yamls": [],
+      "evidence_runs": [],
+      "timeframe_compression_suspicion": {
+        "level": "high",
+        "reason": "transcript setup timeframes=['15m'], entry=['5m', '1m']"
+      },
+      "transcript_timeframes": {
+        "context": [
+          "D",
+          "4H"
+        ],
+        "setup": [
+          "15m"
+        ],
+        "entry": [
+          "5m",
+          "1m"
+        ]
+      },
+      "transcript_universe": [
+        "SPY",
+        "QQQ"
+      ]
+    }
+  ],
+  "notes": [
+    "policy_runtime is derived from engines/risk_engine.py list literals (no code execution).",
+    "evidence_runs is derived from results/**/run_manifest.json playbooks_yaml linkage; runs without playbooks_yaml are ignored.",
+    "APLUS_TRANSCRIPTS entries are keyed by transcript 'id' (not a runtime playbook_name)."
+  ]
+}
