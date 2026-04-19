@@ -1,0 +1,73 @@
+{
+  "protocol": "MINI_LAB_WEEK",
+  "runner": "run_mini_lab_week.py",
+  "contract_version": "RunSummaryV0",
+  "run_started_at_utc": "2026-04-19T19:26:20.260218+00:00",
+  "git_sha": "38ffef30917708a9cfc09ea6777c785f993556a9",
+  "run_id": "miniweek_fair_oct_w2_normalcaps",
+  "start_date": "2025-10-06",
+  "end_date": "2025-10-10",
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "respect_allowlists": false,
+  "bypass_lss_quarantine": true,
+  "output_parent": null,
+  "playbooks_yaml": null,
+  "nf_tp1_rr_meta": null,
+  "data_coverage_ok": true,
+  "data_coverage_error_count": 0,
+  "total_trades": 48,
+  "final_capital": "38023.094069800005",
+  "playbooks_registered_count": 28,
+  "funnel": {
+    "NY_Open_Reversal": {
+      "matches": 780,
+      "setups_created": 609,
+      "after_risk": 609,
+      "trades": 1
+    },
+    "News_Fade": {
+      "matches": 1820,
+      "setups_created": 1399,
+      "after_risk": 1399,
+      "trades": 2
+    },
+    "Liquidity_Sweep_Scalp": {
+      "matches": 650,
+      "setups_created": 510,
+      "after_risk": 510,
+      "trades": 6
+    },
+    "FVG_Fill_Scalp": {
+      "matches": 650,
+      "setups_created": 614,
+      "after_risk": 614,
+      "trades": 0
+    },
+    "Session_Open_Scalp": {
+      "matches": 24,
+      "setups_created": 22,
+      "after_risk": 22,
+      "trades": 1
+    }
+  },
+  "trade_metrics_parquet": {
+    "schema_version": "MiniLabTradeMetricsParquetV0",
+    "trades_rows": 48,
+    "parquet_path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/fair_oct_w2_normalcaps/trades_miniweek_fair_oct_w2_normalcaps_AGGRESSIVE_DAILY_SCALP.parquet",
+    "wins": 6,
+    "losses": 42,
+    "breakevens": 0,
+    "winrate": 12.5,
+    "sum_pnl_dollars": -11976.905930199988,
+    "mean_pnl_dollars": -249.5188735458331,
+    "mean_r_multiple": -0.24136217687916664,
+    "expectancy_r": -0.2413621768791666,
+    "gross_profit_r": 0.25052799999998715,
+    "gross_loss_r": -11.835912490199984,
+    "profit_factor": 0.021166766838418397,
+    "max_drawdown_r": 11.976905930199987
+  }
+}
