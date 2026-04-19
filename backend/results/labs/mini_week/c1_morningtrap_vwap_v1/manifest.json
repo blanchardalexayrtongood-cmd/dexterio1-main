@@ -1,0 +1,72 @@
+{
+  "schema_version": "CalibCorpusV1",
+  "output_parent": "c1_morningtrap_vwap_v1",
+  "created_at_utc": "2026-04-19T22:36:14.852336+00:00",
+  "git_sha": "85462faf1c0a9f32b3319fc66d35cd3833ccb8f4",
+  "env_flags": {
+    "RISK_EVAL_ALLOW_ALL_PLAYBOOKS": "true",
+    "RISK_EVAL_RELAX_CAPS": "false",
+    "RISK_EVAL_DISABLE_KILL_SWITCH": "true",
+    "RISK_EVAL_CALIB_ALLOWLIST": "Morning_Trap_Reversal,Engulfing_Bar_V056,BOS_Scalp_1m,Liquidity_Sweep_Scalp"
+  },
+  "allowlist_exact": [
+    "BOS_Scalp_1m",
+    "Engulfing_Bar_V056",
+    "Liquidity_Sweep_Scalp",
+    "Morning_Trap_Reversal"
+  ],
+  "period": {
+    "start_date": "2025-06-16",
+    "end_date": "2025-11-21",
+    "windows": [
+      {
+        "start": "2025-06-16",
+        "end": "2025-06-20",
+        "label": "jun_w3"
+      },
+      {
+        "start": "2025-08-18",
+        "end": "2025-08-22",
+        "label": "aug_w3"
+      },
+      {
+        "start": "2025-10-06",
+        "end": "2025-10-10",
+        "label": "oct_w2"
+      },
+      {
+        "start": "2025-11-17",
+        "end": "2025-11-21",
+        "label": "nov_w4"
+      }
+    ]
+  },
+  "playbooks_included": {
+    "BOS_Scalp_1m": {
+      "trades": 51,
+      "inter_trade_gap_p50_sec": 85200.0
+    },
+    "Engulfing_Bar_V056": {
+      "trades": 32,
+      "inter_trade_gap_p50_sec": 86400.0
+    },
+    "Liquidity_Sweep_Scalp": {
+      "trades": 51,
+      "inter_trade_gap_p50_sec": 77700.0
+    },
+    "Morning_Trap_Reversal": {
+      "trades": 32,
+      "inter_trade_gap_p50_sec": 85950.0
+    }
+  },
+  "caps_config": {
+    "cooldown_minutes_aggressive": 5,
+    "session_cap_aggressive": 10,
+    "note": "Values from risk_engine.COOLDOWN_MINUTES_AGGRESSIVE + AGGRESSIVE_MAX_TRADES_PER_SESSION_PLAYBOOK"
+  },
+  "gates": {
+    "min_trades_per_playbook": 20,
+    "trades_per_playbook_ok": true,
+    "gap_p50_respects_cooldown": true
+  }
+}
