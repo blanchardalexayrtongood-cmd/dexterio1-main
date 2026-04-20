@@ -2,11 +2,13 @@
 
 ## TL;DR
 
-Per Phase D.2 reframing: Family A (Aplus_01/03/04 — sweep/IFVG/HTF-BOS) was **never tested**. This is the first run. Two variants wired (LAB permissive, SAFE strict), 4 weeks caps-active, 61 trades total.
+Per Phase D.2 reframing: Family A (Aplus_01/03/04 — sweep/IFVG/HTF-BOS) was **never tested**. This is the first run.
 
-**Result**: E[R] **-0.090** combined (LAB -0.074, SAFE -0.142). **2/4 weeks positive on LAB** (jun_w3 +0.025, aug_w3 +0.020) collapse to -0.07 / -0.21 on oct/nov. **0 TPs hit** on any of the 61 trades.
+**Correction 2026-04-20 (post-run)**: the v1 run initially wired two playbooks (`Aplus_03_IFVG_Flip_5m_LAB` + `Aplus_03_IFVG_Flip_5m_SAFE`) as "same signal, different gates". This misrepresents the LAB/SAFE pipeline — LAB and SAFE are a **promotion tier**, not two YAML variants. A playbook has ONE config and lives in LAB until it's proven winning, then gets promoted to SAFE (same config, added to paper/live allowlist). The `_SAFE` variant was deleted from YAML; the playbook is now `Aplus_03_IFVG_Flip_5m` (LAB-only until it earns a promotion). The 14-trade `_SAFE` subset below is kept for historical reference but **not representative of the signal going forward**.
 
-**Product verdict**: the signal is not dead — LAB fires 47 times in 4 weeks with WR 36% and peak_R p60 = 0.68R (clears the 0.6R signal-quality bar used in Phase B1). But the TP structure (fixed 2.0-5.0R) is demonstrably unreachable: peak_R p80 = 1.06R means 80% of trades never see 1R of MFE. A **minimal B1-like calibration is warranted**: drop TP1 from 2.0R → 0.68R (peak_R p60) on LAB, hold n and WR, expect E[R] to cross zero. SAFE does not merit calibration (n=14/4wk, 3/4 weeks negative, no sample stability).
+**Result (Aplus_03_IFVG_Flip_5m, n=47)**: E[R]=**-0.074**, WR=36%, peak_R p60=**0.68R**, 0/47 TPs hit. 2/4 weeks positive (jun +0.025, aug +0.020), 2/4 negative (oct -0.068, nov -0.213).
+
+**Product verdict**: the signal is not dead — 47 trades over 4 weeks with WR 36% and peak_R p60 = 0.68R clears the 0.6R signal-quality bar used to flag Morning_Trap/BOS_Scalp/Liquidity_Sweep as non-calibrable. But the TP structure (fixed 2.0/4.0R) is demonstrably unreachable: peak_R p80 = 1.06R means 80% of trades never see 1R of MFE. A **minimal B1-like calibration is warranted**: drop TP1 from 2.0R → 0.68R (peak_R p60), BE 1.5R → 0.40R, re-run 4 weeks. If it crosses E[R]>0 on ≥3/4 weeks → first playbook eligible for LAB → SAFE promotion. If it fails → Family A detector as-wired has no edge on SPY/QQQ 5m.
 
 ## Fidelity to sources
 
@@ -16,7 +18,7 @@ Source: `MASTER_FINAL.txt::How_To_Start_Day_Trading_As_A_Beginner_In_2025...` + 
 - Detector: [ifvg.py](../../engines/patterns/ifvg.py) emits on 5m close invalidating a same-direction FVG (bullish FVG fills-through-low → bearish IFVG fires, mirror).
 - SL structural via `pattern.price_level` (opposite edge of the invalidated zone) — routed through `SWING` SL logic in [setup_engine_v2.py:382-396](../../engines/setup_engine_v2.py#L382-L396).
 - Setup TF = 5m as per transcript.
-- LAB permissive (HTF bias OFF, ADX OFF, window 09:30-15:00) vs SAFE strict (HTF bias ON, structure trending, ADX ≥ 20, 09:45-12:00) — same signal, different gates.
+- Single config: `enabled_in_modes: [AGGRESSIVE]` (LAB only). HTF bias gate OFF, ADX gate OFF, window 09:30-15:00 NY. Keeping it permissive so the signal gets a fair first measurement; if it proves winning after calibration, it gets promoted to SAFE mode via allowlist (no config change).
 
 **Honest approximations** (documented in [manifest.json](../../results/labs/mini_week/aplus03_v1/manifest.json)):
 1. **Trigger A only** — entry on invalidation close. Trigger B (retest into invalidated zone) not wired in v1. Per transcript, Trigger B is higher-probability, so this v1 excludes the better half of the setup.
@@ -26,17 +28,23 @@ Source: `MASTER_FINAL.txt::How_To_Start_Day_Trading_As_A_Beginner_In_2025...` + 
 
 ## Results
 
-### 4-week aggregate
+### 4-week aggregate (Aplus_03_IFVG_Flip_5m — current YAML)
 
-| playbook | n | E[R] | WR | total_R | peak_R p60 | peak_R p80 | \|mae_R\| p75 | time_stop% | SL% | TP% |
-|----------|---|------|-----|---------|-------------|-------------|----------------|-------------|------|------|
-| LAB | 47 | **-0.074** | 36.2% | -3.49 | **0.68** | 1.06 | 1.01 | 53% | 47% | **0%** |
-| SAFE | 14 | -0.142 | 21.4% | -1.99 | 0.52 | 0.78 | 0.94 | 64% | 36% | 0% |
-| **combined** | **61** | **-0.090** | **32.8%** | **-5.48** | — | — | — | 56% | 44% | **0%** |
+| | n | E[R] | WR | total_R | peak_R p60 | peak_R p80 | \|mae_R\| p75 | time_stop% | SL% | TP% |
+|-|---|------|-----|---------|-------------|-------------|----------------|-------------|------|------|
+| Aplus_03_IFVG_Flip_5m | **47** | **-0.074** | **36.2%** | -3.49 | **0.68** | 1.06 | 1.01 | 53% | 47% | **0%** |
 
-Exit mix: **0 TPs hit across 61 trades**. All wins are either `time_stop` with positive r_multiple (trailing/BE captured partial MFE) or `SL` labeled after breakeven was pushed (trailing SL hit in profit).
+### Orphaned SAFE-variant subset (deleted from YAML, kept for reference only)
 
-### Per-week stability (LAB)
+| | n | E[R] | WR | total_R | peak_R p60 | TP% |
+|-|---|------|-----|---------|-------------|------|
+| Aplus_03_IFVG_Flip_5m_SAFE (deleted) | 14 | -0.142 | 21.4% | -1.99 | 0.52 | 0% |
+
+The SAFE-variant YAML was removed after the run (LAB/SAFE is a promotion tier, not two config variants). These 14 trades ran with HTF bias gate + ADX ≥ 20 + 09:45-12:00 window — **not representative** of the current `Aplus_03_IFVG_Flip_5m` signal.
+
+Exit mix: **0 TPs hit across 47 trades**. All wins are either `time_stop` with positive r_multiple (trailing/BE captured partial MFE) or `SL` labeled after breakeven was pushed (trailing SL hit in profit).
+
+### Per-week stability (Aplus_03_IFVG_Flip_5m)
 
 | week | n | E[R] | verdict |
 |------|---|------|---------|
@@ -47,7 +55,7 @@ Exit mix: **0 TPs hit across 61 trades**. All wins are either `time_stop` with p
 
 Direction balance: LAB 26 LONG / 21 SHORT; SAFE 8 LONG / 6 SHORT. No directional bias artifact.
 
-### Per-week stability (SAFE)
+### Orphaned SAFE per-week (deleted variant, reference only)
 
 | week | n | E[R] |
 |------|---|------|
@@ -56,7 +64,7 @@ Direction balance: LAB 26 LONG / 21 SHORT; SAFE 8 LONG / 6 SHORT. No directional
 | oct_w2 | 3 | -0.102 |
 | nov_w4 | 4 | -0.260 |
 
-3/4 weeks negative, n too small for meaningful inference.
+Not representative of current config. Variant removed from YAML.
 
 ## Interpretation per decision rule
 
@@ -74,10 +82,10 @@ The math is straightforward: with WR 36% and peak_R p80 = 1.06R, a TP1 at 0.7R (
 
 ## Recommended next calibration (minimal)
 
-**B1-like patch on LAB only** (SAFE untouchable until sample grows):
+**B1-like TP/BE patch on the single Aplus_03_IFVG_Flip_5m config**:
 
 ```yaml
-Aplus_03_IFVG_Flip_5m_LAB.take_profit_logic:
+Aplus_03_IFVG_Flip_5m.take_profit_logic:
   min_rr: 0.70       # was 2.0
   tp1_rr: 0.70       # was 2.0 — peak_R p60 observed
   tp2_rr: 1.20       # was 4.0 — peak_R p80 observed
@@ -90,7 +98,7 @@ This converts the playbook from "fixed RR optimism" to "empirical-MFE harvesting
 
 If this calibration fails, the conclusion is "Family A detector as wired has no edge on SPY/QQQ 5m 4 weeks" — a stronger statement than the current "Family A untested".
 
-If it succeeds, Aplus_03_LAB becomes the **first product-grade playbook** and earns SAFE re-wiring + portfolio slot consideration.
+If it succeeds, Aplus_03_IFVG_Flip_5m becomes the **first playbook eligible for LAB → SAFE promotion** (flip `enabled_in_modes` to include SAFE, added to paper allowlist).
 
 ## Sanity notes
 
@@ -104,7 +112,7 @@ If it succeeds, Aplus_03_LAB becomes the **first product-grade playbook** and ea
 
 - [Run dir](../../results/labs/mini_week/aplus03_v1/)
 - [manifest.json](../../results/labs/mini_week/aplus03_v1/manifest.json)
-- YAML entries: [playbooks.yml:1817-1950](../../knowledge/playbooks.yml#L1817-L1950)
+- YAML entry: [playbooks.yml:1816](../../knowledge/playbooks.yml#L1816) (single config, LAB-only)
 - Detector: [ifvg.py](../../engines/patterns/ifvg.py)
 - Threshold patch: [patterns_config.yml:15](../../knowledge/patterns_config.yml#L15)
 - Transcript spec: [playbooks_Aplus_from_transcripts.yaml](../../knowledge/playbooks_Aplus_from_transcripts.yaml)

@@ -1,7 +1,7 @@
 {
   "corpus_id": "aplus03_v1",
   "created": "2026-04-20",
-  "purpose": "First faithful instantiation of Aplus_03 IFVG Flip (MASTER Family A untested, see tf_faithfulness_audit_v1). LAB + SAFE profiles, caps normales, 4-week run for product-grade verdict.",
+  "purpose": "First faithful instantiation of Aplus_03 IFVG Flip (MASTER Family A untested, see tf_faithfulness_audit_v1). Run initially wired LAB + SAFE YAML variants; post-run correction: LAB/SAFE is a promotion tier not two configs. SAFE variant deleted. Reference playbook is Aplus_03_IFVG_Flip_5m (LAB-only).",
   "git_sha": "aeb3b7c5e7262bac72bfa6cbb90cd3b08184c665",
   "git_sha_note": "HEAD at run start. Uncommitted at run time: patterns_config.yml (ifvg.min_displacement_pct 0.05 -> 0.0005), playbooks.yml (+2 Aplus_03 entries).",
   "env_flags": {
@@ -27,19 +27,22 @@
     ]
   },
   "playbooks_included": {
-    "Aplus_03_IFVG_Flip_5m_LAB": {
+    "Aplus_03_IFVG_Flip_5m": {
+      "alias_at_run_time": "Aplus_03_IFVG_Flip_5m_LAB",
       "n_trades": 47,
       "per_week": {"jun_w3": 7, "aug_w3": 14, "oct_w2": 11, "nov_w4": 15},
       "ER": -0.074,
       "WR_pct": 36.2,
-      "total_R": -3.49
+      "total_R": -3.49,
+      "note": "Renamed post-run to drop the _LAB suffix; same config."
     },
-    "Aplus_03_IFVG_Flip_5m_SAFE": {
+    "Aplus_03_IFVG_Flip_5m_SAFE_deleted": {
       "n_trades": 14,
       "per_week": {"jun_w3": 4, "aug_w3": 3, "oct_w2": 3, "nov_w4": 4},
       "ER": -0.142,
       "WR_pct": 21.4,
-      "total_R": -1.99
+      "total_R": -1.99,
+      "note": "DELETED from YAML post-run. Not representative of current signal. Reference only."
     }
   },
   "caps_config": {
