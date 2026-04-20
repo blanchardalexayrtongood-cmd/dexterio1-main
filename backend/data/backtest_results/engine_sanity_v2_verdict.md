@@ -1,16 +1,16 @@
-# Engine sanity v2 — verdict (2026-04-20)
+# Engine sanity v2 — verdict (2026-04-20, rev. +4 tests + OB fix)
 
 ## TL;DR
 
-Script: [engine_sanity_v2.py](../../scripts/engine_sanity_v2.py) — 23 tests covering everything v1 didn't: full execution layer, all detectors v1 didn't audit, position sizing, anti-spam caps, denylist, 15m TFA gap-merge, timezone coherence.
+Script: [engine_sanity_v2.py](../../scripts/engine_sanity_v2.py) — 27 tests. Original 23 cover everything v1 didn't (full execution layer, all detectors v1 didn't audit, position sizing, anti-spam caps, denylist, 15m TFA gap-merge, timezone coherence). **+4 tests added** to close the gaps v2 flagged: costs-flow contract, trailing+breakeven interaction, multi-symbol sizing/execution, and the new `FillModel` protocol.
 
-**22/23 logic-correct; 1 regression test documents a real detector bug.**
+**27/27 PASS.** `detect_order_blocks` bug **fixed** in the same pass (1-line window change) — B2 now asserts a real bullish OB signal fires. Empirical post-fix: 318 OB signals over 1999 SPY 1m bars on oct_w2 (was 0 pre-fix).
 
 | Bloc | Scope | Pass |
 |------|-------|------|
-| A — Execution | SL/TP fills, intrabar priority, trailing, breakeven, time-stop, SHORT mirror, costs | 9/9 |
-| B — Detectors (non-v1) | IFVG, OB, BOS, EMA cross, VWAP bounce, RSI extreme, ORB | 7/7 (B2 = bug regression) |
-| C — Risk + TF + integrity | Position size, cooldown, session cap, kill-switch, denylist, 15m TFA gap, TZ | 7/7 |
+| A — Execution | SL/TP fills, intrabar priority, trailing, breakeven, time-stop, SHORT mirror, costs, **costs-flow contract (A10)**, **trailing+BE (A11)**, **FillModel protocol (A12)** | 12/12 |
+| B — Detectors (non-v1) | IFVG, OB (fixed), BOS, EMA cross, VWAP bounce, RSI extreme, ORB | 7/7 |
+| C — Risk + TF + integrity | Position size, **multi-symbol sizing+exec (C1b)**, cooldown, session cap, kill-switch, denylist, 15m TFA gap, TZ | 8/8 |
 
 ## Bloc A — Execution verified
 
@@ -40,14 +40,14 @@ No execution invariant violated. Trailing and breakeven math matches the declare
 | B6 RSI extreme | monotonic down sequence → RSI(5) < 15 → bullish signal |
 | B7 ORB breakout | 15-min opening range 100.05-100.95, breakout close 101.5 → bullish |
 
-### B2 — order_block detector is structurally broken
+### B2 — order_block detector FIXED in this pass
 
-- File: [order_block.py:40-45](../../engines/patterns/order_block.py#L40-L45)
-- Bug: `window = candles[-lb:]` INCLUDES the last (breakout) candle, so `swing_high = max(c.high for c in window) >= last.high >= last.close`. The trigger `last.close > swing_high` is therefore mathematically impossible. Bearish side has the symmetric bug.
-- Empirical check: `detect_order_blocks` fires **0 signals** over the full oct_w2 SPY 1m week (1999 bars, every rolling 20-bar window). Confirmed by direct scan before writing this verdict.
-- Fix (one line): `window = candles[-(lb+1):-1]` so swing_high excludes the breakout bar itself.
-- Status: **NOT fixed now.** Out of scope for this sanity pass — any fix changes detector output across the corpus and needs a dedicated re-run. The test asserts the current broken behavior (0 signals) as a regression marker: when someone applies the fix, B2 will fail loudly and they update it.
-- Scope of the finding: no playbook in the 27-playbook universe has ever received a real `order_block` signal from this detector in any backtest. When `required_signals: [order_block]` is used, the gate fails silently. This is a *separate* reason (beyond the MASTER-faithfulness issue and fixed-RR-TP ceiling) why some MASTER-vocab playbooks produce zero matches.
+- File: [order_block.py](../../engines/patterns/order_block.py)
+- Bug (pre-fix): `window = candles[-lb:]` INCLUDED the last (breakout) candle, so `swing_high >= last.high >= last.close`. The trigger `last.close > swing_high` was therefore mathematically impossible. Bearish side had the symmetric bug.
+- Pre-fix empirical: **0 signals** over full oct_w2 SPY 1m week (1999 bars). Confirmed by direct scan.
+- Fix applied: `window = candles[-(lb+1):-1]` — swing_high excludes the breakout bar. Simultaneous tweak to the OB-candidate search (`for c in reversed(window):` — previously excluded the last window element, which with the new slice would miss the bearish OB immediately before the breakout).
+- Post-fix empirical: **318 signals** on the same data (155 bullish + 163 bearish). B2 now asserts a bullish signal fires on a canonical setup (bearish candle → decisive breakout close above prior range).
+- Corpus ripple: any playbook with `required_signals: [order_block]` will now actually receive signals. Existing backtests were run with the broken detector, so their null verdicts for such playbooks are NOT informative. Re-run when those playbooks return to focus.
 
 ## Bloc C — Risk + TF + integrity
 
@@ -73,15 +73,19 @@ v2 verifies: execution layer (all SL/TP/trailing/breakeven/time-stop paths), all
 
 **v1 + v2 = 29/29 logic-correct.** The engine is honest about everything it claims to do.
 
-## What the combined suite does NOT cover yet
+## Gaps closed in this pass (was the "v3 list")
 
-- **Costs integration path** (costs are computed in A_costs but not tested flowing into `paper_trading.close_trade`'s `pnl_dollars`). This was flagged as "D.1 ✓ done" in the roadmap but is not directly asserted.
-- **Multi-symbol portfolio sizing interaction** (single-symbol tested).
-- **Trailing activation through multiple peaks** (only one peak+retrace tested in A5).
-- **Breakeven + trailing interaction** (A5 and A6 are independent).
-- **detect_order_blocks in a real backtest** — we know it fires 0 signals; whether any playbook has `required_signals: [order_block]` and what happens when that gate is checked is a separate Phase C.0 investigation.
+- ✅ **Costs flow into realized P&L** — `A10_costs_flow_into_pnl` asserts the `engine.py:2447-2451` contract directly: `pnl_gross` = points × size (set by `close_trade`), `pnl_net = pnl_gross − (entry_costs.total + exit_costs.total)`. Expected band $130-$175 on 100 SPY @ $450 round-trip, observed within band.
+- ✅ **Trailing + breakeven in the same trade** — `A11_trailing_plus_be` asserts SL trajectory 99 → 100 (BE at r=1.0R) → 101.5 (trail at peak=2.0R) → holds (no regression when price pulls back) → closes at 101.5 on deeper pullback.
+- ✅ **Multi-symbol sizing + execution** — `C1b_multi_symbol` asserts SPY+QQQ are sized independently (SPY=333, QQQ=375 under AGGRESSIVE×A, documenting that the engine does NOT deduct open-position risk across symbols) AND that `update_open_trades` processes both bar feeds concurrently (SPY TP + QQQ SL in same call both close correctly).
+- ✅ **FillModel protocol** — [fill_model.py](../../engines/execution/fill_model.py) with `IdealFillModel` (current behavior) and `ConservativeFillModel` (next-bar-open + adverse slippage). `A12_fill_model` asserts both honor the same contract; bar-miss returns None; TP and SL paths tested.
+- ✅ **Paper-vs-backtest reconcile harness** — [reconcile_paper_backtest.py](../../scripts/reconcile_paper_backtest.py). Replays a trades parquet with both fill models and reports per-trade fill-price delta. Run on calib_corpus_v1 oct_w2 (40 trades): **100% of trades worse**, mean Δ = -$72 (-0.065R), total -2.6R on the week. Report: [reconcile_paper_vs_backtest_calib_oct_w2.md](reconcile_paper_vs_backtest_calib_oct_w2.md). Establishes the slippage-to-paper budget before any promotion.
 
-None of these gaps change the "engine is honest" conclusion — they are areas for a future v3 if future work exposes them.
+## Known remaining gaps (acceptable)
+
+- **FillModel not yet wired into `ExecutionEngine`** — it's a new protocol + implementations used by the reconcile harness. Wiring it into production `paper_trading.ExecutionEngine` is a follow-up when the code actually goes to paper (Phase G in the roadmap). The backtest still uses the inline `update_open_trades` logic.
+- **Trailing activation through multiple peaks** (A11 covers 1 peak + ratchet + pullback-to-stop; multi-peak ratchet not explicitly tested).
+- **order_block now fires signals** — any playbook declaring `required_signals: [order_block]` will now receive signals. Prior backtests are stale for those playbooks specifically.
 
 ## Artifacts
 
