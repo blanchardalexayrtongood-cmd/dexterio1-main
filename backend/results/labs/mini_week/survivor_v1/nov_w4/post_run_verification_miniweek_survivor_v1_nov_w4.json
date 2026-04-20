@@ -1,0 +1,195 @@
+{
+  "run_id": "miniweek_survivor_v1_nov_w4",
+  "timestamp": "2026-04-20T02:19:41.416964",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json",
+    "Lookahead: Trade 324390d1-b28d-46d3-a661-3c4fe8e0b843: mc_breakout_dir=LONG but entry_ts is before MC window end"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/survivor_v1/nov_w4/sanity_report_miniweek_survivor_v1_nov_w4.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": false,
+    "sample_size": 20,
+    "issues": [
+      "Trade 324390d1-b28d-46d3-a661-3c4fe8e0b843: mc_breakout_dir=LONG but entry_ts is before MC window end"
+    ],
+    "samples": [
+      {
+        "trade_id": "e0df13da-43f9-48be-baca-2242215b7bd9",
+        "entry_timestamp": "2025-11-17T14:30:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "be86bd3d-80f7-4c09-90e8-157a8556b5df",
+        "entry_timestamp": "2025-11-17T14:34:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "6d215559-d450-4595-baa7-bfe496c5f593",
+        "entry_timestamp": "2025-11-17T14:44:00+00:00",
+        "mc_high": 672.67,
+        "mc_low": 668.92,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "9ba1d9b8-8480-4832-a558-eff79d5eb70c",
+        "entry_timestamp": "2025-11-17T14:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "1ce85e58-997e-4454-886e-225cff2caf48",
+        "entry_timestamp": "2025-11-17T14:49:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "b6f701ed-d1e6-418f-80d2-2229a137f666",
+        "entry_timestamp": "2025-11-17T14:54:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "d7255cb0-1031-4e51-81a5-becdee5b9ace",
+        "entry_timestamp": "2025-11-17T14:59:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "8b705f45-a137-4c77-b720-14708f2fa5a4",
+        "entry_timestamp": "2025-11-17T15:04:00+00:00",
+        "mc_high": 672.67,
+        "mc_low": 668.92,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "6c85a79b-a059-4ef8-bf40-f7e24ab4e7e7",
+        "entry_timestamp": "2025-11-17T15:09:00+00:00",
+        "mc_high": 672.67,
+        "mc_low": 668.92,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "539aa569-6e58-450f-82b2-9b953a6cbcba",
+        "entry_timestamp": "2025-11-17T15:04:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "c327afb2-f8b1-4f11-9814-d05321981b92",
+        "entry_timestamp": "2025-11-17T16:29:00+00:00",
+        "mc_high": 672.67,
+        "mc_low": 668.92,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "93f4aa5d-2110-4d88-ae4c-03545ec5d211",
+        "entry_timestamp": "2025-11-17T14:55:00+00:00",
+        "mc_high": 672.67,
+        "mc_low": 668.92,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "d3f65b86-fdeb-4fbd-9e40-e6ac63ecb136",
+        "entry_timestamp": "2025-11-17T16:44:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "38197e44-fa02-48a6-bcd2-ab04dea7f7a6",
+        "entry_timestamp": "2025-11-17T16:59:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "b33f2742-1b1c-4156-a987-5d1fb4aaa9a6",
+        "entry_timestamp": "2025-11-17T17:04:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "45ea5952-19f0-414b-a81e-1e90d966d128",
+        "entry_timestamp": "2025-11-17T16:54:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "324390d1-b28d-46d3-a661-3c4fe8e0b843",
+        "entry_timestamp": "2025-11-18T12:59:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "9902aa94-fe7f-4613-ba0f-313c69135bca",
+        "entry_timestamp": "2025-11-18T14:34:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "b035392a-1933-48d2-868c-cf250a4d3905",
+        "entry_timestamp": "2025-11-18T14:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "256b601a-0a93-4dc2-8af3-dfdb9f2c4093",
+        "entry_timestamp": "2025-11-18T14:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      }
+    ]
+  }
+}
