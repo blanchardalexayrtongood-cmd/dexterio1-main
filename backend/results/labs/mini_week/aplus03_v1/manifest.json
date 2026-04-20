@@ -1,0 +1,73 @@
+{
+  "corpus_id": "aplus03_v1",
+  "created": "2026-04-20",
+  "purpose": "First faithful instantiation of Aplus_03 IFVG Flip (MASTER Family A untested, see tf_faithfulness_audit_v1). LAB + SAFE profiles, caps normales, 4-week run for product-grade verdict.",
+  "git_sha": "aeb3b7c5e7262bac72bfa6cbb90cd3b08184c665",
+  "git_sha_note": "HEAD at run start. Uncommitted at run time: patterns_config.yml (ifvg.min_displacement_pct 0.05 -> 0.0005), playbooks.yml (+2 Aplus_03 entries).",
+  "env_flags": {
+    "RISK_EVAL_ALLOW_ALL_PLAYBOOKS": true,
+    "RISK_EVAL_CALIB_ALLOWLIST": "Aplus_03_IFVG_Flip_5m_LAB,Aplus_03_IFVG_Flip_5m_SAFE",
+    "RISK_EVAL_RELAX_CAPS": false,
+    "RISK_EVAL_DISABLE_KILL_SWITCH": false,
+    "respect_allowlists": false,
+    "manifest_ignore_warmup_check": true
+  },
+  "allowlist_exact": [
+    "Aplus_03_IFVG_Flip_5m_LAB",
+    "Aplus_03_IFVG_Flip_5m_SAFE"
+  ],
+  "period": {
+    "start_date": "2025-06-16",
+    "end_date": "2025-11-21",
+    "weeks": [
+      {"label": "jun_w3", "start": "2025-06-16", "end": "2025-06-20"},
+      {"label": "aug_w3", "start": "2025-08-18", "end": "2025-08-22"},
+      {"label": "oct_w2", "start": "2025-10-06", "end": "2025-10-10"},
+      {"label": "nov_w4", "start": "2025-11-17", "end": "2025-11-21"}
+    ]
+  },
+  "playbooks_included": {
+    "Aplus_03_IFVG_Flip_5m_LAB": {
+      "n_trades": 47,
+      "per_week": {"jun_w3": 7, "aug_w3": 14, "oct_w2": 11, "nov_w4": 15},
+      "ER": -0.074,
+      "WR_pct": 36.2,
+      "total_R": -3.49
+    },
+    "Aplus_03_IFVG_Flip_5m_SAFE": {
+      "n_trades": 14,
+      "per_week": {"jun_w3": 4, "aug_w3": 3, "oct_w2": 3, "nov_w4": 4},
+      "ER": -0.142,
+      "WR_pct": 21.4,
+      "total_R": -1.99
+    }
+  },
+  "caps_config": {
+    "cooldown_minutes": 5,
+    "session_cap_per_playbook": 10,
+    "lab_max_setups_per_session": 3,
+    "safe_max_setups_per_session": 1,
+    "kill_switch_daily_R": "CIRCUIT_STOP_DAY_R active"
+  },
+  "fidelity_notes": {
+    "source": "MASTER transcript 'How_To_Start_Day_Trading_As_A_Beginner_In_2025_9_hours-[aobHuNcI1QM].txt' + playbooks_Aplus_from_transcripts.yaml::Aplus_03_IFVG_Flip_from_FVG_Invalidation",
+    "faithful": [
+      "Detector: ifvg.py emits on 5m close invalidating a same-direction FVG",
+      "SL structural (SWING via pattern.price_level = opposite edge of invalidated zone)",
+      "Setup TF = 5m as per transcript",
+      "LAB permissive (HTF bias OFF, ADX OFF, full 09:30-15:00), SAFE strict (HTF bias ON, structure trending, ADX >= 20, 09:45-12:00)"
+    ],
+    "honest_approximations": [
+      "Trigger A only (entry on invalidation close). Trigger B (retest into invalidated zone) not implemented in v1.",
+      "TP = fixed RR (2.0/4.0 LAB, 2.5/5.0 SAFE). MASTER transcript asks liquidity-targeting TP (next pool); not wired in engine.",
+      "HTF bias in SAFE = intraday pivot bias via market_state.py. MASTER uses D/4H draw-on-liquidity not implemented in engine.",
+      "patterns_config.yml::ifvg.min_displacement_pct set 5% -> 5bps (0.05 -> 0.0005). Justification in YAML comment: 5% unreachable on SPY/QQQ 5m."
+    ]
+  },
+  "gates": {
+    "min_trades_per_playbook": {"threshold": 20, "LAB": "PASS (47)", "SAFE": "FAIL (14)"},
+    "per_week_stability": "FAIL — LAB flips jun/aug (+0.02) vs oct/nov (-0.07/-0.21); SAFE all weeks negative except aug (+0.001)",
+    "peak_R_p60_signal_quality": {"threshold": 0.6, "LAB": "PASS (0.68)", "SAFE": "BORDERLINE (0.52)"},
+    "exit_mix_sanity": "55% time_stop, 45% SL, 0% TP hit — confirms fixed-RR 2.0-5.0R unreachable (peak_R p80 = 1.06 LAB, 0.78 SAFE)"
+  }
+}
