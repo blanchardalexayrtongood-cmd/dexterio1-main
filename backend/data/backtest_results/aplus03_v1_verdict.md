@@ -98,7 +98,7 @@ This converts the playbook from "fixed RR optimism" to "empirical-MFE harvesting
 
 If this calibration fails, the conclusion is "Family A detector as wired has no edge on SPY/QQQ 5m 4 weeks" — a stronger statement than the current "Family A untested".
 
-If it succeeds, Aplus_03_IFVG_Flip_5m becomes the **first playbook eligible for LAB → SAFE promotion** (flip `enabled_in_modes` to include SAFE, added to paper allowlist).
+If it succeeds, Aplus_03_IFVG_Flip_5m stays in LAB as a positive playbook, available for further polish (extended period, detector refinement, Trigger B wiring). **Promotion to SAFE is not automatic** — it is a manual user decision taken once, just before paper trading, when a curated set of polished positive playbooks is selected. A positive backtest does not trigger promotion.
 
 ## Sanity notes
 
