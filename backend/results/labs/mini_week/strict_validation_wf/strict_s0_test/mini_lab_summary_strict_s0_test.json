@@ -1,0 +1,73 @@
+{
+  "protocol": "MINI_LAB_WEEK",
+  "runner": "run_mini_lab_week.py",
+  "contract_version": "RunSummaryV0",
+  "run_started_at_utc": "2026-04-17T10:06:32.662203+00:00",
+  "git_sha": "e8b40b48bd48434a4b07b7711ff7f06aa32f3dc6",
+  "run_id": "miniweek_strict_validation_wf_strict_s0_test",
+  "start_date": "2025-08-31",
+  "end_date": "2025-10-14",
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "respect_allowlists": true,
+  "bypass_lss_quarantine": true,
+  "output_parent": "strict_validation_wf",
+  "playbooks_yaml": null,
+  "nf_tp1_rr_meta": null,
+  "data_coverage_ok": true,
+  "data_coverage_error_count": 0,
+  "total_trades": 389,
+  "final_capital": "39606.402972500706",
+  "playbooks_registered_count": 15,
+  "funnel": {
+    "NY_Open_Reversal": {
+      "matches": 7442,
+      "setups_created": 5535,
+      "after_risk": 5535,
+      "trades": 38
+    },
+    "News_Fade": {
+      "matches": 3570,
+      "setups_created": 2669,
+      "after_risk": 2669,
+      "trades": 18
+    },
+    "Liquidity_Sweep_Scalp": {
+      "matches": 13279,
+      "setups_created": 9795,
+      "after_risk": 9795,
+      "trades": 93
+    },
+    "FVG_Fill_Scalp": {
+      "matches": 7428,
+      "setups_created": 5556,
+      "after_risk": 5556,
+      "trades": 88
+    },
+    "Session_Open_Scalp": {
+      "matches": 609,
+      "setups_created": 461,
+      "after_risk": 461,
+      "trades": 45
+    }
+  },
+  "trade_metrics_parquet": {
+    "schema_version": "MiniLabTradeMetricsParquetV0",
+    "trades_rows": 389,
+    "parquet_path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/strict_validation_wf/strict_s0_test/trades_miniweek_strict_validation_wf_strict_s0_test_AGGRESSIVE_DAILY_SCALP.parquet",
+    "wins": 129,
+    "losses": 260,
+    "breakevens": 0,
+    "winrate": 33.16195372750643,
+    "sum_pnl_dollars": -10393.597027499347,
+    "mean_pnl_dollars": -26.718758425448193,
+    "mean_r_multiple": -0.027572086960152585,
+    "expectancy_r": -0.027572086960152585,
+    "gross_profit_r": 28.902689064000082,
+    "gross_loss_r": -39.628230891499435,
+    "profit_factor": 0.7293459337898411,
+    "max_drawdown_r": 20.979875339999477
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "protocol": "MINI_LAB_WEEK",
+  "runner": "run_mini_lab_week.py",
+  "contract_version": "RunSummaryV0",
+  "run_started_at_utc": "2026-04-19T17:14:16.503328+00:00",
+  "git_sha": "fd4322c62a9bdc82fab4e55c311cc31cac040cac",
+  "run_id": "miniweek_maeTest",
+  "start_date": "2025-10-06",
+  "end_date": "2025-10-06",
+  "symbols": [
+    "SPY"
+  ],
+  "respect_allowlists": false,
+  "bypass_lss_quarantine": true,
+  "output_parent": null,
+  "playbooks_yaml": null,
+  "nf_tp1_rr_meta": null,
+  "data_coverage_ok": true,
+  "data_coverage_error_count": 0,
+  "total_trades": 123,
+  "final_capital": "31836.94251139981",
+  "playbooks_registered_count": 28,
+  "funnel": {
+    "NY_Open_Reversal": {
+      "matches": 78,
+      "setups_created": 63,
+      "after_risk": 63,
+      "trades": 2
+    },
+    "News_Fade": {
+      "matches": 182,
+      "setups_created": 144,
+      "after_risk": 144,
+      "trades": 1
+    },
+    "Liquidity_Sweep_Scalp": {
+      "matches": 48,
+      "setups_created": 40,
+      "after_risk": 40,
+      "trades": 3
+    },
+    "FVG_Fill_Scalp": {
+      "matches": 48,
+      "setups_created": 28,
+      "after_risk": 28,
+      "trades": 0
+    },
+    "Session_Open_Scalp": {
+      "matches": 3,
+      "setups_created": 3,
+      "after_risk": 3,
+      "trades": 2
+    }
+  },
+  "trade_metrics_parquet": {
+    "schema_version": "MiniLabTradeMetricsParquetV0",
+    "trades_rows": 123,
+    "parquet_path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/maeTest/trades_miniweek_maeTest_AGGRESSIVE_DAILY_SCALP.parquet",
+    "wins": 16,
+    "losses": 107,
+    "breakevens": 0,
+    "winrate": 13.008130081300813,
+    "sum_pnl_dollars": -18163.05748860021,
+    "mean_pnl_dollars": -147.66713405366025,
+    "mean_r_multiple": -0.13849310533414813,
+    "expectancy_r": -0.13849310533414808,
+    "gross_profit_r": 0.4694895000000731,
+    "gross_loss_r": -17.504141456100285,
+    "profit_factor": 0.026821623966964317,
+    "max_drawdown_r": 18.526710988600268
+  }
+}

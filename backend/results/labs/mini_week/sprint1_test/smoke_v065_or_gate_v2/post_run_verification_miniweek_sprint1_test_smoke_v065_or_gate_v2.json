@@ -1,0 +1,56 @@
+{
+  "run_id": "miniweek_sprint1_test_smoke_v065_or_gate_v2",
+  "timestamp": "2026-04-18T20:51:26.322555",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/sprint1_test/smoke_v065_or_gate_v2/sanity_report_miniweek_sprint1_test_smoke_v065_or_gate_v2.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 3,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "e2065b53-ff3f-4ca1-82cd-06ad4ed824fa",
+        "entry_timestamp": "2025-10-07T15:10:00+00:00",
+        "mc_high": 609.69,
+        "mc_low": 608.58,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-07"
+      },
+      {
+        "trade_id": "e3fe45ff-a9b7-49a6-867a-c7b0ce9279e4",
+        "entry_timestamp": "2025-10-08T14:10:00+00:00",
+        "mc_high": 670.4309,
+        "mc_low": 669.42,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-10-08"
+      },
+      {
+        "trade_id": "96e30862-ffa0-4728-91c4-368d1c3755ce",
+        "entry_timestamp": "2025-10-10T15:05:00+00:00",
+        "mc_high": 673.63,
+        "mc_low": 671.88,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-10-10"
+      }
+    ]
+  }
+}

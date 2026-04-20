@@ -1,0 +1,149 @@
+{
+  "run_id": "miniweek_phase0_scoring_fix_wf_p0fix_s1_test",
+  "status": "OK",
+  "timestamp": "2026-04-17T09:23:55.145820",
+  "entry_price_validation": {
+    "entry_price_mean": 647.5055591096492,
+    "entry_price_median": 663.2149999999999,
+    "entry_price_std": 32.10525013173907,
+    "entry_price_vs_market": {
+      "SPY": {
+        "entry_price_mean": 674.2694930232558,
+        "market_close_mean": 673.409946531988,
+        "market_close_std": 8.855344824997946,
+        "entry_vs_market_diff": 0.8595464912677926,
+        "entry_vs_market_diff_pct": 0.12764089626154085
+      },
+      "QQQ": {
+        "entry_price_mean": 612.6313421919192,
+        "market_close_mean": 613.3502106962707,
+        "market_close_std": 12.325515656220874,
+        "entry_vs_market_diff": -0.7188685043514624,
+        "entry_vs_market_diff_pct": -0.11720359621877495
+      }
+    },
+    "placeholder_detected": false
+  },
+  "duration_validation": {
+    "zero_duration_count": 1,
+    "zero_duration_pct": 0.21929824561403508,
+    "duration_mean_minutes": 492.24342105263156,
+    "duration_median_minutes": 76.0,
+    "total_trades_with_duration": 456,
+    "scalp": {
+      "duration_mean_minutes": 65.09606986899563,
+      "duration_median_minutes": 32.0,
+      "duration_max_minutes": 120.0,
+      "max_allowed_minutes": 120.0,
+      "time_stop_broken": false,
+      "violations": [],
+      "total_scalp_trades": 229
+    },
+    "daily": {
+      "duration_mean_minutes": 923.1541850220265,
+      "duration_median_minutes": 90.0,
+      "total_daily_trades": 227
+    }
+  },
+  "session_validation": {
+    "unknown_session_count": 0,
+    "unknown_session_pct": 0.0,
+    "session_distribution": {
+      "ny": 456
+    },
+    "total_trades_with_session": 456
+  },
+  "costs_breakdown": {
+    "total_slippage": 10432.22,
+    "total_spread": 4173.7,
+    "total_commission": 912.0,
+    "total_reg_fees": 111.02,
+    "total_costs": 15628.94,
+    "costs_per_trade_avg": 34.27399122807017,
+    "slippage_double_counting_detected": false
+  },
+  "stability_metrics": {
+    "total_trades": 456,
+    "winrate_pct": 32.45614035087719,
+    "expectancy_net_R": -0.03534076323464802,
+    "total_r_net": -16.1153880349995,
+    "avg_win_r": 0.222403410179052,
+    "avg_loss_r": -0.15919185955032206
+  },
+  "grading_validation": {
+    "grading_produced": true,
+    "quality_distribution": {
+      "B": 106,
+      "C": 240,
+      "A": 73,
+      "A+": 37
+    },
+    "all_c_detected": false,
+    "total_trades": 456,
+    "count_missing_grade": 0,
+    "pct_missing_grade": 0.0,
+    "grading_pipeline_propagation_ok": true
+  },
+  "grading_debug": {
+    "total_trades": 456,
+    "score_count": 456,
+    "pct_missing_score": 0.0,
+    "score_min": 0.075,
+    "score_max": 0.9909090909090991,
+    "score_mean": 0.48903737899340244,
+    "grade_counts": {
+      "A+": 37,
+      "A": 73,
+      "B": 106,
+      "C": 240,
+      "UNKNOWN": 0
+    },
+    "unique_playbooks": 8,
+    "playbook_counts": {
+      "Liquidity_Sweep_Scalp": 96,
+      "FVG_Fill_Scalp": 81,
+      "NY_Open_Reversal": 62,
+      "Morning_Trap_Reversal": 58,
+      "IFVG_5m_Sweep": 58,
+      "Session_Open_Scalp": 52,
+      "HTF_Bias_15m_BOS": 26,
+      "News_Fade": 23
+    },
+    "thresholds_snapshot": {
+      "Liquidity_Sweep_Scalp": {
+        "count": 96,
+        "thresholds": {
+          "A_plus": 0.75,
+          "A": 0.6,
+          "B": 0.45
+        }
+      },
+      "FVG_Fill_Scalp": {
+        "count": 81,
+        "thresholds": {
+          "A_plus": 0.8,
+          "A": 0.7,
+          "B": 0.6
+        }
+      },
+      "NY_Open_Reversal": {
+        "count": 62,
+        "thresholds": {
+          "A_plus": 0.8,
+          "A": 0.65,
+          "B": 0.5
+        }
+      }
+    },
+    "grading_pipeline_ok": true
+  },
+  "sanity_checks": {
+    "entry_price_valid": true,
+    "duration_valid": true,
+    "session_valid": true,
+    "costs_valid": true,
+    "stability_valid": true,
+    "scalp_time_stop_valid": true,
+    "grading_valid": true
+  }
+}

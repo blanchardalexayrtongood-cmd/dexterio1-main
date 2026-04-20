@@ -1,0 +1,72 @@
+{
+  "protocol": "MINI_LAB_WEEK",
+  "runner": "run_mini_lab_week.py",
+  "contract_version": "RunSummaryV0",
+  "run_started_at_utc": "2026-04-16T01:06:24.051493+00:00",
+  "git_sha": "eb74a7c7f0f4fd040d828f8ddfb7a842ba8ebdc5",
+  "run_id": "miniweek_equity_r_fix_smoke_20260416_smoke_eq_fix",
+  "start_date": "2025-11-03",
+  "end_date": "2025-11-05",
+  "symbols": [
+    "SPY"
+  ],
+  "respect_allowlists": true,
+  "bypass_lss_quarantine": true,
+  "output_parent": "equity_r_fix_smoke_20260416",
+  "playbooks_yaml": "/home/dexter/dexterio1-main/backend/knowledge/campaigns/campaign_full_baseline_allow_core_no_quarantine.yml",
+  "nf_tp1_rr_meta": null,
+  "data_coverage_ok": true,
+  "data_coverage_error_count": 0,
+  "total_trades": 983,
+  "final_capital": "8475.163563499882",
+  "playbooks_registered_count": 6,
+  "funnel": {
+    "NY_Open_Reversal": {
+      "matches": 1173,
+      "setups_created": 154,
+      "after_risk": 154,
+      "trades": 108
+    },
+    "News_Fade": {
+      "matches": 150,
+      "setups_created": 13,
+      "after_risk": 13,
+      "trades": 1
+    },
+    "Liquidity_Sweep_Scalp": {
+      "matches": 0,
+      "setups_created": 0,
+      "after_risk": 0,
+      "trades": 0
+    },
+    "FVG_Fill_Scalp": {
+      "matches": 1083,
+      "setups_created": 963,
+      "after_risk": 963,
+      "trades": 831
+    },
+    "Session_Open_Scalp": {
+      "matches": 48,
+      "setups_created": 48,
+      "after_risk": 48,
+      "trades": 43
+    }
+  },
+  "trade_metrics_parquet": {
+    "schema_version": "MiniLabTradeMetricsParquetV0",
+    "trades_rows": 983,
+    "parquet_path": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/equity_r_fix_smoke_20260416/smoke_eq_fix/trades_miniweek_equity_r_fix_smoke_20260416_smoke_eq_fix_AGGRESSIVE_DAILY_SCALP.parquet",
+    "wins": 220,
+    "losses": 763,
+    "breakevens": 0,
+    "winrate": 22.380467955239062,
+    "sum_pnl_dollars": -41524.836436500154,
+    "mean_pnl_dollars": -42.24296687334706,
+    "mean_r_multiple": -0.03932922351220771,
+    "expectancy_r": -0.03932922351220771,
+    "gross_profit_r": 15.00196609599978,
+    "gross_loss_r": -53.662592808499966,
+    "profit_factor": 0.27956096250391244,
+    "max_drawdown_r": 45.058866937499886
+  }
+}

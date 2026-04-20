@@ -1,0 +1,1435 @@
+{
+  "total_records": 44340,
+  "playbooks": {
+    "NY_Open_Reversal": {
+      "total_setups": 3910,
+      "trades_generated": 10,
+      "trade_rate_pct": 0.3,
+      "setups_per_day": 782.0,
+      "trades_per_day": 2.0,
+      "n_days": 5,
+      "setup_tf_requested": "5m",
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 2888,
+        "pct": 73.9,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 2284,
+          "candlestick_patterns_missing": 1479
+        }
+      },
+      "scoring": {
+        "mean": 0.514,
+        "std": 0.1862,
+        "min": 0.075,
+        "max": 0.8206,
+        "p25": 0.38,
+        "p50": 0.4831,
+        "p75": 0.68
+      },
+      "grade_distribution": {
+        "A": 1331,
+        "B": 502,
+        "C": 2024,
+        "A+": 53
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.4
+      },
+      "real_weight_pct": {
+        "mean": 0.6
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.266,
+          "std": 0.1217,
+          "min": 0.0,
+          "max": 0.6633,
+          "unique_values": 114,
+          "is_constant": false,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.6217,
+          "std": 0.485,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        },
+        "fvg_alignment": {
+          "type": "semi_placeholder",
+          "mean": 0.561,
+          "std": 0.3662,
+          "min": 0.0,
+          "max": 0.8,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        },
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.2144,
+          "std": 0.2428,
+          "min": 0.0,
+          "max": 0.9107,
+          "unique_values": 388,
+          "is_constant": false,
+          "count": 3910
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7677,
+          "std": 0.1882,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {
+        "loss": 3,
+        "win": 2
+      },
+      "pnl_net_R": {
+        "mean": -0.0392,
+        "total": -0.196,
+        "count": 5
+      }
+    },
+    "London_Sweep_NY_Continuation": {
+      "total_setups": 3910,
+      "trades_generated": 0,
+      "trade_rate_pct": 0.0,
+      "setups_per_day": 782.0,
+      "trades_per_day": 0.0,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 2816,
+        "pct": 72.0,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 2284,
+          "candlestick_patterns_missing": 1283
+        }
+      },
+      "scoring": {
+        "mean": 0.5043,
+        "std": 0.1793,
+        "min": 0.1,
+        "max": 0.9019,
+        "p25": 0.35,
+        "p50": 0.51,
+        "p75": 0.6326
+      },
+      "grade_distribution": {
+        "A": 495,
+        "B": 441,
+        "C": 2823,
+        "A+": 151
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.4
+      },
+      "real_weight_pct": {
+        "mean": 0.6
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.2144,
+          "std": 0.2428,
+          "min": 0.0,
+          "max": 0.9107,
+          "unique_values": 388,
+          "is_constant": false,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.6541,
+          "std": 0.4617,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 7,
+          "is_constant": false,
+          "count": 3910
+        },
+        "fvg_alignment": {
+          "type": "semi_placeholder",
+          "mean": 0.561,
+          "std": 0.3662,
+          "min": 0.0,
+          "max": 0.8,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7677,
+          "std": 0.1882,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {},
+      "pnl_net_R": {
+        "mean": null,
+        "total": null,
+        "count": 0
+      }
+    },
+    "Trend_Continuation_FVG_Retest": {
+      "total_setups": 3610,
+      "trades_generated": 0,
+      "trade_rate_pct": 0.0,
+      "setups_per_day": 722.0,
+      "trades_per_day": 0.0,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 1210,
+        "5m": 3610
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 2801,
+        "pct": 77.6,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 2134,
+          "candlestick_patterns_missing": 1638
+        }
+      },
+      "scoring": {
+        "mean": 0.4709,
+        "std": 0.1793,
+        "min": 0.125,
+        "max": 0.8287,
+        "p25": 0.2987,
+        "p50": 0.465,
+        "p75": 0.5934
+      },
+      "grade_distribution": {
+        "B": 1052,
+        "C": 1936,
+        "A": 588,
+        "A+": 34
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.35
+      },
+      "real_weight_pct": {
+        "mean": 0.65
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "fvg_quality": {
+          "type": "real",
+          "mean": 0.3037,
+          "std": 0.2158,
+          "min": 0.0,
+          "max": 0.6872,
+          "unique_values": 467,
+          "is_constant": false,
+          "count": 3610
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.5396,
+          "std": 0.4942,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 8,
+          "is_constant": false,
+          "count": 3610
+        },
+        "trend_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.5044,
+          "std": 0.2458,
+          "min": 0.3,
+          "max": 0.8,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3610
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7667,
+          "std": 0.1885,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3610
+        }
+      },
+      "trade_outcomes": {},
+      "pnl_net_R": {
+        "mean": null,
+        "total": null,
+        "count": 0
+      }
+    },
+    "Morning_Trap_Reversal": {
+      "total_setups": 3910,
+      "trades_generated": 9,
+      "trade_rate_pct": 0.2,
+      "setups_per_day": 782.0,
+      "trades_per_day": 1.8,
+      "n_days": 5,
+      "setup_tf_requested": "5m",
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 1394,
+        "pct": 35.7,
+        "details": {
+          "candlestick_patterns_missing": 1394
+        }
+      },
+      "scoring": {
+        "mean": 0.4368,
+        "std": 0.1715,
+        "min": 0.125,
+        "max": 0.8552,
+        "p25": 0.27,
+        "p50": 0.47,
+        "p75": 0.57
+      },
+      "grade_distribution": {
+        "B": 1654,
+        "C": 2070,
+        "A": 76,
+        "A+": 110
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.25
+      },
+      "real_weight_pct": {
+        "mean": 0.75
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.266,
+          "std": 0.1217,
+          "min": 0.0,
+          "max": 0.6633,
+          "unique_values": 114,
+          "is_constant": false,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.6405,
+          "std": 0.477,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 6,
+          "is_constant": false,
+          "count": 3910
+        },
+        "rejection_strength": {
+          "type": "real",
+          "mean": 0.0428,
+          "std": 0.1916,
+          "min": 0.0,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7677,
+          "std": 0.1882,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {
+        "win": 3,
+        "loss": 2
+      },
+      "pnl_net_R": {
+        "mean": 0.3403,
+        "total": 1.7013,
+        "count": 5
+      }
+    },
+    "Power_Hour_Expansion": {
+      "total_setups": 3910,
+      "trades_generated": 0,
+      "trade_rate_pct": 0.0,
+      "setups_per_day": 782.0,
+      "trades_per_day": 0.0,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 3536,
+        "pct": 90.4,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 2284,
+          "candlestick_patterns_missing": 3010
+        }
+      },
+      "scoring": {
+        "mean": 0.358,
+        "std": 0.1551,
+        "min": 0.21,
+        "max": 0.8664,
+        "p25": 0.21,
+        "p50": 0.3355,
+        "p75": 0.4507
+      },
+      "grade_distribution": {
+        "C": 3527,
+        "B": 265,
+        "A": 73,
+        "A+": 45
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.3,
+        "max": 0.3
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.0
+      },
+      "real_weight_pct": {
+        "mean": 0.7
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.2144,
+          "std": 0.2428,
+          "min": 0.0,
+          "max": 0.9107,
+          "unique_values": 388,
+          "is_constant": false,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.2074,
+          "std": 0.3851,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 4,
+          "is_constant": false,
+          "count": 3910
+        },
+        "day_momentum": {
+          "type": "placeholder",
+          "mean": 0.7,
+          "std": 0.0,
+          "min": 0.7,
+          "max": 0.7,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {},
+      "pnl_net_R": {
+        "mean": null,
+        "total": null,
+        "count": 0
+      }
+    },
+    "News_Fade": {
+      "total_setups": 1060,
+      "trades_generated": 2,
+      "trade_rate_pct": 0.2,
+      "setups_per_day": 212.0,
+      "trades_per_day": 0.4,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 360,
+        "5m": 1060
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 481,
+        "pct": 45.4,
+        "details": {
+          "candlestick_patterns_missing": 481
+        }
+      },
+      "scoring": {
+        "mean": 0.3667,
+        "std": 0.156,
+        "min": 0.215,
+        "max": 0.8125,
+        "p25": 0.215,
+        "p50": 0.465,
+        "p75": 0.465
+      },
+      "grade_distribution": {
+        "C": 1010,
+        "A": 50
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.35,
+        "max": 0.35
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.0
+      },
+      "real_weight_pct": {
+        "mean": 0.65
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "rejection_strength": {
+          "type": "real",
+          "mean": 0.0425,
+          "std": 0.1908,
+          "min": 0.0,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 1060
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.5389,
+          "std": 0.4928,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 6,
+          "is_constant": false,
+          "count": 1060
+        },
+        "wick_size": {
+          "type": "placeholder",
+          "mean": 0.7,
+          "std": 0.0,
+          "min": 0.7,
+          "max": 0.7,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 1060
+        },
+        "volume_spike": {
+          "type": "placeholder",
+          "mean": 0.5,
+          "std": 0.0,
+          "min": 0.5,
+          "max": 0.5,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 1060
+        }
+      },
+      "trade_outcomes": {
+        "win": 2
+      },
+      "pnl_net_R": {
+        "mean": 0.067,
+        "total": 0.1339,
+        "count": 2
+      }
+    },
+    "Liquidity_Sweep_Scalp": {
+      "total_setups": 3610,
+      "trades_generated": 15,
+      "trade_rate_pct": 0.4,
+      "setups_per_day": 722.0,
+      "trades_per_day": 3.0,
+      "n_days": 5,
+      "setup_tf_requested": "5m",
+      "pattern_tfs_distribution": {
+        "15m": 1210,
+        "5m": 3610
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 1553,
+        "pct": 43.0,
+        "details": {
+          "candlestick_patterns_missing": 1553
+        }
+      },
+      "scoring": {
+        "mean": 0.6024,
+        "std": 0.1808,
+        "min": 0.3,
+        "max": 0.8593,
+        "p25": 0.44,
+        "p50": 0.7046,
+        "p75": 0.79
+      },
+      "grade_distribution": {
+        "A+": 1219,
+        "A": 833,
+        "C": 1510,
+        "B": 48
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.25,
+        "max": 0.25
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.2
+      },
+      "real_weight_pct": {
+        "mean": 0.55
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.2661,
+          "std": 0.1185,
+          "min": 0.0,
+          "max": 0.6633,
+          "unique_values": 100,
+          "is_constant": false,
+          "count": 3610
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.5596,
+          "std": 0.4889,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 11,
+          "is_constant": false,
+          "count": 3610
+        },
+        "rejection_speed": {
+          "type": "placeholder",
+          "mean": 0.8,
+          "std": 0.0,
+          "min": 0.8,
+          "max": 0.8,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3610
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7667,
+          "std": 0.1885,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3610
+        }
+      },
+      "trade_outcomes": {
+        "loss": 4,
+        "win": 1
+      },
+      "pnl_net_R": {
+        "mean": -0.2481,
+        "total": -1.2405,
+        "count": 5
+      }
+    },
+    "FVG_Fill_Scalp": {
+      "total_setups": 3610,
+      "trades_generated": 12,
+      "trade_rate_pct": 0.3,
+      "setups_per_day": 722.0,
+      "trades_per_day": 2.4,
+      "n_days": 5,
+      "setup_tf_requested": "5m",
+      "pattern_tfs_distribution": {
+        "15m": 1210,
+        "5m": 3610
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 2501,
+        "pct": 69.3,
+        "details": {
+          "candlestick_patterns_missing": 2501
+        }
+      },
+      "scoring": {
+        "mean": 0.1831,
+        "std": 0.1211,
+        "min": 0.0,
+        "max": 0.4544,
+        "p25": 0.1347,
+        "p50": 0.1756,
+        "p75": 0.2637
+      },
+      "grade_distribution": {
+        "C": 3610
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.0
+      },
+      "real_weight_pct": {
+        "mean": 1.0
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "fvg_quality": {
+          "type": "real",
+          "mean": 0.3037,
+          "std": 0.2158,
+          "min": 0.0,
+          "max": 0.6872,
+          "unique_values": 467,
+          "is_constant": false,
+          "count": 3610
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.155,
+          "std": 0.233,
+          "min": 0.0,
+          "max": 0.7,
+          "unique_values": 6,
+          "is_constant": false,
+          "count": 3610
+        },
+        "trend_alignment": {
+          "type": "real",
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3610
+        }
+      },
+      "trade_outcomes": {
+        "loss": 3,
+        "win": 1
+      },
+      "pnl_net_R": {
+        "mean": -0.1067,
+        "total": -0.4267,
+        "count": 4
+      }
+    },
+    "BOS_Momentum_Scalp": {
+      "total_setups": 3610,
+      "trades_generated": 0,
+      "trade_rate_pct": 0.0,
+      "setups_per_day": 722.0,
+      "trades_per_day": 0.0,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 1210,
+        "5m": 3610
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 3275,
+        "pct": 90.7,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 2134,
+          "candlestick_patterns_missing": 2789
+        }
+      },
+      "scoring": {
+        "mean": 0.309,
+        "std": 0.1707,
+        "min": 0.14,
+        "max": 0.8856,
+        "p25": 0.14,
+        "p50": 0.2968,
+        "p75": 0.4396
+      },
+      "grade_distribution": {
+        "C": 3347,
+        "B": 172,
+        "A": 43,
+        "A+": 48
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.2,
+        "max": 0.2
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.0
+      },
+      "real_weight_pct": {
+        "mean": 0.8
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.215,
+          "std": 0.2429,
+          "min": 0.0,
+          "max": 0.9107,
+          "unique_values": 360,
+          "is_constant": false,
+          "count": 3610
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.205,
+          "std": 0.3837,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 4,
+          "is_constant": false,
+          "count": 3610
+        },
+        "momentum": {
+          "type": "placeholder",
+          "mean": 0.7,
+          "std": 0.0,
+          "min": 0.7,
+          "max": 0.7,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3610
+        }
+      },
+      "trade_outcomes": {},
+      "pnl_net_R": {
+        "mean": null,
+        "total": null,
+        "count": 0
+      }
+    },
+    "Session_Open_Scalp": {
+      "total_setups": 160,
+      "trades_generated": 9,
+      "trade_rate_pct": 5.6,
+      "setups_per_day": 32.0,
+      "trades_per_day": 1.8,
+      "n_days": 5,
+      "setup_tf_requested": "5m",
+      "pattern_tfs_distribution": {
+        "15m": 60,
+        "5m": 160
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 75,
+        "pct": 46.9,
+        "details": {
+          "candlestick_patterns_missing": 75
+        }
+      },
+      "scoring": {
+        "mean": 0.5335,
+        "std": 0.1602,
+        "min": 0.365,
+        "max": 0.715,
+        "p25": 0.365,
+        "p50": 0.61,
+        "p75": 0.715
+      },
+      "grade_distribution": {
+        "A": 70,
+        "B": 15,
+        "C": 75
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.65,
+        "max": 0.65
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.0
+      },
+      "real_weight_pct": {
+        "mean": 0.35
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "range_quality": {
+          "type": "placeholder",
+          "mean": 0.6,
+          "std": 0.0,
+          "min": 0.6,
+          "max": 0.6,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 160
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.4816,
+          "std": 0.4578,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 6,
+          "is_constant": false,
+          "count": 160
+        },
+        "volume": {
+          "type": "placeholder",
+          "mean": 0.5,
+          "std": 0.0,
+          "min": 0.5,
+          "max": 0.5,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 160
+        }
+      },
+      "trade_outcomes": {
+        "loss": 4,
+        "win": 1
+      },
+      "pnl_net_R": {
+        "mean": -0.1402,
+        "total": -0.7012,
+        "count": 5
+      }
+    },
+    "IFVG_5m_Sweep": {
+      "total_setups": 3910,
+      "trades_generated": 10,
+      "trade_rate_pct": 0.3,
+      "setups_per_day": 782.0,
+      "trades_per_day": 2.0,
+      "n_days": 5,
+      "setup_tf_requested": "5m",
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 2939,
+        "pct": 75.2,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 2284,
+          "candlestick_patterns_missing": 1575
+        }
+      },
+      "scoring": {
+        "mean": 0.3873,
+        "std": 0.1287,
+        "min": 0.075,
+        "max": 0.6594,
+        "p25": 0.285,
+        "p50": 0.395,
+        "p75": 0.4887
+      },
+      "grade_distribution": {
+        "B": 821,
+        "C": 3083,
+        "A": 6
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.15
+      },
+      "real_weight_pct": {
+        "mean": 0.85
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "fvg_quality": {
+          "type": "real",
+          "mean": 0.2988,
+          "std": 0.218,
+          "min": 0.0,
+          "max": 0.6872,
+          "unique_values": 494,
+          "is_constant": false,
+          "count": 3910
+        },
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.266,
+          "std": 0.1217,
+          "min": 0.0,
+          "max": 0.6633,
+          "unique_values": 114,
+          "is_constant": false,
+          "count": 3910
+        },
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.2144,
+          "std": 0.2428,
+          "min": 0.0,
+          "max": 0.9107,
+          "unique_values": 388,
+          "is_constant": false,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.5762,
+          "std": 0.4776,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 11,
+          "is_constant": false,
+          "count": 3910
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7677,
+          "std": 0.1882,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {
+        "win": 1,
+        "loss": 3
+      },
+      "pnl_net_R": {
+        "mean": -0.128,
+        "total": -0.5118,
+        "count": 4
+      }
+    },
+    "HTF_Bias_15m_BOS": {
+      "total_setups": 1310,
+      "trades_generated": 4,
+      "trade_rate_pct": 0.3,
+      "setups_per_day": 262.0,
+      "trades_per_day": 0.8,
+      "n_days": 5,
+      "setup_tf_requested": "15m",
+      "pattern_tfs_distribution": {
+        "15m": 1310
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 1310,
+        "pct": 100.0,
+        "details": {
+          "structure_htf_mismatch:range_not_in_['uptrend', 'downtrend']": 764,
+          "candlestick_patterns_missing": 1310
+        }
+      },
+      "scoring": {
+        "mean": 0.3505,
+        "std": 0.1211,
+        "min": 0.075,
+        "max": 0.5798,
+        "p25": 0.2558,
+        "p50": 0.3221,
+        "p75": 0.4593
+      },
+      "grade_distribution": {
+        "C": 1118,
+        "B": 192
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.15
+      },
+      "real_weight_pct": {
+        "mean": 0.85
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.3133,
+          "std": 0.3489,
+          "min": 0.0,
+          "max": 0.9582,
+          "unique_values": 120,
+          "is_constant": false,
+          "count": 1310
+        },
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.2884,
+          "std": 0.0718,
+          "min": 0.0,
+          "max": 0.6416,
+          "unique_values": 19,
+          "is_constant": false,
+          "count": 1310
+        },
+        "fvg_quality": {
+          "type": "real",
+          "mean": 0.3464,
+          "std": 0.1672,
+          "min": 0.0,
+          "max": 0.93,
+          "unique_values": 189,
+          "is_constant": false,
+          "count": 1310
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 1310
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7678,
+          "std": 0.1882,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 1310
+        }
+      },
+      "trade_outcomes": {
+        "loss": 3
+      },
+      "pnl_net_R": {
+        "mean": -0.1989,
+        "total": -0.5967,
+        "count": 3
+      }
+    },
+    "DAY_Aplus_1_Liquidity_Sweep_OB_Retest": {
+      "total_setups": 3910,
+      "trades_generated": 0,
+      "trade_rate_pct": 0.0,
+      "setups_per_day": 782.0,
+      "trades_per_day": 0.0,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 1339,
+        "pct": 34.2,
+        "details": {
+          "candlestick_patterns_missing": 1339
+        }
+      },
+      "scoring": {
+        "mean": 0.4036,
+        "std": 0.1899,
+        "min": 0.0,
+        "max": 0.6966,
+        "p25": 0.2413,
+        "p50": 0.4401,
+        "p75": 0.57
+      },
+      "grade_distribution": {
+        "A+": 1656,
+        "A": 999,
+        "B": 589,
+        "C": 666
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.0
+      },
+      "real_weight_pct": {
+        "mean": 1.0
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3910
+        },
+        "bos_strength": {
+          "type": "real",
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3910
+        },
+        "fvg_quality": {
+          "type": "real",
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.0,
+          "std": 0.0,
+          "min": 0.0,
+          "max": 0.0,
+          "unique_values": 1,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {},
+      "pnl_net_R": {
+        "mean": null,
+        "total": null,
+        "count": 0
+      }
+    },
+    "SCALP_Aplus_1_Mini_FVG_Retest_NY_Open": {
+      "total_setups": 3910,
+      "trades_generated": 0,
+      "trade_rate_pct": 0.0,
+      "setups_per_day": 782.0,
+      "trades_per_day": 0.0,
+      "n_days": 5,
+      "setup_tf_requested": null,
+      "pattern_tfs_distribution": {
+        "15m": 1310,
+        "5m": 3910
+      },
+      "fallback_tf": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "aggressive_bypass": {
+        "count": 961,
+        "pct": 24.6,
+        "details": {
+          "candlestick_patterns_missing": 961
+        }
+      },
+      "scoring": {
+        "mean": 0.4702,
+        "std": 0.1672,
+        "min": 0.05,
+        "max": 0.7689,
+        "p25": 0.36,
+        "p50": 0.5103,
+        "p75": 0.604
+      },
+      "grade_distribution": {
+        "A": 2042,
+        "B": 485,
+        "A+": 1042,
+        "C": 341
+      },
+      "placeholder_weight_pct": {
+        "mean": 0.0,
+        "max": 0.0
+      },
+      "semi_placeholder_weight_pct": {
+        "mean": 0.1
+      },
+      "real_weight_pct": {
+        "mean": 0.9
+      },
+      "phantom_setups": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "component_breakdown": {
+        "fvg_quality": {
+          "type": "real",
+          "mean": 0.2988,
+          "std": 0.218,
+          "min": 0.0,
+          "max": 0.6872,
+          "unique_values": 494,
+          "is_constant": false,
+          "count": 3910
+        },
+        "pattern_quality": {
+          "type": "real",
+          "mean": 0.7303,
+          "std": 0.4237,
+          "min": 0.0,
+          "max": 1.0,
+          "unique_values": 16,
+          "is_constant": false,
+          "count": 3910
+        },
+        "liquidity_sweep": {
+          "type": "real",
+          "mean": 0.266,
+          "std": 0.1217,
+          "min": 0.0,
+          "max": 0.6633,
+          "unique_values": 114,
+          "is_constant": false,
+          "count": 3910
+        },
+        "context_strength": {
+          "type": "semi_placeholder",
+          "mean": 0.7677,
+          "std": 0.1882,
+          "min": 0.5,
+          "max": 0.9,
+          "unique_values": 2,
+          "is_constant": true,
+          "count": 3910
+        }
+      },
+      "trade_outcomes": {},
+      "pnl_net_R": {
+        "mean": null,
+        "total": null,
+        "count": 0
+      }
+    }
+  },
+  "global_summary": {
+    "total_setups": 44340,
+    "total_trades": 71,
+    "pct_fallback_tf": 0.0,
+    "pct_aggressive_bypass": 62.9,
+    "mean_placeholder_weight_pct": 0.0738
+  }
+}

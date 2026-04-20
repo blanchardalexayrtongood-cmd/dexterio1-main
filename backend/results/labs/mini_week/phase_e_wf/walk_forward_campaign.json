@@ -1,0 +1,92 @@
+{
+  "schema_version": "WalkForwardMiniLabCampaignV0",
+  "created_at_utc": "2026-04-17T21:16:01.579017+00:00",
+  "output_parent": "phase_e_wf",
+  "label_prefix": "wf",
+  "include_train": false,
+  "dry_run": false,
+  "fail_fast": true,
+  "fail_fast_stopped": null,
+  "max_returncode": 0,
+  "forwarded_argv": [],
+  "plan": {
+    "schema_version": "WalkForwardLightV0",
+    "start_date": "2025-08-01",
+    "end_date": "2025-11-30",
+    "calendar_days": 122,
+    "q_calendar_blocks": 30,
+    "splits": [
+      {
+        "id": 0,
+        "train": {
+          "start_date": "2025-08-01",
+          "end_date": "2025-09-29"
+        },
+        "test": {
+          "start_date": "2025-09-30",
+          "end_date": "2025-10-29"
+        },
+        "train_days": 60,
+        "test_days": 30
+      },
+      {
+        "id": 1,
+        "train": {
+          "start_date": "2025-08-01",
+          "end_date": "2025-10-29"
+        },
+        "test": {
+          "start_date": "2025-10-30",
+          "end_date": "2025-11-30"
+        },
+        "train_days": 90,
+        "test_days": 32
+      }
+    ],
+    "note": "Train/test en jours calendaires (minuit UTC) \u2014 dates inclusives pour encha\u00eener run_mini_lab_week / backtest."
+  },
+  "runs": [
+    {
+      "phase": "test",
+      "split_id": 0,
+      "window": {
+        "start_date": "2025-09-30",
+        "end_date": "2025-10-29"
+      },
+      "cmd": [
+        "/home/dexter/dexterio1-main/backend/.venv/bin/python",
+        "/home/dexter/dexterio1-main/backend/scripts/run_mini_lab_week.py",
+        "--start",
+        "2025-09-30",
+        "--end",
+        "2025-10-29",
+        "--label",
+        "wf_s0_test",
+        "--output-parent",
+        "phase_e_wf"
+      ],
+      "returncode": 0
+    },
+    {
+      "phase": "test",
+      "split_id": 1,
+      "window": {
+        "start_date": "2025-10-30",
+        "end_date": "2025-11-30"
+      },
+      "cmd": [
+        "/home/dexter/dexterio1-main/backend/.venv/bin/python",
+        "/home/dexter/dexterio1-main/backend/scripts/run_mini_lab_week.py",
+        "--start",
+        "2025-10-30",
+        "--end",
+        "2025-11-30",
+        "--label",
+        "wf_s1_test",
+        "--output-parent",
+        "phase_e_wf"
+      ],
+      "returncode": 0
+    }
+  ]
+}

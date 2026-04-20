@@ -1,0 +1,149 @@
+{
+  "run_id": "miniweek_phase_e_wf_wf_s1_test",
+  "status": "OK",
+  "timestamp": "2026-04-17T23:16:00.105329",
+  "entry_price_validation": {
+    "entry_price_mean": 651.5950092920353,
+    "entry_price_median": 666.0025,
+    "entry_price_std": 30.95329302907182,
+    "entry_price_vs_market": {
+      "SPY": {
+        "entry_price_mean": 673.7430430555555,
+        "market_close_mean": 673.5453098864659,
+        "market_close_std": 8.676149819214675,
+        "entry_vs_market_diff": 0.19773316908958805,
+        "entry_vs_market_diff_pct": 0.029357070146167053
+      },
+      "QQQ": {
+        "entry_price_mean": 612.7009012195123,
+        "market_close_mean": 613.1314319778818,
+        "market_close_std": 12.55808164642652,
+        "entry_vs_market_diff": -0.43053075836951393,
+        "entry_vs_market_diff_pct": -0.07021834730943055
+      }
+    },
+    "placeholder_detected": false
+  },
+  "duration_validation": {
+    "zero_duration_count": 1,
+    "zero_duration_pct": 0.4424778761061947,
+    "duration_mean_minutes": 275.9778761061947,
+    "duration_median_minutes": 50.0,
+    "total_trades_with_duration": 226,
+    "scalp": {
+      "duration_mean_minutes": 57.52739726027397,
+      "duration_median_minutes": 30.0,
+      "duration_max_minutes": 120.0,
+      "max_allowed_minutes": 120.0,
+      "time_stop_broken": false,
+      "violations": [],
+      "total_scalp_trades": 146
+    },
+    "daily": {
+      "duration_mean_minutes": 674.65,
+      "duration_median_minutes": 104.5,
+      "total_daily_trades": 80
+    }
+  },
+  "session_validation": {
+    "unknown_session_count": 0,
+    "unknown_session_pct": 0.0,
+    "session_distribution": {
+      "ny": 226
+    },
+    "total_trades_with_session": 226
+  },
+  "costs_breakdown": {
+    "total_slippage": 6053.95,
+    "total_spread": 2422.24,
+    "total_commission": 452.0,
+    "total_reg_fees": 64.42,
+    "total_costs": 8992.61,
+    "costs_per_trade_avg": 39.79030973451328,
+    "slippage_double_counting_detected": false
+  },
+  "stability_metrics": {
+    "total_trades": 226,
+    "winrate_pct": 33.6283185840708,
+    "expectancy_net_R": -0.057248413736723985,
+    "total_r_net": -12.938141504499619,
+    "avg_win_r": 0.22546251286841865,
+    "avg_loss_r": -0.20048861654999628
+  },
+  "grading_validation": {
+    "grading_produced": true,
+    "quality_distribution": {
+      "A+": 26,
+      "B": 37,
+      "A": 59,
+      "C": 104
+    },
+    "all_c_detected": false,
+    "total_trades": 226,
+    "count_missing_grade": 0,
+    "pct_missing_grade": 0.0,
+    "grading_pipeline_propagation_ok": true
+  },
+  "grading_debug": {
+    "total_trades": 226,
+    "score_count": 226,
+    "pct_missing_score": 0.0,
+    "score_min": 0.15,
+    "score_max": 0.9909090909090991,
+    "score_mean": 0.5396828031914199,
+    "grade_counts": {
+      "A+": 26,
+      "A": 59,
+      "B": 37,
+      "C": 104,
+      "UNKNOWN": 0
+    },
+    "unique_playbooks": 8,
+    "playbook_counts": {
+      "Liquidity_Sweep_Scalp": 63,
+      "FVG_Fill_Scalp": 54,
+      "Morning_Trap_Reversal": 42,
+      "Session_Open_Scalp": 29,
+      "IFVG_5m_Sweep": 12,
+      "NY_Open_Reversal": 11,
+      "News_Fade": 9,
+      "HTF_Bias_15m_BOS": 6
+    },
+    "thresholds_snapshot": {
+      "Liquidity_Sweep_Scalp": {
+        "count": 63,
+        "thresholds": {
+          "A_plus": 0.75,
+          "A": 0.6,
+          "B": 0.45
+        }
+      },
+      "FVG_Fill_Scalp": {
+        "count": 54,
+        "thresholds": {
+          "A_plus": 0.8,
+          "A": 0.7,
+          "B": 0.6
+        }
+      },
+      "Morning_Trap_Reversal": {
+        "count": 42,
+        "thresholds": {
+          "A_plus": 0.8,
+          "A": 0.65,
+          "B": 0.5
+        }
+      }
+    },
+    "grading_pipeline_ok": true
+  },
+  "sanity_checks": {
+    "entry_price_valid": true,
+    "duration_valid": true,
+    "session_valid": true,
+    "costs_valid": true,
+    "stability_valid": true,
+    "scalp_time_stop_valid": true,
+    "grading_valid": true
+  }
+}

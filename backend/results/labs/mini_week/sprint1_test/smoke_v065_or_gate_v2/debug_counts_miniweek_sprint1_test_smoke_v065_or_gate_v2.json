@@ -1,0 +1,242 @@
+{
+  "run_id": "miniweek_sprint1_test_smoke_v065_or_gate_v2",
+  "config": {
+    "start_date": "2025-10-06",
+    "end_date": "2025-10-10",
+    "htf_warmup_days": 30,
+    "trading_mode": "AGGRESSIVE",
+    "strict_validation": false,
+    "trade_types": [
+      "DAILY",
+      "SCALP"
+    ],
+    "symbols": [
+      "SPY",
+      "QQQ"
+    ]
+  },
+  "counts": {
+    "candles_loaded_1m": 8598,
+    "candles_loaded_htf": {
+      "SPY_1d": 20,
+      "SPY_4h": 30,
+      "SPY_1h": 50,
+      "QQQ_1d": 20,
+      "QQQ_4h": 30,
+      "QQQ_1h": 50
+    },
+    "setups_detected_total": 0,
+    "setups_rejected_total": 0,
+    "setups_accepted_total": 0,
+    "setups_rejected_by_mode": 0,
+    "setups_rejected_by_trade_types": 0,
+    "trades_opened_total": 3,
+    "trades_closed_total": 3,
+    "reject_reasons": {},
+    "bars_processed": 8598,
+    "playbooks_registered_count": 1,
+    "playbooks_registered_names": [
+      "FVG_Fill_V065"
+    ],
+    "playbooks_evaluated_total": 9316,
+    "playbooks_evaluated_unique": {},
+    "matches_total": 230,
+    "matches_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_created_total": 230,
+    "setups_created_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_after_risk_filter_total": 230,
+    "setups_after_risk_filter_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "trades_open_attempted_total": 3,
+    "trades_open_rejected_by_reason": {},
+    "setups_detected_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_rejected_by_reason": {},
+    "setups_rejected_by_mode_by_playbook": {},
+    "setups_rejected_by_mode_examples": [],
+    "missing_playbook_name": 0,
+    "risk_mode_used": "AGGRESSIVE",
+    "risk_allowlist_snapshot": {
+      "aggressive": {
+        "len": 8,
+        "first5": [
+          "News_Fade",
+          "Session_Open_Scalp",
+          "NY_Open_Reversal",
+          "Morning_Trap_Reversal",
+          "Liquidity_Sweep_Scalp"
+        ]
+      },
+      "safe": {
+        "len": 1,
+        "first5": [
+          "NY_Open_Reversal"
+        ]
+      }
+    },
+    "risk_rejects_by_playbook": {},
+    "risk_reject_examples": [],
+    "risk_input_setups_len": 1,
+    "risk_output_setups_len": 1,
+    "risk_first3_input_playbooks": [
+      "FVG_Fill_V065"
+    ],
+    "risk_first3_output_playbooks": [
+      "FVG_Fill_V065"
+    ],
+    "caps_snapshot": {
+      "aggressive": {
+        "daily_cap": 30,
+        "per_playbook_session_cap": 10,
+        "hard_daily_cap": 80,
+        "n_active_playbooks": 1
+      },
+      "safe": {
+        "daily_cap": 20,
+        "per_playbook_session_cap": 3
+      }
+    },
+    "trades_opened_by_playbook": {
+      "FVG_Fill_V065": 3
+    },
+    "trades_attempted_by_playbook": {
+      "FVG_Fill_V065": 3
+    },
+    "session_limit_reached_by_playbook": {},
+    "session_key_used": "2025-10-07|ny|0800-1200NY",
+    "grade_counts_by_playbook": {
+      "FVG_Fill_V065": {
+        "A+": 2,
+        "A": 1,
+        "B": 0,
+        "C": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "trade_context_snapshots": [
+      {
+        "timestamp": "2025-10-07T15:10:00+00:00",
+        "symbol": "QQQ",
+        "session_label": "ny",
+        "session_key": "2025-10-07|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "normal",
+        "session_states": {
+          "london": {
+            "open": 607.36,
+            "high": 609.91,
+            "low": 606.56,
+            "close": 608.89,
+            "range": 3.3500000000000227
+          },
+          "ny": {
+            "open": 608.89,
+            "high": 609.63,
+            "low": 604.83,
+            "close": 605.32,
+            "range": 4.7999999999999545
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-08T14:10:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-08|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 670.04,
+            "high": 670.56,
+            "low": 669.5,
+            "close": 670.03,
+            "range": 1.0599999999999454
+          },
+          "ny": {
+            "open": 670.03,
+            "high": 671.74,
+            "low": 669.58,
+            "close": 671.74,
+            "range": 2.159999999999968
+          }
+        }
+      },
+      {
+        "timestamp": "2025-10-10T15:05:00+00:00",
+        "symbol": "SPY",
+        "session_label": "ny",
+        "session_key": "2025-10-10|ny|0800-1200NY",
+        "sweep_flags": {},
+        "vol_regime": "high",
+        "session_states": {
+          "london": {
+            "open": 671.9,
+            "high": 672.42,
+            "low": 670.67,
+            "close": 672.0,
+            "range": 1.75
+          },
+          "ny": {
+            "open": 672.0,
+            "high": 673.845,
+            "low": 665.58,
+            "close": 666.78,
+            "range": 8.264999999999986
+          }
+        }
+      }
+    ],
+    "symbols_processed": [
+      "SPY",
+      "QQQ"
+    ],
+    "metrics_by_symbol": {
+      "SPY": {
+        "trades": 2,
+        "wins": 1,
+        "winrate": 50.0,
+        "avg_r": -0.24670372499999776,
+        "total_r": -0.49340744999999553
+      },
+      "QQQ": {
+        "trades": 1,
+        "wins": 0,
+        "winrate": 0.0,
+        "avg_r": -0.07253599999999731,
+        "total_r": -0.07253599999999731
+      }
+    },
+    "trades_opened_by_minute": {
+      "2025-10-07T15:10:00+00:00": 1,
+      "2025-10-08T14:10:00+00:00": 1,
+      "2025-10-10T15:05:00+00:00": 1
+    },
+    "trades_opened_by_minute_by_symbol": {
+      "2025-10-07T15:10:00+00:00": {
+        "QQQ": 1
+      },
+      "2025-10-08T14:10:00+00:00": {
+        "SPY": 1
+      },
+      "2025-10-10T15:05:00+00:00": {
+        "SPY": 1
+      }
+    },
+    "blocked_by_per_minute_cap": 0,
+    "news_fade_post_risk_final_pool_count": 0,
+    "news_fade_post_risk_final_pool_multi_setup_count": 0,
+    "news_fade_post_risk_won_final_selection_count": 0,
+    "news_fade_post_risk_lost_final_selection_count": 0,
+    "news_fade_post_risk_lost_final_selection_by_winner": {},
+    "pending_setups_queued": 230,
+    "pending_setups_consumed": 230,
+    "blocked_by_session_cap": 227
+  }
+}

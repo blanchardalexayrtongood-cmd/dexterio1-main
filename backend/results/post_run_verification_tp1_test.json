@@ -1,0 +1,213 @@
+{
+  "run_id": "tp1_test",
+  "timestamp": "2026-04-19T06:51:16.391685",
+  "pass": false,
+  "failures": [
+    "Grading: Error reading CSV: No columns to parse from file",
+    "Grading: grading_debug: score_count == 0",
+    "Grading: grading_debug: thresholds_snapshot is empty",
+    "Master Candle: Error reading CSV for MC: No columns to parse from file",
+    "Master Candle: master_candle_debug: mc_by_session is empty"
+  ],
+  "artifacts": {
+    "summary_json": "/home/dexter/dexterio1-main/backend/results/summary_tp1_test_AGGRESSIVE_DAILY_SCALP.json",
+    "trades_csv": "/home/dexter/dexterio1-main/backend/results/trades_tp1_test_AGGRESSIVE_DAILY_SCALP.csv",
+    "trades_parquet": "/home/dexter/dexterio1-main/backend/results/trades_tp1_test_AGGRESSIVE_DAILY_SCALP.parquet",
+    "grading_debug_json": "/home/dexter/dexterio1-main/backend/results/grading_debug_tp1_test.json",
+    "master_candle_debug_json": "/home/dexter/dexterio1-main/backend/results/master_candle_debug_tp1_test.json",
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/sanity_report_tp1_test.json"
+  },
+  "grading_validation": {
+    "grading_debug": {
+      "score_count": 0,
+      "thresholds_snapshot_present": false,
+      "diagnostic": null
+    },
+    "pipeline_ok": true,
+    "pass": false,
+    "issues": [
+      "Error reading CSV: No columns to parse from file",
+      "grading_debug: score_count == 0",
+      "grading_debug: thresholds_snapshot is empty"
+    ]
+  },
+  "master_candle_validation": {
+    "master_candle_debug": {
+      "mc_by_session_present": false,
+      "timezone": "America/New_York",
+      "mc_window_minutes": 15
+    },
+    "pass": false,
+    "issues": [
+      "Error reading CSV for MC: No columns to parse from file",
+      "master_candle_debug: mc_by_session is empty"
+    ]
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 20,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "d1282ce4-9b5f-46c4-96f6-90700e752ae7",
+        "entry_timestamp": "2025-10-06T13:30:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "362d2b26-3ba1-451e-98b9-159169c096b6",
+        "entry_timestamp": "2025-10-06T14:44:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "b5a34f40-7690-429d-be28-ec13442b41a6",
+        "entry_timestamp": "2025-10-06T14:49:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "f2b1db7d-a80c-4e19-8cda-287449146642",
+        "entry_timestamp": "2025-10-06T13:57:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "54263b6b-b4d4-46c1-9597-d8c1f084912f",
+        "entry_timestamp": "2025-10-06T13:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "3b38fbfd-ee91-4668-88ee-ea86cfbf7dd9",
+        "entry_timestamp": "2025-10-06T13:41:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "2da41c2c-82b0-402a-ad9a-985355636684",
+        "entry_timestamp": "2025-10-06T13:44:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "7f4b85ae-1add-4bcc-bc2f-d5ed3cc6c612",
+        "entry_timestamp": "2025-10-06T13:54:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "e6782a05-a6f8-459c-8677-f287898de57f",
+        "entry_timestamp": "2025-10-06T13:49:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "56ba3e87-996b-40a1-8f16-ea2e0664878c",
+        "entry_timestamp": "2025-10-06T14:01:00+00:00",
+        "mc_high": 671.65,
+        "mc_low": 670.06,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-06"
+      },
+      {
+        "trade_id": "41b2bae9-c7e5-44c3-9497-b0d5b7c1547a",
+        "entry_timestamp": "2025-10-07T13:30:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "d1056464-f658-4704-9889-78eaa68f5457",
+        "entry_timestamp": "2025-10-07T13:34:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "a15f5d59-9d75-4484-b4bc-6965e1ab148e",
+        "entry_timestamp": "2025-10-07T13:35:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "791eccf2-f67e-4fde-afd8-b6b1b337f824",
+        "entry_timestamp": "2025-10-07T13:36:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "6528f189-d4d3-4daa-a872-a89407079103",
+        "entry_timestamp": "2025-10-07T13:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "4f3ca23e-e81d-4e30-9921-17b19b86553a",
+        "entry_timestamp": "2025-10-07T13:50:00+00:00",
+        "mc_high": 672.99,
+        "mc_low": 672.2,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-07"
+      },
+      {
+        "trade_id": "a1ae822b-1663-4e33-a61f-8900157bdfb9",
+        "entry_timestamp": "2025-10-07T16:04:00+00:00",
+        "mc_high": 672.99,
+        "mc_low": 672.2,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-07"
+      },
+      {
+        "trade_id": "09b371df-ee32-4770-88b0-7a7ba16ceefe",
+        "entry_timestamp": "2025-10-07T16:09:00+00:00",
+        "mc_high": 672.99,
+        "mc_low": 672.2,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-10-07"
+      },
+      {
+        "trade_id": "a8661986-5489-4c74-bb73-02b70c93cd74",
+        "entry_timestamp": "2025-10-08T13:36:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "8622ac4d-0b70-4784-850e-c8e00e7178cc",
+        "entry_timestamp": "2025-10-08T13:37:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "run_id": "miniweek_sprint1_test_smoke_v065_or_gate",
+  "config": {
+    "start_date": "2025-10-06",
+    "end_date": "2025-10-10",
+    "htf_warmup_days": 30,
+    "trading_mode": "AGGRESSIVE",
+    "strict_validation": false,
+    "trade_types": [
+      "DAILY",
+      "SCALP"
+    ],
+    "symbols": [
+      "SPY",
+      "QQQ"
+    ]
+  },
+  "counts": {
+    "candles_loaded_1m": 8598,
+    "candles_loaded_htf": {
+      "SPY_1d": 20,
+      "SPY_4h": 30,
+      "SPY_1h": 50,
+      "QQQ_1d": 20,
+      "QQQ_4h": 30,
+      "QQQ_1h": 50
+    },
+    "setups_detected_total": 0,
+    "setups_rejected_total": 0,
+    "setups_accepted_total": 0,
+    "setups_rejected_by_mode": 230,
+    "setups_rejected_by_trade_types": 0,
+    "trades_opened_total": 0,
+    "trades_closed_total": 0,
+    "reject_reasons": {},
+    "bars_processed": 8598,
+    "playbooks_registered_count": 1,
+    "playbooks_registered_names": [
+      "FVG_Fill_V065"
+    ],
+    "playbooks_evaluated_total": 9316,
+    "playbooks_evaluated_unique": {},
+    "matches_total": 230,
+    "matches_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_created_total": 230,
+    "setups_created_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_after_risk_filter_total": 0,
+    "setups_after_risk_filter_by_playbook": {},
+    "trades_open_attempted_total": 0,
+    "trades_open_rejected_by_reason": {},
+    "setups_detected_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_rejected_by_reason": {
+      "rejected_by_mode": 230
+    },
+    "setups_rejected_by_mode_by_playbook": {
+      "FVG_Fill_V065": 230
+    },
+    "setups_rejected_by_mode_examples": [
+      {
+        "playbook_name": "FVG_Fill_V065",
+        "raw_playbook_name": "FVG_Fill_V065",
+        "reason": "Playbook 'FVG_Fill_V065' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      },
+      {
+        "playbook_name": "FVG_Fill_V065",
+        "raw_playbook_name": "FVG_Fill_V065",
+        "reason": "Playbook 'FVG_Fill_V065' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      },
+      {
+        "playbook_name": "FVG_Fill_V065",
+        "raw_playbook_name": "FVG_Fill_V065",
+        "reason": "Playbook 'FVG_Fill_V065' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      },
+      {
+        "playbook_name": "FVG_Fill_V065",
+        "raw_playbook_name": "FVG_Fill_V065",
+        "reason": "Playbook 'FVG_Fill_V065' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      },
+      {
+        "playbook_name": "FVG_Fill_V065",
+        "raw_playbook_name": "FVG_Fill_V065",
+        "reason": "Playbook 'FVG_Fill_V065' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      }
+    ],
+    "missing_playbook_name": 0,
+    "risk_mode_used": "AGGRESSIVE",
+    "risk_allowlist_snapshot": {
+      "aggressive": {
+        "len": 8,
+        "first5": [
+          "News_Fade",
+          "Session_Open_Scalp",
+          "NY_Open_Reversal",
+          "Morning_Trap_Reversal",
+          "Liquidity_Sweep_Scalp"
+        ]
+      },
+      "safe": {
+        "len": 1,
+        "first5": [
+          "NY_Open_Reversal"
+        ]
+      }
+    },
+    "risk_rejects_by_playbook": {
+      "FVG_Fill_V065": 1
+    },
+    "risk_reject_examples": [
+      {
+        "playbook_name": "FVG_Fill_V065",
+        "raw_playbook_name": "FVG_Fill_V065",
+        "reason": "Playbook 'FVG_Fill_V065' not in AGGRESSIVE allowlist",
+        "mode": "AGGRESSIVE",
+        "in_aggressive_allowlist": false,
+        "in_safe_allowlist": false,
+        "in_denylist": false
+      }
+    ],
+    "risk_input_setups_len": 1,
+    "risk_output_setups_len": 0,
+    "risk_first3_input_playbooks": [
+      "FVG_Fill_V065"
+    ],
+    "risk_first3_output_playbooks": [],
+    "caps_snapshot": {
+      "aggressive": {
+        "daily_cap": 30,
+        "per_playbook_session_cap": 10,
+        "hard_daily_cap": 80,
+        "n_active_playbooks": 1
+      },
+      "safe": {
+        "daily_cap": 20,
+        "per_playbook_session_cap": 3
+      }
+    },
+    "trades_opened_by_playbook": {},
+    "trades_attempted_by_playbook": {},
+    "session_limit_reached_by_playbook": {},
+    "session_key_used": "",
+    "grade_counts_by_playbook": {},
+    "trade_context_snapshots": [],
+    "symbols_processed": [],
+    "metrics_by_symbol": {},
+    "trades_opened_by_minute": {},
+    "trades_opened_by_minute_by_symbol": {},
+    "blocked_by_per_minute_cap": 0,
+    "news_fade_post_risk_final_pool_count": 0,
+    "news_fade_post_risk_final_pool_multi_setup_count": 0,
+    "news_fade_post_risk_won_final_selection_count": 0,
+    "news_fade_post_risk_lost_final_selection_count": 0,
+    "news_fade_post_risk_lost_final_selection_by_winner": {}
+  }
+}
