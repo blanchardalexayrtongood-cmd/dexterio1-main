@@ -1,0 +1,95 @@
+{
+  "schema_version": "CampaignManifestV0",
+  "contract_version": "RunSummaryV0",
+  "run_id": "miniweek_mass_s1_v1_oct_w2",
+  "runner": "run_mini_lab_week.py",
+  "argv": [
+    "scripts/run_mini_lab_week.py",
+    "--start",
+    "2025-10-06",
+    "--end",
+    "2025-10-10",
+    "--label",
+    "oct_w2",
+    "--symbols",
+    "SPY,QQQ",
+    "--no-respect-allowlists",
+    "--no-relax-caps",
+    "--calib-allowlist",
+    "Engulfing_Bar_V056,Aplus_03_IFVG_Flip_5m,Morning_Trap_Reversal,Liquidity_Sweep_Scalp,FVG_Fill_V065,Liquidity_Raid_V056,Range_FVG_V054,Asia_Sweep_V051,London_Fakeout_V066,OB_Retest_V004",
+    "--playbooks-yaml",
+    "/home/dexter/dexterio1-main/backend/knowledge/campaigns/mass_s1_v1.yml",
+    "--output-parent",
+    "mass_s1_v1"
+  ],
+  "cwd": "/home/dexter/dexterio1-main/backend",
+  "git_sha": "0d2d0f15775181246e260543f8a1510b6cdb78df",
+  "run_started_at_utc": "2026-04-20T22:36:08.390346+00:00",
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "start_date": "2025-10-06",
+  "end_date": "2025-10-10",
+  "label": "oct_w2",
+  "output_parent": "mass_s1_v1",
+  "respect_allowlists": false,
+  "bypass_lss_quarantine": true,
+  "playbooks_yaml": "/home/dexter/dexterio1-main/backend/knowledge/campaigns/mass_s1_v1.yml",
+  "nf_tp1_rr_meta": null,
+  "run_clock_mode": "BACKTEST",
+  "lab_environment": {
+    "RISK_EVAL_ALLOW_ALL_PLAYBOOKS": "true",
+    "RISK_EVAL_RELAX_CAPS": "false",
+    "RISK_EVAL_DISABLE_KILL_SWITCH": "true",
+    "RISK_BYPASS_DYNAMIC_QUARANTINE_LSS_ONLY": "true",
+    "data_fingerprint_v0": {
+      "schema_version": "DataFingerprintV0",
+      "timeframe": "1m",
+      "sha256": "91f8a0884f9a5220f88f282089922147310dad141d370789549b967888d58973",
+      "by_symbol": {
+        "QQQ": {
+          "path": "/home/dexter/dexterio1-main/data/historical/1m/QQQ.parquet",
+          "exists": true,
+          "size_bytes": 2777149,
+          "mtime_ns": 1775806380000000000
+        },
+        "SPY": {
+          "path": "/home/dexter/dexterio1-main/data/historical/1m/SPY.parquet",
+          "exists": true,
+          "size_bytes": 2674673,
+          "mtime_ns": 1775806380000000000
+        }
+      }
+    }
+  },
+  "data_coverage": {
+    "schema_version": "DataCoverageV0",
+    "coverage_ok": true,
+    "warmup_start_utc": "2025-09-06T00:00:00+00:00",
+    "start_utc": "2025-10-06T00:00:00+00:00",
+    "end_exclusive_utc": "2025-10-11T00:00:00+00:00",
+    "htf_warmup_days": 30,
+    "ignore_warmup_check": false,
+    "errors": [],
+    "warnings": [],
+    "by_path": [
+      {
+        "path": "/home/dexter/dexterio1-main/data/historical/1m/SPY.parquet",
+        "exists": true,
+        "min_utc": "2025-06-02T08:00:00+00:00",
+        "max_utc": "2025-11-28T21:59:00+00:00",
+        "rows": 105822,
+        "symbol": "SPY"
+      },
+      {
+        "path": "/home/dexter/dexterio1-main/data/historical/1m/QQQ.parquet",
+        "exists": true,
+        "min_utc": "2025-06-02T08:00:00+00:00",
+        "max_utc": "2025-11-28T21:59:00+00:00",
+        "rows": 110752,
+        "symbol": "QQQ"
+      }
+    ]
+  }
+}

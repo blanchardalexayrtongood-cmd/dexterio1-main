@@ -1,0 +1,75 @@
+{
+  "run_id": "miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2",
+  "timestamp": "2026-04-21T07:58:32.276365",
+  "pass": false,
+  "failures": [
+    "Master Candle: CSV: mc_high is NULL on all trades",
+    "Master Candle: CSV: mc_low is NULL on all trades",
+    "Master Candle: master_candle_debug: mc_by_session is empty"
+  ],
+  "artifacts": {
+    "summary_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_smoke/aplus03_v2_oct_w2/summary_miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2_AGGRESSIVE_DAILY_SCALP.json",
+    "trades_csv": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_smoke/aplus03_v2_oct_w2/trades_miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2_AGGRESSIVE_DAILY_SCALP.csv",
+    "trades_parquet": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_smoke/aplus03_v2_oct_w2/trades_miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2_AGGRESSIVE_DAILY_SCALP.parquet",
+    "grading_debug_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_smoke/aplus03_v2_oct_w2/grading_debug_miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2.json",
+    "master_candle_debug_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_smoke/aplus03_v2_oct_w2/master_candle_debug_miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2.json",
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_smoke/aplus03_v2_oct_w2/sanity_report_miniweek_aplus03_v2_smoke_aplus03_v2_oct_w2.json"
+  },
+  "grading_validation": {
+    "total_trades": 2,
+    "csv_match_score_non_null": 2,
+    "csv_match_grade_non_null": 2,
+    "csv_grade_thresholds_non_null": 2,
+    "csv_score_scale_hint_non_null": 2,
+    "grading_debug": {
+      "score_count": 2,
+      "thresholds_snapshot_present": true,
+      "diagnostic": "ALL_C_LEGIT_SCORE_BELOW_B_THRESHOLD"
+    },
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "total_trades": 2,
+    "csv_mc_high_non_null": 0,
+    "csv_mc_low_non_null": 0,
+    "csv_mc_range_non_null": 0,
+    "csv_mc_breakout_dir_non_null": 0,
+    "csv_mc_session_date_non_null": 0,
+    "master_candle_debug": {
+      "mc_by_session_present": false,
+      "timezone": "America/New_York",
+      "mc_window_minutes": null
+    },
+    "pass": false,
+    "issues": [
+      "CSV: mc_high is NULL on all trades",
+      "CSV: mc_low is NULL on all trades",
+      "master_candle_debug: mc_by_session is empty"
+    ]
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 2,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "e5f44b35-375d-4386-98c0-8195c48e0c29",
+        "entry_timestamp": "2025-10-10T13:34:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "81cd0c02-06ed-44cf-b615-6ca1a6c40651",
+        "entry_timestamp": "2025-10-10T13:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "run_id": "miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3",
+  "timestamp": "2026-04-21T22:28:31.061942",
+  "pass": false,
+  "failures": [
+    "Grading: Error reading CSV: No columns to parse from file",
+    "Grading: grading_debug: score_count == 0",
+    "Grading: grading_debug: thresholds_snapshot is empty",
+    "Master Candle: Error reading CSV for MC: No columns to parse from file",
+    "Master Candle: master_candle_debug: mc_by_session is empty"
+  ],
+  "artifacts": {
+    "summary_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_alpha_pp/aplus03_v2_alpha_pp_aug_w3/summary_miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3_AGGRESSIVE_DAILY_SCALP.json",
+    "trades_csv": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_alpha_pp/aplus03_v2_alpha_pp_aug_w3/trades_miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3_AGGRESSIVE_DAILY_SCALP.csv",
+    "trades_parquet": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_alpha_pp/aplus03_v2_alpha_pp_aug_w3/trades_miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3_AGGRESSIVE_DAILY_SCALP.parquet",
+    "grading_debug_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_alpha_pp/aplus03_v2_alpha_pp_aug_w3/grading_debug_miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3.json",
+    "master_candle_debug_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_alpha_pp/aplus03_v2_alpha_pp_aug_w3/master_candle_debug_miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3.json",
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2_alpha_pp/aplus03_v2_alpha_pp_aug_w3/sanity_report_miniweek_aplus03_v2_alpha_pp_aplus03_v2_alpha_pp_aug_w3.json"
+  },
+  "grading_validation": {
+    "grading_debug": {
+      "score_count": 0,
+      "thresholds_snapshot_present": false,
+      "diagnostic": null
+    },
+    "pipeline_ok": true,
+    "pass": false,
+    "issues": [
+      "Error reading CSV: No columns to parse from file",
+      "grading_debug: score_count == 0",
+      "grading_debug: thresholds_snapshot is empty"
+    ]
+  },
+  "master_candle_validation": {
+    "master_candle_debug": {
+      "mc_by_session_present": false,
+      "timezone": "America/New_York",
+      "mc_window_minutes": 15
+    },
+    "pass": false,
+    "issues": [
+      "Error reading CSV for MC: No columns to parse from file",
+      "master_candle_debug: mc_by_session is empty"
+    ]
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 3,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "7d1f7cfe-958a-47fe-914a-9e7abb3622c0",
+        "entry_timestamp": "2025-08-15T13:34:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "bc762fd4-1776-4a42-aa78-532b1a20670f",
+        "entry_timestamp": "2025-08-15T13:39:00+00:00",
+        "mc_high": null,
+        "mc_low": null,
+        "mc_breakout_dir": null,
+        "mc_session_date": null
+      },
+      {
+        "trade_id": "3b52bd5e-a0af-4284-8674-d0b89ea1ad4b",
+        "entry_timestamp": "2025-08-15T13:44:00+00:00",
+        "mc_high": 579.84,
+        "mc_low": 578.0,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-08-15"
+      }
+    ]
+  }
+}

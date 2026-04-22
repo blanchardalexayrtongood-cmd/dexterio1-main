@@ -1,0 +1,122 @@
+{
+  "symbol": "SPY",
+  "start": "2025-10-06",
+  "end": "2025-10-10",
+  "n_bars": 1999,
+  "tests": [
+    {
+      "test": "directional_change no-lookahead",
+      "n_bars": 1999,
+      "checkpoints": [
+        199,
+        398,
+        597,
+        796,
+        995,
+        1194,
+        1393,
+        1592,
+        1791,
+        1990,
+        1999
+      ],
+      "pivots_final": 129,
+      "violations": [],
+      "passed": true,
+      "_name": "audit_1_no_lookahead"
+    },
+    {
+      "test": "deterministic replay",
+      "n_runs": 3,
+      "snapshot_summary": {
+        "n_dc_pivots": 129,
+        "n_fvgs": 0,
+        "n_sweeps": 0
+      },
+      "all_equal": true,
+      "passed": true,
+      "_name": "audit_2_deterministic"
+    },
+    {
+      "test": "1m bars integrity",
+      "symbol": "SPY",
+      "n_bars": 181828,
+      "date_span": [
+        "2024-06-03 13:30:00+00:00",
+        "2026-04-17 20:45:00+00:00"
+      ],
+      "tz_aware": true,
+      "tz_name": "UTC",
+      "monotonic_increasing": true,
+      "strictly_unique_ts": true,
+      "n_duplicates": 0,
+      "n_ohlc_violations": 0,
+      "n_nans_ohlc": 0,
+      "within_day_gaps_over_1min": 5776,
+      "gap_samples_seconds": [
+        120.0,
+        180.0,
+        240.0,
+        300.0,
+        360.0
+      ],
+      "passed": true,
+      "_name": "audit_3_bars_integrity"
+    },
+    {
+      "test": "signal spot-check export (5m TFA stream)",
+      "symbol": "SPY",
+      "n_bars_1m": 1999,
+      "n_bars_5m": 200,
+      "n_unique_fvg_detected": 1,
+      "n_unique_sweep_detected": 1,
+      "n_math_violations": 0,
+      "math_violations": [],
+      "fvg_samples": [
+        {
+          "direction": "bearish",
+          "gap_high": null,
+          "gap_low": null,
+          "math_check": true,
+          "c1_5m": {
+            "ts": "2025-10-10 14:50:00+00:00",
+            "h": 673.02,
+            "l": 672.66
+          },
+          "c2_5m": {
+            "ts": "2025-10-10 14:55:00+00:00",
+            "h": 672.99,
+            "l": 667.9
+          },
+          "c3_5m": {
+            "ts": "2025-10-10 15:00:00+00:00",
+            "h": 669.135,
+            "l": 665.2,
+            "c": 666.14
+          }
+        }
+      ],
+      "sweep_samples": [
+        {
+          "direction": "bullish",
+          "swept_level": null,
+          "bar_5m": {
+            "ts": "2025-10-10 17:45:00+00:00",
+            "h": 660.05,
+            "l": 658.85,
+            "c": 659.6
+          },
+          "prev_5m": {
+            "ts": "2025-10-10 17:40:00+00:00",
+            "h": 660.7,
+            "l": 659.77
+          }
+        }
+      ],
+      "passed": true,
+      "note": "Detectors stream through TFA (realistic engine path). Pass = no FVG math violations. Low counts on 5m are expected (1-week window, 0.3% min gap).",
+      "_name": "audit_4_spot_check"
+    }
+  ],
+  "all_passed": true
+}

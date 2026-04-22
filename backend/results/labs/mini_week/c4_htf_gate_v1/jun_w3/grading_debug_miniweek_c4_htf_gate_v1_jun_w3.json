@@ -1,0 +1,633 @@
+{
+  "run_id": "miniweek_c4_htf_gate_v1_jun_w3",
+  "total_trades": 40,
+  "score_count": 40,
+  "score_min": 0.227828225401765,
+  "score_max": 1.0,
+  "score_mean": 0.6723318569183014,
+  "grade_counts": {
+    "A+": 21,
+    "A": 11,
+    "B": 2,
+    "C": 6,
+    "UNKNOWN": 0
+  },
+  "thresholds_snapshot": {
+    "Liquidity_Sweep_Scalp": {
+      "count": 12,
+      "thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      }
+    },
+    "BOS_Scalp_1m": {
+      "count": 12,
+      "thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      }
+    },
+    "Engulfing_Bar_V056": {
+      "count": 8,
+      "thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      }
+    }
+  },
+  "sample_first_5_trades": [
+    {
+      "trade_id": "8799c8d7-21b9-4b0f-bec3-fe1582dfcff8",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "C",
+      "match_score": 0.36,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "30eae1bf-b5a2-4230-a1d5-f9c7718340c4",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "3bc8e3f8-4d47-471c-b083-1e9d9df79dd0",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "bcc55eab-4798-441a-a437-a0be2354150b",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.6268404096050804,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "fad1df57-02d1-4e30-8926-73664c440571",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.5608454263759057,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    }
+  ],
+  "reason_if_empty": null,
+  "diagnostic": null,
+  "diagnostic_data": null,
+  "all_trades": [
+    {
+      "trade_id": "8799c8d7-21b9-4b0f-bec3-fe1582dfcff8",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "C",
+      "match_score": 0.36,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "30eae1bf-b5a2-4230-a1d5-f9c7718340c4",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "3bc8e3f8-4d47-471c-b083-1e9d9df79dd0",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "bcc55eab-4798-441a-a437-a0be2354150b",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.6268404096050804,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "fad1df57-02d1-4e30-8926-73664c440571",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.5608454263759057,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "93a6ae3a-641a-4f2c-92ce-5f6a226a21f8",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.6547733165399605,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "dbe1966c-504f-49bd-8c84-daef728db7b1",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "C",
+      "match_score": 0.36,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "8c25f89d-05d3-4a4c-a957-268678592bf9",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.71,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "b0cf918a-3b91-4f91-9af6-f63ccbc9d19a",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "C",
+      "match_score": 0.47,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "ac37e8dd-4981-451c-9723-d500ff01731d",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A",
+      "match_score": 0.227828225401765,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "04f4ff7b-35f5-4eac-a4ba-d3a4fdb1232d",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "652ff5fa-196a-4f44-be0c-1843690af018",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.65,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "8fdb003c-4ba9-4315-b09a-d879e2f8b2ec",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.65,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "acf23a29-f880-4925-a0e0-b1b811e82e55",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.65,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "f1a14519-6c73-4284-bbfa-48c18c1082af",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "d1ec70e7-62f7-4d4c-baeb-af9a005c72f1",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.5298884466271498,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "b5111f6f-cfb3-4041-9351-fb65de271e6e",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.6335994050849298,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "76e72543-0d96-4243-a6fc-20e872f8b4d7",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "A",
+      "match_score": 0.665,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "ad8e0a2d-3923-482b-bb5e-64fe19b40fb2",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.5622118806089137,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "0cdbbb5b-bda4-48ff-a1b7-e73788a7544d",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "583d4f7a-7baa-4e05-a608-e94341a19194",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.5990142137400347,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "1a7f362e-b92e-4bf7-8b5f-9b9df9aeea4f",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "b0a7eada-dd72-4b67-ba91-9c89c81a0e9e",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.7324991035706321,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "c8dcfe79-ab80-45a7-97d8-45dc19f3e3b2",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.65,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "06ae2dd6-453a-4697-938c-7f0f60576670",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A+",
+      "match_score": 0.750970422650997,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "4c9ab537-f2bf-4fa3-942c-0b9c0b94d7b1",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A+",
+      "match_score": 0.750970422650997,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "4b27af11-f019-4b7f-9524-ca2147c0b0cb",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "B",
+      "match_score": 0.525,
+      "match_grade": "B",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "82198ce1-6db9-4968-b5e0-74bceef42386",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "C",
+      "match_score": 0.425,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "18b2556c-d537-4c9a-943a-3c9b0601a6a4",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.6049999999999999,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "2c75fac8-d9c1-4731-a318-34bedeb86b35",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.71,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "8d4fddf2-2bbd-4a21-a8fe-e8ff363cc9b1",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.6754000846740257,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "9d10ea4b-d27a-4124-8b78-035cf0b0d6db",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.6419393227793874,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "b924a0d1-d2a4-4aaf-a8bf-808d780daa68",
+      "playbook": "Liquidity_Sweep_Scalp",
+      "quality": "A",
+      "match_score": 0.71,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.75,
+        "A": 0.6,
+        "B": 0.45
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "6cae6cea-f54d-4054-9fd2-4c849feec708",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "C",
+      "match_score": 0.47,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "78cf3cf6-de3a-4e49-b4be-e57732795cc4",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "76026cae-cd92-4c0d-ae21-bf9cf547d04a",
+      "playbook": "BOS_Scalp_1m",
+      "quality": "A+",
+      "match_score": 0.7064935964222792,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "7623552b-5919-4056-8ead-52406afc405e",
+      "playbook": "Engulfing_Bar_V056",
+      "quality": "A+",
+      "match_score": 1.0,
+      "match_grade": "A+",
+      "grade_thresholds": {
+        "A_plus": 0.5,
+        "A": 0.01,
+        "B": 0.0
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "e44f39fd-46f1-49e8-9eec-2b6c38879944",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "B",
+      "match_score": 0.525,
+      "match_grade": "B",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "ffa7c0a2-69f4-4d1e-9a00-79bf746555ee",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "A",
+      "match_score": 0.6799999999999999,
+      "match_grade": "A",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    },
+    {
+      "trade_id": "785dfeee-aa97-4986-b946-634f1b4a988e",
+      "playbook": "Morning_Trap_Reversal",
+      "quality": "C",
+      "match_score": 0.425,
+      "match_grade": "C",
+      "grade_thresholds": {
+        "A_plus": 0.8,
+        "A": 0.65,
+        "B": 0.5
+      },
+      "score_scale_hint": "0-1"
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "run_id": "miniweek_aplus03_v2_aplus03_v2_oct_w2",
+  "status": "OK",
+  "timestamp": "2026-04-21T08:08:58.721987",
+  "entry_price_validation": {
+    "entry_price_mean": 612.285,
+    "entry_price_median": 612.285,
+    "entry_price_std": 0.5049999999999955,
+    "entry_price_vs_market": {
+      "QQQ": {
+        "entry_price_mean": 612.285,
+        "market_close_mean": 606.5969361229161,
+        "market_close_std": 6.0233967194948965,
+        "entry_vs_market_diff": 5.688063877083891,
+        "entry_vs_market_diff_pct": 0.9377007265218541
+      }
+    },
+    "placeholder_detected": false
+  },
+  "duration_validation": {
+    "zero_duration_count": 0,
+    "zero_duration_pct": 0.0,
+    "duration_mean_minutes": 40.5,
+    "duration_median_minutes": 40.5,
+    "total_trades_with_duration": 2,
+    "scalp": {
+      "duration_mean_minutes": 40.5,
+      "duration_median_minutes": 40.5,
+      "duration_max_minutes": 78.0,
+      "max_allowed_minutes": 120.0,
+      "time_stop_broken": false,
+      "violations": [],
+      "total_scalp_trades": 2
+    },
+    "daily": {
+      "duration_mean_minutes": 0.0,
+      "duration_median_minutes": 0.0,
+      "total_daily_trades": 0
+    }
+  },
+  "session_validation": {
+    "unknown_session_count": 0,
+    "unknown_session_pct": 0.0,
+    "session_distribution": {
+      "ny": 2
+    },
+    "total_trades_with_session": 2
+  },
+  "costs_breakdown": {
+    "total_slippage": 99.13,
+    "total_spread": 19.82,
+    "total_commission": 4.0,
+    "total_reg_fees": 0.52,
+    "total_costs": 123.47,
+    "costs_per_trade_avg": 61.735,
+    "slippage_double_counting_detected": false
+  },
+  "stability_metrics": {
+    "total_trades": 2,
+    "winrate_pct": 0.0,
+    "expectancy_net_R": -0.12576747250000112,
+    "total_r_net": -0.25153494500000223,
+    "avg_win_r": 0.0,
+    "avg_loss_r": -0.12576747250000112
+  },
+  "grading_validation": {
+    "grading_produced": true,
+    "quality_distribution": {
+      "C": 2
+    },
+    "all_c_detected": true,
+    "total_trades": 2,
+    "count_missing_grade": 0,
+    "pct_missing_grade": 0.0,
+    "grading_pipeline_propagation_ok": false
+  },
+  "grading_debug": {
+    "total_trades": 2,
+    "score_count": 2,
+    "pct_missing_score": 0.0,
+    "score_min": 0.18000000000000002,
+    "score_max": 0.18000000000000002,
+    "score_mean": 0.18000000000000002,
+    "grade_counts": {
+      "A+": 0,
+      "A": 0,
+      "B": 0,
+      "C": 2,
+      "UNKNOWN": 0
+    },
+    "unique_playbooks": 1,
+    "playbook_counts": {
+      "Aplus_03_v2": 2
+    },
+    "thresholds_snapshot": {
+      "Aplus_03_v2": {
+        "count": 2,
+        "thresholds": {
+          "A_plus": 0.7,
+          "A": 0.5,
+          "B": 0.3
+        }
+      }
+    },
+    "grading_pipeline_ok": true
+  },
+  "sanity_checks": {
+    "entry_price_valid": true,
+    "duration_valid": true,
+    "session_valid": true,
+    "costs_valid": true,
+    "stability_valid": true,
+    "scalp_time_stop_valid": true,
+    "grading_valid": false
+  }
+}

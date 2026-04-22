@@ -1,0 +1,48 @@
+{
+  "run_id": "miniweek_aplus03_v2_aplus03_v2_jun_w3",
+  "timestamp": "2026-04-21T08:04:15.271651",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/aplus03_v2/aplus03_v2_jun_w3/sanity_report_miniweek_aplus03_v2_aplus03_v2_jun_w3.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 2,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "ce460795-6111-4589-b040-9d341a40a235",
+        "entry_timestamp": "2025-06-20T13:59:00+00:00",
+        "mc_high": 599.45,
+        "mc_low": 597.65,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-06-20"
+      },
+      {
+        "trade_id": "3326ecb6-8fb3-4677-9d12-b40922227e27",
+        "entry_timestamp": "2025-06-20T15:54:00+00:00",
+        "mc_high": 533.56,
+        "mc_low": 531.4,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-06-20"
+      }
+    ]
+  }
+}
