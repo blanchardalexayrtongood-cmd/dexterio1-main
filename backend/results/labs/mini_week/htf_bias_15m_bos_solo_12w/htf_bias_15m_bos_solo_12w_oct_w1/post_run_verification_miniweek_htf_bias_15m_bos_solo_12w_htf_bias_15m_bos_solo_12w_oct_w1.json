@@ -1,0 +1,72 @@
+{
+  "run_id": "miniweek_htf_bias_15m_bos_solo_12w_htf_bias_15m_bos_solo_12w_oct_w1",
+  "timestamp": "2026-04-22T11:53:43.108420",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/htf_bias_15m_bos_solo_12w/htf_bias_15m_bos_solo_12w_oct_w1/sanity_report_miniweek_htf_bias_15m_bos_solo_12w_htf_bias_15m_bos_solo_12w_oct_w1.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 5,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "f60c9cdd-904a-4a4e-bc59-04267a8ae87b",
+        "entry_timestamp": "2025-09-30T13:44:00+00:00",
+        "mc_high": 598.67,
+        "mc_low": 596.55,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-09-30"
+      },
+      {
+        "trade_id": "ffc34c50-a779-417a-a4da-42e40976b19e",
+        "entry_timestamp": "2025-09-29T13:44:00+00:00",
+        "mc_high": 600.66,
+        "mc_low": 599.045,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-09-29"
+      },
+      {
+        "trade_id": "05ae3f07-627b-40e6-a80b-6c56e8b1ac9f",
+        "entry_timestamp": "2025-10-01T13:44:00+00:00",
+        "mc_high": 599.07,
+        "mc_low": 596.7,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-10-01"
+      },
+      {
+        "trade_id": "cd9f5aa5-8d55-419d-aafc-d6c617525dbd",
+        "entry_timestamp": "2025-10-02T13:44:00+00:00",
+        "mc_high": 607.16,
+        "mc_low": 603.99,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-10-02"
+      },
+      {
+        "trade_id": "5881a155-584c-44c2-92ea-3ff5c6e3ab00",
+        "entry_timestamp": "2025-10-03T13:59:00+00:00",
+        "mc_high": 671.33,
+        "mc_low": 669.93,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-10-03"
+      }
+    ]
+  }
+}

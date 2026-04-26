@@ -1,0 +1,64 @@
+{
+  "run_id": "miniweek_htf_bias_15m_bos_solo_12w_htf_bias_15m_bos_solo_12w_nov_w4",
+  "timestamp": "2026-04-22T12:24:34.590922",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/htf_bias_15m_bos_solo_12w/htf_bias_15m_bos_solo_12w_nov_w4/sanity_report_miniweek_htf_bias_15m_bos_solo_12w_htf_bias_15m_bos_solo_12w_nov_w4.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 4,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "56c0854b-f753-4d50-a1e1-81c6694f69bc",
+        "entry_timestamp": "2025-11-17T14:59:00+00:00",
+        "mc_high": 611.17,
+        "mc_low": 605.24,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-11-17"
+      },
+      {
+        "trade_id": "4f9492aa-1b60-4d08-9114-25cf6d372e75",
+        "entry_timestamp": "2025-11-19T14:44:00+00:00",
+        "mc_high": 600.6199,
+        "mc_low": 596.14,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-11-19"
+      },
+      {
+        "trade_id": "4bd1161a-3752-4ccf-94b7-a606edda7e41",
+        "entry_timestamp": "2025-11-20T14:44:00+00:00",
+        "mc_high": 612.38,
+        "mc_low": 610.03,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-11-20"
+      },
+      {
+        "trade_id": "eeec2994-97e5-4da6-bca6-b740b470bb74",
+        "entry_timestamp": "2025-11-21T14:44:00+00:00",
+        "mc_high": 656.44,
+        "mc_low": 654.03,
+        "mc_breakout_dir": "NONE",
+        "mc_session_date": "2025-11-21"
+      }
+    ]
+  }
+}

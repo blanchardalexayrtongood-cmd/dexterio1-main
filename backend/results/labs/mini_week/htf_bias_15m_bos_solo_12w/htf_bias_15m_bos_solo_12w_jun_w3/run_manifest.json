@@ -1,0 +1,94 @@
+{
+  "schema_version": "CampaignManifestV0",
+  "contract_version": "RunSummaryV0",
+  "run_id": "miniweek_htf_bias_15m_bos_solo_12w_htf_bias_15m_bos_solo_12w_jun_w3",
+  "runner": "run_mini_lab_week.py",
+  "argv": [
+    "scripts/run_mini_lab_week.py",
+    "--start",
+    "2025-06-16",
+    "--end",
+    "2025-06-20",
+    "--label",
+    "htf_bias_15m_bos_solo_12w_jun_w3",
+    "--output-parent",
+    "htf_bias_15m_bos_solo_12w",
+    "--no-respect-allowlists",
+    "--no-relax-caps",
+    "--calib-allowlist",
+    "HTF_Bias_15m_BOS"
+  ],
+  "cwd": "/home/dexter/dexterio1-main/backend",
+  "git_sha": "b1da681783f45558b48d7a10bf44d23df18b8ae7",
+  "run_started_at_utc": "2026-04-22T08:53:13.464027+00:00",
+  "symbols": [
+    "SPY",
+    "QQQ"
+  ],
+  "start_date": "2025-06-16",
+  "end_date": "2025-06-20",
+  "label": "htf_bias_15m_bos_solo_12w_jun_w3",
+  "output_parent": "htf_bias_15m_bos_solo_12w",
+  "respect_allowlists": false,
+  "bypass_lss_quarantine": true,
+  "playbooks_yaml": null,
+  "nf_tp1_rr_meta": null,
+  "run_clock_mode": "BACKTEST",
+  "lab_environment": {
+    "RISK_EVAL_ALLOW_ALL_PLAYBOOKS": "true",
+    "RISK_EVAL_RELAX_CAPS": "false",
+    "RISK_EVAL_DISABLE_KILL_SWITCH": "true",
+    "RISK_BYPASS_DYNAMIC_QUARANTINE_LSS_ONLY": "true",
+    "data_fingerprint_v0": {
+      "schema_version": "DataFingerprintV0",
+      "timeframe": "1m",
+      "sha256": "91f8a0884f9a5220f88f282089922147310dad141d370789549b967888d58973",
+      "by_symbol": {
+        "QQQ": {
+          "path": "/home/dexter/dexterio1-main/data/historical/1m/QQQ.parquet",
+          "exists": true,
+          "size_bytes": 2777149,
+          "mtime_ns": 1775806380000000000
+        },
+        "SPY": {
+          "path": "/home/dexter/dexterio1-main/data/historical/1m/SPY.parquet",
+          "exists": true,
+          "size_bytes": 2674673,
+          "mtime_ns": 1775806380000000000
+        }
+      }
+    }
+  },
+  "data_coverage": {
+    "schema_version": "DataCoverageV0",
+    "coverage_ok": false,
+    "warmup_start_utc": "2025-05-17T00:00:00+00:00",
+    "start_utc": "2025-06-16T00:00:00+00:00",
+    "end_exclusive_utc": "2025-06-21T00:00:00+00:00",
+    "htf_warmup_days": 30,
+    "ignore_warmup_check": false,
+    "errors": [
+      "SPY: min datetime 2025-06-02 08:00:00+00:00 > warmup_start 2025-05-17 00:00:00+00:00 (pas assez d'historique pour htf_warmup_days=30; utiliser --ignore-warmup-check pour n'exiger que [start,end])",
+      "QQQ: min datetime 2025-06-02 08:00:00+00:00 > warmup_start 2025-05-17 00:00:00+00:00 (pas assez d'historique pour htf_warmup_days=30; utiliser --ignore-warmup-check pour n'exiger que [start,end])"
+    ],
+    "warnings": [],
+    "by_path": [
+      {
+        "path": "/home/dexter/dexterio1-main/data/historical/1m/SPY.parquet",
+        "exists": true,
+        "min_utc": "2025-06-02T08:00:00+00:00",
+        "max_utc": "2025-11-28T21:59:00+00:00",
+        "rows": 105822,
+        "symbol": "SPY"
+      },
+      {
+        "path": "/home/dexter/dexterio1-main/data/historical/1m/QQQ.parquet",
+        "exists": true,
+        "min_utc": "2025-06-02T08:00:00+00:00",
+        "max_utc": "2025-11-28T21:59:00+00:00",
+        "rows": 110752,
+        "symbol": "QQQ"
+      }
+    ]
+  }
+}

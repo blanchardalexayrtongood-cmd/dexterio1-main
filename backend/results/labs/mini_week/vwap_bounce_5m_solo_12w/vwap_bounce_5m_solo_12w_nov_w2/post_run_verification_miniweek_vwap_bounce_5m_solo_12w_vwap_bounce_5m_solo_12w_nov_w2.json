@@ -1,0 +1,48 @@
+{
+  "run_id": "miniweek_vwap_bounce_5m_solo_12w_vwap_bounce_5m_solo_12w_nov_w2",
+  "timestamp": "2026-04-22T12:27:54.322258",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/vwap_bounce_5m_solo_12w/vwap_bounce_5m_solo_12w_nov_w2/sanity_report_miniweek_vwap_bounce_5m_solo_12w_vwap_bounce_5m_solo_12w_nov_w2.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 2,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "904b131c-1aaa-455f-8fd5-2bba991d9ba7",
+        "entry_timestamp": "2025-11-06T19:09:00+00:00",
+        "mc_high": 677.38,
+        "mc_low": 675.695,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-11-06"
+      },
+      {
+        "trade_id": "619f628f-0c8a-4ed6-9b6f-1bca6804cef9",
+        "entry_timestamp": "2025-11-06T19:19:00+00:00",
+        "mc_high": 677.38,
+        "mc_low": 675.695,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-11-06"
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "run_id": "stat_arb_spy_qqq_v2_smoke_nov_w4",
+  "config": {
+    "start_date": "2025-11-17",
+    "end_date": "2025-11-21",
+    "symbol_y": "SPY",
+    "symbol_x": "QQQ",
+    "spy_path": "backend/data/market/SPY_1m.parquet",
+    "qqq_path": "backend/data/market/QQQ_1m.parquet",
+    "session_start_utc": "14:30",
+    "session_end_utc": "21:00",
+    "beta_window": 60,
+    "z_window": 60,
+    "daily_coint_window": 60,
+    "daily_coint_alpha": 0.05,
+    "daily_lookback_days": 120,
+    "entry_z": 2.0,
+    "exit_z": 0.5,
+    "blowout_z": 3.0,
+    "time_stop_bars": 18,
+    "lockout_bars": 6,
+    "risk_dollars": 100.0,
+    "label": "stat_arb_spy_qqq_v2_smoke_nov_w4",
+    "output_dir": "backend/results/labs/mini_week/stat_arb_spy_qqq_v2"
+  },
+  "counts": {
+    "bars_1m_loaded_spy": 35526,
+    "bars_1m_loaded_qqq": 36101,
+    "bars_5m_joined_total": 6287,
+    "bars_5m_session_window": 395,
+    "bars_5m_z_finite": 395,
+    "bars_skipped_daily_gate": 0,
+    "smoke_trading_days": 5,
+    "daily_coint_pass_days": 5,
+    "setups_emitted": 8,
+    "trades_closed": 8
+  },
+  "summary": {
+    "n": 8,
+    "WR": 0.375,
+    "PF": 0.25769180838633515,
+    "E[R]_gross": -0.17868750000000772,
+    "total_R": -1.4295000000000617,
+    "peak_R_p80": 0.14714999999998035,
+    "mae_R_p20": -0.39368000000001707,
+    "exit_reasons": {
+      "TIME_STOP": 3,
+      "TP_MEAN_REVERSION": 2,
+      "SL_BLOWOUT": 3
+    },
+    "mean_reversion_rate": 0.25
+  }
+}

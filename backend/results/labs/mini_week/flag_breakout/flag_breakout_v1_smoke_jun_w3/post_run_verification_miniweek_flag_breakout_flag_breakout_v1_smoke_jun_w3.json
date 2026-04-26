@@ -1,0 +1,72 @@
+{
+  "run_id": "miniweek_flag_breakout_flag_breakout_v1_smoke_jun_w3",
+  "timestamp": "2026-04-25T04:25:14.734001",
+  "pass": false,
+  "failures": [
+    "Missing artifacts: summary_json, trades_csv, trades_parquet, grading_debug_json, master_candle_debug_json"
+  ],
+  "artifacts": {
+    "summary_json": null,
+    "trades_csv": null,
+    "trades_parquet": null,
+    "grading_debug_json": null,
+    "master_candle_debug_json": null,
+    "sanity_report_json": "/home/dexter/dexterio1-main/backend/results/labs/mini_week/flag_breakout/flag_breakout_v1_smoke_jun_w3/sanity_report_miniweek_flag_breakout_flag_breakout_v1_smoke_jun_w3.json"
+  },
+  "grading_validation": {
+    "pipeline_ok": true,
+    "pass": true,
+    "issues": []
+  },
+  "master_candle_validation": {
+    "pass": true,
+    "issues": []
+  },
+  "lookahead_detector": {
+    "pass": true,
+    "sample_size": 5,
+    "issues": [],
+    "samples": [
+      {
+        "trade_id": "c657824b-9824-4349-8ffb-3abb9004b1c9",
+        "entry_timestamp": "2025-06-16T13:54:00+00:00",
+        "mc_high": 601.705,
+        "mc_low": 600.22,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-06-16"
+      },
+      {
+        "trade_id": "3b660f2d-3ab8-4183-9ba4-6369d1472739",
+        "entry_timestamp": "2025-06-16T13:54:00+00:00",
+        "mc_high": 532.48,
+        "mc_low": 530.45,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-06-16"
+      },
+      {
+        "trade_id": "233d01bf-9619-44de-9a5d-3ed5a372f42d",
+        "entry_timestamp": "2025-06-16T15:59:00+00:00",
+        "mc_high": 601.705,
+        "mc_low": 600.22,
+        "mc_breakout_dir": "LONG",
+        "mc_session_date": "2025-06-16"
+      },
+      {
+        "trade_id": "afe507f1-6fab-4e3a-92cb-bfd0991b8ffd",
+        "entry_timestamp": "2025-06-20T14:44:00+00:00",
+        "mc_high": 533.56,
+        "mc_low": 531.4,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-06-20"
+      },
+      {
+        "trade_id": "c74ea288-bd8e-4431-b6b6-7fc68d2a11b6",
+        "entry_timestamp": "2025-06-20T14:44:00+00:00",
+        "mc_high": 599.45,
+        "mc_low": 597.65,
+        "mc_breakout_dir": "SHORT",
+        "mc_session_date": "2025-06-20"
+      }
+    ]
+  }
+}
