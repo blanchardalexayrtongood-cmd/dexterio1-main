@@ -10,14 +10,14 @@ import math
 import numpy as np
 import pytest
 
-from backend.engines.stat_arb.cointegration import (
+from engines.stat_arb.cointegration import (
     EG_CRITICAL_VALUES,
     adf_stat_no_const,
     engle_granger_test,
     ols_beta_alpha,
 )
-from backend.engines.stat_arb.sizing import PairSize, pair_sizing
-from backend.engines.stat_arb.zscore import (
+from engines.stat_arb.sizing import PairSize, pair_sizing
+from engines.stat_arb.zscore import (
     compute_spread,
     rolling_beta,
     rolling_mean,

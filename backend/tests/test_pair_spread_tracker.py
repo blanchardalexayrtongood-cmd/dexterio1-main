@@ -5,7 +5,7 @@ from datetime import datetime, timedelta, timezone
 
 import pytest
 
-from backend.engines.stat_arb.tracker import (
+from engines.stat_arb.tracker import (
     STATE_ARMED_LONG,
     STATE_ARMED_SHORT,
     STATE_IDLE,
