@@ -51,9 +51,10 @@ cd frontend && npm install && npm start
 
 ## Tests
 
-The `pytest` suite is run locally. CI (GitHub Actions) runs a smoke check on the
-backtest-campaign tooling (`backend/scripts/backtest_campaign_smoke.py`) rather
-than the full suite, to keep the pipeline fast.
+CI (GitHub Actions) runs the full `pytest` suite on every push to `main`
+(594 passed, 6 skipped, 1 xfailed — no network or API keys required), plus a
+separate smoke check on the backtest-campaign tooling
+(`backend/scripts/backtest_campaign_smoke.py`).
 
 ```bash
 pytest
